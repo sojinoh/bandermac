@@ -27,18 +27,26 @@ var content = [
     [//Scene 1 Amnesia:
 
         "Your eyes gradually open as you slowly float into consciousness. With your head",
+        "",
         "pounding you open your eyes to realize you are lying flat on your back in the",
+        "",
         "middle of Smail gallery. You glance to the backdoors only to realize it is pitch",
+        "",
         "black outside. There is an eerie stillness to the place. The building itself is",
+        "",
         "completely dark except for a light emanating from the top floor. Suddenly you",
+        "",
         "hear a crash coming for the geology wing."
     ],
 
     [//Scene 2a. Top
 
         "You stand carefully. You feel slightly off balance as you walk up the main",
+        "",
         "staircase to the third floor. There, sitting at the one of the circular tables",
+        "",
         "of the top floor is man. From his young features, you figure he must be a student.",
+        "",
         "You walk over to him. You need to try to understand what is going on.",
     
     ],
@@ -46,14 +54,26 @@ var content = [
     [//Scene 2b. Dino
 
         "You stand carefully. You feel slightly off balance as you walk down the",
+        "",
         "stairs towards the crash. As you come closer, you notice shards of glass",
+        "",
         "scattered around a case containing a dinosaur skull. The case is broken,",
+        "",
         "and you notice a note pinned between the dinosaur’s teeth. You pick up",
+        "",
         "(action) the note. The notes reads, “They who hath awoken, hath stumbled",
+        "",
         "upon the broken. Here upon these bones shall lead you deep into the unknown.",
+        "",
         "Follow the red or suffer with dread.” You wonder what William Shakespeare",
-        "was doing in OLRI."
-    
+        "",
+        "was doing in OLRI. You also notice a trail of blood leading towards the staircase.",
+        "",
+        "You follow it and end up in a old part of the building, down a hallway you didn’t",
+        "",
+        "know existed. Along the way, you notice an orange and pick it up. It might be a clue.",
+        "",
+        "A small door opens at the end of the hallway, you crawl through."
     ]
 
 ];
@@ -62,7 +82,7 @@ var line = [];
 var wordIndex = 0;
 var lineIndex = 0;
 var wordDelay = 120;
-var lineDelay = 400;
+var lineDelay = 120;
 var button1;
 var button2;
 var text1;
@@ -70,7 +90,7 @@ var currentDecision = 0;
 
 
 function create() {
-    text1 = this.add.text(32, 100, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 30 });
+    text1 = this.add.text(50, 100, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
     nextLine(this);
     nextWord(this);
@@ -114,6 +134,8 @@ function nextLine(game) {
 
 function nextWord(game) {
 
+    text1.y -= 2;
+
     //  Add the next word onto the text string, followed by a space
     if(line[wordIndex]){ text1.text = text1.text.concat(line[wordIndex] + " "); }
 
@@ -139,6 +161,7 @@ function nextWord(game) {
 function actionOnClick1 (game) {
 
     text1.text = "";
+    text1.y = 100;
     button1.text = "";
     button2.text = "";
     currentDecision = 1;
@@ -156,6 +179,7 @@ function actionOnClick1 (game) {
 function actionOnClick2 (game) {
 
     text1.text = "";
+    text1.y = 100;
     button1.text = "";
     button2.text = "";
     currentDecision = 2;
