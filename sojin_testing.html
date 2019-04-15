@@ -10,7 +10,7 @@
 
 var config = {
     type: Phaser.WEBGL,
-    width: 800,
+    width: 1024,
     height: 600,
     parent: 'container',
     plugins: {
@@ -35,6 +35,7 @@ var config = {
     },
     scene: {
         create: create,
+        update: update
     }
 };
 
@@ -91,10 +92,12 @@ var button2;
 var text1;
 var currentDecision = 0;
 
+var text1_animation_time = 0;
+
 
 function create() {
 
-    text1 = this.add.text(50, 100, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
+    text1 = this.add.text(50, 300, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
     nextLine(this);
     nextWord(this);
@@ -109,7 +112,7 @@ function create() {
     .on('pointerdown', () => actionOnClick2(this) );
     button2.visible =! button2.visible
 
-    //resize
+    //resizing
     this.events.on('resize', function (width, height) {
     console.log('Scene "resize" event', width, height);
     
@@ -121,6 +124,10 @@ function create() {
     console.log('Game "resize" event', width, height);
     }, this);
 
+}
+
+function update (time, delta){
+    text1.y -= 0.015 * delta;
 }
 
 function nextLine(game) {
@@ -150,7 +157,7 @@ function nextLine(game) {
 
 function nextWord(game) {
 
-    text1.y -= 0.8;
+    //text1.y -= 0.8;
 
     //  Add the next word onto the text string, followed by a space
     if(line[wordIndex]){ text1.text = text1.text.concat(line[wordIndex]); }
@@ -176,6 +183,7 @@ function nextWord(game) {
 
 function actionOnClick1 (game) {
 
+    //TODO: transition
     
 
     text1.text = "";
