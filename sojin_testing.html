@@ -2,19 +2,25 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser.min.js"></script>
 </head>
 <body>
     <script type="text/javascript">
 
 var config = {
-    type: Phaser.CANVAS,
-    width: 800,
-    height: 600,
+    type: Phaser.WEBGL,
+    width: 1024,
+    height: 768,
     physics: {
-        default: 'arcade',
+        default: 'impact',
         arcade: {
             gravity: { y: 200 }
+        },
+        impact: {
+            gravity: 100,
+            maxVelocity: 500
         }
+
     },
     scene: {
         create: create,
@@ -26,57 +32,43 @@ new Phaser.Game(config);
 var content = [
     [//Scene 1 Amnesia:
 
-        "Your eyes gradually open as you slowly float into consciousness. With your head",
-        "",
-        "pounding you open your eyes to realize you are lying flat on your back in the",
-        "",
-        "middle of Smail gallery. You glance to the backdoors only to realize it is pitch",
-        "",
-        "black outside. There is an eerie stillness to the place. The building itself is",
-        "",
-        "completely dark except for a light emanating from the top floor. Suddenly you",
-        "",
-        "hear a crash coming for the geology wing."
+        "Your eyes gradually open \nas you slowly float into consciousness.\n\n\nWith your head pounding",
+        "you open your eyes to realize \nyou are lying flat on your back in the middle of Smail gallery.\n\n\n",
+        "You glance to the backdoors \nonly to realize it is pitch black outside.",
+        "\n\n\nThere is an eerie stillness to the place.\n\n\nThe building itself is completely dark", 
+        "except for a light emanating from the top floor.\n\n\nSuddenly you hear a crash", 
+        "coming for the geology wing."
     ],
 
     [//Scene 2a. Top
 
         "You stand carefully. You feel slightly off balance as you walk up the main",
-        "",
         "staircase to the third floor. There, sitting at the one of the circular tables",
-        "",
         "of the top floor is man. From his young features, you figure he must be a student.",
-        "",
         "You walk over to him. You need to try to understand what is going on.",
     
     ],
 
-    [//Scene 2b. Dino
+    [//Scene 2b. Dino (1)
 
         "You stand carefully. You feel slightly off balance as you walk down the",
-        "",
         "stairs towards the crash. As you come closer, you notice shards of glass",
-        "",
         "scattered around a case containing a dinosaur skull. The case is broken,",
-        "",
         "and you notice a note pinned between the dinosaur’s teeth. You pick up",
-        "",
         "(action) the note. The notes reads, “They who hath awoken, hath stumbled",
-        "",
-        "upon the broken. Here upon these bones shall lead you deep into the unknown.",
-        "",
+        "upon the broken. Here upon these bones shall lead you deep into the unknown."
+    ],
+
+    [//Scene 2b. Dino (2)
         "Follow the red or suffer with dread.” You wonder what William Shakespeare",
-        "",
         "was doing in OLRI. You also notice a trail of blood leading towards the staircase.",
-        "",
         "You follow it and end up in a old part of the building, down a hallway you didn’t",
-        "",
         "know existed. Along the way, you notice an orange and pick it up. It might be a clue.",
-        "",
         "A small door opens at the end of the hallway, you crawl through."
     ]
 
 ];
+
 
 var line = [];
 var wordIndex = 0;
@@ -90,6 +82,8 @@ var currentDecision = 0;
 
 
 function create() {
+    this.impact.world.setBounds();
+
     text1 = this.add.text(50, 100, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
     nextLine(this);
@@ -113,7 +107,7 @@ function nextLine(game) {
     {
 
     //  Split the current line on spaces, so one word per array element
-    line = content[currentDecision][lineIndex].split(' ');
+    line = content[currentDecision][lineIndex].split('');
     console.log(line)
 
     //  Reset the word index to zero (the first word in the line)
@@ -134,10 +128,10 @@ function nextLine(game) {
 
 function nextWord(game) {
 
-    text1.y -= 2;
+    text1.y -= 0.8;
 
     //  Add the next word onto the text string, followed by a space
-    if(line[wordIndex]){ text1.text = text1.text.concat(line[wordIndex] + " "); }
+    if(line[wordIndex]){ text1.text = text1.text.concat(line[wordIndex]); }
 
     //  Advance the word index to the next word in the line
     wordIndex++;
@@ -159,6 +153,8 @@ function nextWord(game) {
 }
 
 function actionOnClick1 (game) {
+
+    game.body(50, 100).setGameObject(text1).setVelocity(0, -200).setBounce(1);
 
     text1.text = "";
     text1.y = 100;
