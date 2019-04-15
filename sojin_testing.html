@@ -3,24 +3,35 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser.min.js"></script>
+    <script src="../node_modules/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
 </head>
 <body>
     <script type="text/javascript">
 
 var config = {
     type: Phaser.WEBGL,
-    width: 1024,
-    height: 768,
+    width: 800,
+    height: 600,
+    parent: 'container',
+    plugins: {
+      global: [{
+        key: 'GameScalePlugin',
+        plugin: Phaser.Plugins.GameScalePlugin,
+        mapping: 'gameScale',
+        data: {
+          minWidth: 400,
+          minHeight: 300,
+          maxWidth: 1600,
+          maxHeight: 1200,
+          snap: 0
+        }
+      }]
+    },
     physics: {
-        default: 'impact',
+        default: 'arcade',
         arcade: {
             gravity: { y: 200 }
-        },
-        impact: {
-            gravity: 100,
-            maxVelocity: 500
         }
-
     },
     scene: {
         create: create,
@@ -82,7 +93,6 @@ var currentDecision = 0;
 
 
 function create() {
-    this.impact.world.setBounds();
 
     text1 = this.add.text(50, 100, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
@@ -98,6 +108,18 @@ function create() {
     .setInteractive()
     .on('pointerdown', () => actionOnClick2(this) );
     button2.visible =! button2.visible
+
+    //resize
+    this.events.on('resize', function (width, height) {
+    console.log('Scene "resize" event', width, height);
+    
+        // Adjust the boundary
+        this.physics.world.setBounds(0, 0, width, height);
+      }, this);
+
+    this.sys.game.events.on('resize', function (width, height) {
+    console.log('Game "resize" event', width, height);
+    }, this);
 
 }
 
@@ -154,7 +176,7 @@ function nextWord(game) {
 
 function actionOnClick1 (game) {
 
-    game.body(50, 100).setGameObject(text1).setVelocity(0, -200).setBounce(1);
+    
 
     text1.text = "";
     text1.y = 100;
