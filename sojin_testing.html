@@ -124,7 +124,7 @@ function create() {
         x: 100,
         ease: 'Sine.easeInOut',
         yoyo: true,
-        repeat: 8,
+        repeat: 3,
         duration: 2000
     });
 
@@ -211,14 +211,12 @@ function nextWord(game) {
 }
 
 function actionOnClick1 (game) {
-
-    
     
     //transition physics 
     //game.impact.add.body(text1.x, text1.y).setGameObject(text1).setActiveCollision().setVelocity(0, -300)
     //this.impact.add.body(100, 200).setGameObject(text1).setActiveCollision().setVelocity(0, 200).setBounce(1);
     
-
+    textDisplayDone = false
     text1.text = "";
     text1.y = 300;
     button1.text = "";
@@ -237,6 +235,7 @@ function actionOnClick1 (game) {
 
 function actionOnClick2 (game) {
 
+	textDisplayDone = false
     text1.text = "";
     text1.y = 300;
     button1.text = "";
