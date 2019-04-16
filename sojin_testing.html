@@ -28,9 +28,13 @@ var config = {
       }]
     },
     physics: {
-        default: 'arcade',
+        default: 'impact',
         arcade: {
             gravity: { y: 200 }
+        },
+        impact: {
+            gravity: 100,
+            maxVelocity: 500
         }
     },
     scene: {
@@ -91,6 +95,7 @@ var button1;
 var button2;
 var text1;
 var currentDecision = 0;
+var textDisplayDone = false;
 
 var text1_animation_time = 0;
 
@@ -127,6 +132,7 @@ function create() {
 }
 
 function update (time, delta){
+    if(!textDisplayDone)
     text1.y -= 0.015 * delta;
 }
 
@@ -150,8 +156,9 @@ function nextLine(game) {
     //  Advance to the next line
     lineIndex++;
     } else{
-        button1.visible =! button1.visible
-        button2.visible =! button2.visible
+        textDisplayDone = true;
+        button1.visible =! button1.visible;
+        button2.visible =! button2.visible;
     }
 }
 
@@ -183,11 +190,15 @@ function nextWord(game) {
 
 function actionOnClick1 (game) {
 
-    //TODO: transition
+    
+    
+    //transition physics 
+    //game.impact.add.body(text1.x, text1.y).setGameObject(text1).setActiveCollision().setVelocity(0, -300)
+    //this.impact.add.body(100, 200).setGameObject(text1).setActiveCollision().setVelocity(0, 200).setBounce(1);
     
 
     text1.text = "";
-    text1.y = 100;
+    text1.y = 300;
     button1.text = "";
     button2.text = "";
     currentDecision = 1;
@@ -205,7 +216,7 @@ function actionOnClick1 (game) {
 function actionOnClick2 (game) {
 
     text1.text = "";
-    text1.y = 100;
+    text1.y = 300;
     button1.text = "";
     button2.text = "";
     currentDecision = 2;
