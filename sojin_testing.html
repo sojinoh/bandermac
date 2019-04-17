@@ -38,8 +38,12 @@ var config = {
         }
     },
     scene: {
+        preload: preload,
         create: create,
         update: update
+    },
+    audio: {
+        disableWebAudio: true
     }
 };
 
@@ -99,8 +103,19 @@ var textDisplayDone = false;
 
 var text1_animation_time = 0;
 
+function preload(){
+
+    //load the audio asset
+    this.load.audio('theme','assets/creepy.wav');
+    this.load.audio('crash','assets/crash.wav');
+
+}
+
 
 function create() {
+
+    var theme = this.sound.add('theme');
+    theme.play();
 
     text1 = this.add.text(50, 300, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
