@@ -122,8 +122,7 @@ function create() {
     .on('pointerdown', () => actionOnClick2(this) );
     button2.visible =! button2.visible
 
-    //-----Fade in/out blinking---------
-
+    //animation
     this.tweens.add({
         targets: text1,
         x: 100,
@@ -140,21 +139,20 @@ function create() {
         camera.fadeIn(1500);
     });
 
-    //------------------------------------
 
 
-
-    //resizing
+    //resizing the window
     this.events.on('resize', function (width, height) {
     console.log('Scene "resize" event', width, height);
     
-        // Adjust the boundary
+        //Adjust the boundary
         this.physics.world.setBounds(0, 0, width, height);
       }, this);
 
     this.sys.game.events.on('resize', function (width, height) {
     console.log('Game "resize" event', width, height);
     }, this);
+
 }
 
 function update (time, delta){

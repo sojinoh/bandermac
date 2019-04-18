@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Created basic initial &quot;loading&quot; state">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/.eslintrc.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/dist/GameScalePlugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/examples/.eslintrc.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/examples/no-parent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/examples/no-parent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/examples/parent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/examples/parent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/phaser-plugin-game-scale/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/first_scene.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sojin_testing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/words.html" afterPath="" />
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/comp225-bandermac.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/first_scene.js" afterPath="$PROJECT_DIR$/src/first_scene.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +17,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="first_scene.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/first_scene.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1795">
+              <caret line="243" column="22" lean-forward="false" selection-start-line="243" selection-start-column="22" selection-end-line="243" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -62,6 +60,7 @@
         <option value="$PROJECT_DIR$/js/StateLoad.js" />
         <option value="$PROJECT_DIR$/stephanie_testing.html" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/src/first_scene.js" />
       </list>
     </option>
   </component>
@@ -102,12 +101,28 @@
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comp225-bandermac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comp225-bandermac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -352,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554831588095</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cleaned up directories">
+      <created>1555613102696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555613102696</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -401,7 +423,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic initial &quot;loading&quot; state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created basic initial &quot;loading&quot; state" />
+    <MESSAGE value="cleaned up directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up directories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -451,11 +474,94 @@
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/first_scene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1795">
+          <caret line="243" column="22" lean-forward="false" selection-start-line="243" selection-start-column="22" selection-end-line="243" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>comp225-bandermac</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
