@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser.min.js"></script>
-    <script src="../node_modules/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
-    <script src="dist/phaser-ui-tools.js"></script>
-</head>
-<body>
-    <script type="text/javascript">
-
 var config = {
     type: Phaser.WEBGL,
     width: 1024,
@@ -107,8 +96,8 @@ var text1_animation_time = 0;
 function preload(){
 
     //load the audio asset
-    this.load.audio('theme','assets/creepy.wav');
-    this.load.audio('crash','assets/crash.wav');
+    this.load.audio('theme','../assets/creepy.wav');
+    this.load.audio('crash','../assets/crash.wav');
 
 }
 
@@ -166,8 +155,6 @@ function create() {
     this.sys.game.events.on('resize', function (width, height) {
     console.log('Game "resize" event', width, height);
     }, this);
-
-    var viewport = new uiWidgets.Viewport(this, 75, 75, 600, 260);
 }
 
 function update (time, delta){
@@ -198,16 +185,6 @@ function nextLine(game) {
         textDisplayDone = true;
         button1.visible =! button1.visible;
         button2.visible =! button2.visible;
-        var scrollbar = new uiWidgets.Scrollbar(
-            game,
-            viewport,
-            true,
-            true,
-            true,
-            trackImage,
-            barImage,
-            {'duration': 300, 'ease': Phaser.Easing.Quadratic.Out}
-        );
     }
 }
 
@@ -275,9 +252,3 @@ function actionOnClick2 (game) {
     nextWord(game);
     
 }
-
-
-
-    </script>
-</body>
-</html>
