@@ -110,7 +110,6 @@ function create() {
     text1 = this.add.text(50, 300, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
     nextLine(this);
-    nextWord(this);
 
     button1 = this.add.text(150, 500, 'Go to the top floor', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick1, this, 2, 1, 0)
     .setInteractive()
@@ -157,28 +156,27 @@ function create() {
 
 function update (time, delta){
     if(!textDisplayDone)
-    text1.y -= 0.015 * delta;
+        text1.y -= 0.015 * delta;
 }
 
 function nextLine(game) {
 
-    if (lineIndex != content[currentDecision].length)
-    {
+    if (lineIndex != content[currentDecision].length) {
 
-    //  Split the current line on spaces, so one word per array element
-    line = content[currentDecision][lineIndex].split('');
-    console.log(line)
+        //  Split the current line on spaces, so one word per array element
+        line = content[currentDecision][lineIndex].split('');
+        console.log(line)
 
-    //  Reset the word index to zero (the first word in the line)
-    wordIndex = 0;
+        //  Reset the word index to zero (the first word in the line)
+        wordIndex = 0;
 
-    //  Call the 'nextWord' function once for each word in the line (line.length)
-    //console.log(game);
+        //  Call the 'nextWord' function once for each word in the line (line.length)
+        //console.log(game);
 
-    game.time.addEvent({ delay: wordDelay, callback: () => nextWord(game), repeat: line.length -1, callbackScope: this});
+        game.time.addEvent({ delay: wordDelay, callback: () => nextWord(game), repeat: line.length -1, callbackScope: this});
 
-    //  Advance to the next line
-    lineIndex++;
+        //  Advance to the next line
+        lineIndex++;
     } else{
         textDisplayDone = true;
         button1.visible =! button1.visible;
@@ -191,7 +189,9 @@ function nextWord(game) {
     //text1.y -= 0.8;
 
     //  Add the next word onto the text string, followed by a space
-    if(line[wordIndex]){ text1.text = text1.text.concat(line[wordIndex]); }
+    if(line[wordIndex]) {
+        text1.text = text1.text.concat(line[wordIndex]);
+    }
 
     //  Advance the word index to the next word in the line
     wordIndex++;
@@ -228,11 +228,6 @@ function actionOnClick1 (game) {
     wordIndex = 0;
     lineIndex = 0;
     nextLine(game);
-    nextWord(game);
-    
-
-    
-    
 }
 
 function actionOnClick2 (game) {
@@ -247,6 +242,4 @@ function actionOnClick2 (game) {
     wordIndex = 0;
     lineIndex = 0;
     nextLine(game);
-    nextWord(game);
-    
 }
