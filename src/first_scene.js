@@ -113,12 +113,17 @@ function create() {
 
     button1 = this.add.text(300, 500, 'Go to the top floor', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick1, this, 2, 1, 0)
     .setInteractive()
-    .on('pointerdown', () => actionOnClick1(this) );
+    .on('pointerdown', () => actionOnClick1(this) )
+    .on('pointerover', () => actionOnHover1(this))
+    .on('pointerout', () => actionHoverOut1(this) );
     button1.visible =! button1.visible
 
     button2 = this.add.text(750, 500, 'Go to the Geology wing', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick2, this, 2, 1, 0)
     .setInteractive()
-    .on('pointerdown', () => actionOnClick2(this) );
+    .on('pointerdown', () => actionOnClick2(this) )
+    .on('pointerover', () => actionOnHover2(this))
+    .on('pointerout', () => actionHoverOut2(this) );
+
     button2.visible =! button2.visible
 
     //animation
@@ -243,3 +248,21 @@ function actionOnClick2 (game) {
     lineIndex = 0;
     nextLine(game);
 }
+
+function actionOnHover1 (game){
+    button1.setStyle({ fill: '#ff0'});
+}
+
+function actionOnHover2 (game){
+    button2.setStyle({ fill: '#ff0'});
+}
+
+function actionHoverOut1 (game){
+    button1.setStyle({ fill: '#c51b7d'});
+}
+
+function actionHoverOut2 (game){
+    button2.setStyle({ fill: '#c51b7d'});
+}
+
+
