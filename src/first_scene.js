@@ -1,6 +1,6 @@
 var config = {
     type: Phaser.WEBGL,
-    width: 1024,
+    width: 1250,
     height: 600,
     parent: 'container',
     plugins: {
@@ -47,7 +47,7 @@ var content = [
         "You glance to the backdoors \nonly to realize it is pitch black outside.",
         "\n\n\nThere is an eerie stillness to the place.\n\n\nThe building itself is completely dark", 
         "except for a light emanating from the top floor.\n\n\nSuddenly you hear a crash", 
-        "coming for the geology wing."
+        "coming from the geology wing."
     ],
 
     [//Scene 2a. Top
@@ -83,8 +83,8 @@ var content = [
 var line = [];
 var wordIndex = 0;
 var lineIndex = 0;
-var wordDelay = 120;
-var lineDelay = 120;
+var wordDelay = 100;
+var lineDelay = 100;
 var button1;
 var button2;
 var text1;
@@ -107,16 +107,16 @@ function create() {
     var theme = this.sound.add('theme');
     theme.play();
 
-    text1 = this.add.text(50, 300, '', { font: "14px Courier New", fill: "#ffffff", lineSpacing: 15 });
+    text1 = this.add.text(350, 300, '', { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 });
 
     nextLine(this);
 
-    button1 = this.add.text(150, 500, 'Go to the top floor', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick1, this, 2, 1, 0)
+    button1 = this.add.text(300, 500, 'Go to the top floor', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick1, this, 2, 1, 0)
     .setInteractive()
     .on('pointerdown', () => actionOnClick1(this) );
     button1.visible =! button1.visible
 
-    button2 = this.add.text(450, 500, 'Go to the Geology wing', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick2, this, 2, 1, 0)
+    button2 = this.add.text(750, 500, 'Go to the Geology wing', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick2, this, 2, 1, 0)
     .setInteractive()
     .on('pointerdown', () => actionOnClick2(this) );
     button2.visible =! button2.visible
@@ -124,7 +124,7 @@ function create() {
     //animation
     this.tweens.add({
         targets: text1,
-        x: 100,
+        x: 450,
         ease: 'Sine.easeInOut',
         yoyo: true,
         repeat: 3,
