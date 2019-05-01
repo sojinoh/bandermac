@@ -1,8 +1,7 @@
-class TextEvent{
-
+class TextEvent {
 	/**
 	Inputs:
-		line:       line content of the current TextEvent (String)
+		text:       content to display on the screen (String)
 		appearBy:   the way how the text is displayed. 
 				    Default is by 'character'. Other options 
 				    include by 'word' and 'line'. (String)
@@ -11,24 +10,40 @@ class TextEvent{
 		textStyle:  text style configuration object (style object)
 		effects:    list of effects applied on the text. (list of Effect object)
 	**/
-	constructor(line, appearBy = "character", xPos = 350, yPos = 300, 
-		textStyle = { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 }, effects = []){
-		
-		this.line = line;
-		this.appearBy = appearBy;
-		this.xPos = xPos;
-		this.yPos = yPos;
-		this.textStyle = textStyle;
-		this.effects = effects;
+	constructor(text, options = {}){
+		this.text = text;
+		this.options = Object.assign(
+			{
+				appearBy: "character",
+				x: undefined,
+				y: undefined, 
+				partDelay: 10,
+				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
+				effects: []
+			}, options);
+		this.finished = false;
 	}
 
-	addText(game) {
-		game.add.text(this.xPos, this.yPos, this.line, this.textStyle);
+	go(game) {
+		game.textX = this.options.x || game.textX;
+		game.textY = this.options.y || game.textY;
+		let textSprite = game.add.text(game.textX, game.textY, '', this.options.textStyle);
+		game.textY += 20;
+		this.nextPart(game, textSprite, this.text.split(''), 0);
 	}
 
-	runEffects() {
-		// for (var effect in this.effects):
-		// 	if (effect.name === 'tweens'):
-		// 		this.game.tweens.add(effect.configuration);
+	nextPart(game, textSprite, parts, partIndex) {
+	    if(parts[partIndex]) {
+	        textSprite.text += parts[partIndex];
+
+console.log(this.options.partDelay)
+	        game.time.addEvent({
+	        	delay: this.options.partDelay,
+	        	callback: () => this.nextPart(game, textSprite, parts, partIndex + 1),
+	        	callbackScope: this
+	        });
+	    } else {
+	    	this.finished = true;
+	    }
 	}
 }

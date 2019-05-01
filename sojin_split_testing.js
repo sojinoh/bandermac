@@ -38,101 +38,51 @@ var config = {
 
 new Phaser.Game(config);
 
-var content = [
-    [//Scene 1 Amnesia:
-        "Your eyes gradually open \nas you slowly float into consciousness.\n\n\nWith your head pounding",
-    ],
-
-    [//Scene 2a. Top
-
-    ],
-
-    [//Scene 2b. Dino (1)
-
-    ],
-
-    [//Scene 2b. Dino (2)
-       
+var scene = {
+    // background: "#df1432",  // for example
+    events: [
+        new TextEvent("Your eyes gradually open", { x: 100, y: 50, partDelay: 60 }),
+        new TextEvent("as you slowly float into consciousness.", { partDelay: 30 }),
+        // new SoundEvent("crash"),
+        // new PauseEvent(1.2),
+        new TextEvent("With your head pounding", { y: 300 }),
     ]
+};
 
-];
-
-
-var currentLine = [];
-var textOfLines = [];
-
-var wordIndex = 0;
-var lineIndex = 0;
-var currentDecision = 0;
-
-var wordDelay = 100;
-var lineDelay = 100;
-var textDisplayDone = false;
+var eventPollingInterval = 100;
+var currentEventIndex = -1;
 
 
-function preload(){
-
+function preload() {
     //load the audio asset
     this.load.audio('theme','assets/creepy.wav');
     this.load.audio('crash','assets/crash.wav');
-
 }
 
-
 function create() {
-
     var theme = this.sound.add('theme');
     theme.play();
 
-    nextLine(this);
+    this.textX = 50;
+    this.textY = 20;
 
+    checkEvent(this);
 }
 
-function nextLine(game) {
-
-    textOfLines[lineIndex] = new TextEvent (line = '');
-    textOfLines[lineIndex].addText(game);
-
-    if (lineIndex != content[currentDecision].length) {
-
-        //  Split the current line on spaces, so one word per array element
-        currentLine = content[currentDecision][lineIndex].split('');
-
-        //  Reset the word index to zero (the first word in the line)
-        wordIndex = 0;
-
-        //  Call the 'nextWord' function once for each word in the line (line.length)
-        game.time.addEvent({ delay: wordDelay, callback: () => nextWord(game), repeat: currentLine.length -1, callbackScope: this});
-
-    } else{
-        textDisplayDone = true;
+function checkEvent(game){
+    if (currentEventIndex < 0 || scene.events[currentEventIndex].finished) {
+        currentEventIndex++; 
+        scene.events[currentEventIndex].go(game);
     }
+
+    game.time.addEvent({
+        delay: eventPollingInterval,
+        callback: () => checkEvent(game)
+    });
 }
 
-function nextWord(game) {
-
-    //  Add the next word onto the text string, followed by a space
-    if(currentLine[wordIndex]) {
-        textOfLines[lineIndex].line = textOfLines[lineIndex].line.concat(currentLine[wordIndex]);
-        textOfLines[lineIndex].addText(game);
-
-    }
-
-    //  Advance the word index to the next word in the line
-    wordIndex++;
-
-    //  Last word?
-    if (wordIndex === currentLine.length)
-    {
-        //  Add a carriage return
-        textOfLines[lineIndex].line = textOfLines[lineIndex].line.concat("\n");
 
 
-        //  Get the next line after the lineDelay amount of ms has elapsed
-        game.time.addEvent({ delay: lineDelay, callback: () => nextLine(game), callbackScope: this});
 
-        //  Advance to the next line
-        lineIndex++;
-    }
 
-}
+

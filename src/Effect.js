@@ -22,4 +22,6 @@ class Effect{
 		this.textStyle = textStyle;
 		this.effects = effects;
 	}
+
+	
 }

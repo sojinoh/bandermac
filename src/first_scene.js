@@ -112,17 +112,17 @@ function create() {
     nextLine(this);
 
     button1 = this.add.text(300, 500, 'Go to the top floor', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick1, this, 2, 1, 0)
-    .setInteractive()
-    .on('pointerdown', () => actionOnClick1(this) )
-    .on('pointerover', () => actionOnHover1(this))
-    .on('pointerout', () => actionHoverOut1(this) );
+        .setInteractive()
+        .on('pointerdown', () => actionOnClick1(this) )
+        .on('pointerover', () => actionOnHover1(this))
+        .on('pointerout', () => actionHoverOut1(this) );
     button1.visible =! button1.visible
 
     button2 = this.add.text(750, 500, 'Go to the Geology wing', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick2, this, 2, 1, 0)
-    .setInteractive()
-    .on('pointerdown', () => actionOnClick2(this) )
-    .on('pointerover', () => actionOnHover2(this))
-    .on('pointerout', () => actionHoverOut2(this) );
+        .setInteractive()
+        .on('pointerdown', () => actionOnClick2(this) )
+        .on('pointerover', () => actionOnHover2(this))
+        .on('pointerout', () => actionHoverOut2(this) );
 
     button2.visible =! button2.visible
 
@@ -147,7 +147,7 @@ function create() {
 
     //resizing the window
     this.events.on('resize', function (width, height) {
-    console.log('Scene "resize" event', width, height);
+        console.log('Scene "resize" event', width, height);
     
         //Adjust the boundary
         this.physics.world.setBounds(0, 0, width, height);
@@ -168,7 +168,7 @@ function nextLine(game) {
 
     if (lineIndex != content[currentDecision].length) {
 
-        //  Split the current line on spaces, so one word per array element
+        //  Split the current line by characters, so one word per array element
         line = content[currentDecision][lineIndex].split('');
         console.log(line)
 
