@@ -31,6 +31,7 @@ new Phaser.Game(config);
 
 var eventPollingInterval = 100;
 var currentSceneIndex = 0;
+var currentSceneDecisionIndex = 0;
 var currentEventIndex = -1;
 
 
@@ -48,14 +49,29 @@ function create() {
     this.textX = 300;
     this.textY = 300;
 
+    this.button1 = this.add.text(300, 500, '', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick, this, 2, 1, 0)
+        .setInteractive()
+        .on('pointerdown', () => actionOnClick(this, 0) )
+        .on('pointerover', () => actionOnHover(this, "button1"))
+        .on('pointerout', () => actionHoverOut(this, "button1"));
+
+    this.button2 = this.add.text(750, 500, '', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick, this, 2, 1, 0)
+        .setInteractive()
+        .on('pointerdown', () => actionOnClick(1) )
+        .on('pointerover', () => actionOnHover(this, "button2"))
+        .on('pointerout', () => actionHoverOut(this, "button2"));
+
+    this.button1.visible = false;
+    this.button2.visible = false;
+
     checkEvent(this);
 }
 
 function checkEvent(game){
-    if (currentEventIndex < 0 || (story[currentSceneIndex][currentEventIndex].finished
-        && currentEventIndex+1 < story[currentSceneIndex].length)) {
+    if (currentEventIndex < 0 || (story[currentSceneIndex][currentSceneDecisionIndex][currentEventIndex].finished
+        && currentEventIndex+1 < story[currentSceneIndex][currentSceneDecisionIndex].length)) {
         currentEventIndex++; 
-        story[currentSceneIndex][currentEventIndex].go(game);
+        story[currentSceneIndex][currentSceneDecisionIndex][currentEventIndex].go(game);
     }
 
     game.time.addEvent({
@@ -65,10 +81,43 @@ function checkEvent(game){
 }
 
 function update (time, delta){
-    if(!story[currentSceneIndex][story[currentSceneIndex].length-1].finished){
+    if(!story[currentSceneIndex][currentSceneDecisionIndex][story[currentSceneIndex][currentSceneDecisionIndex].length-1].finished){
+        //when the whole scene is not shown yet
         this.scrollContainer.y -= 0.02 * delta;
+    } else{
+        //show the decision buttons when the scene is over
+        this.button1.text = decisions[currentSceneIndex][0];
+        this.button2.text = decisions[currentSceneIndex][1];
+        this.button1.visible = true;
+        this.button2.visible = true;
     }
+
 }
+
+function actionOnClick (game, decisionChosen) {
+    console.log("clicked");
+    currentSceneIndex += 1;
+    currentSceneDecisionIndex = decisionChosen;
+    currentEventIndex = -1;
+    this.scrollContainer.clear();
+    this.button1.visible = false;
+    this.button2.visible = false;
+
+    checkEvent(game);
+}
+
+
+function actionOnHover (game, button){
+    console.log("hoveron");
+    this.window[button].setStyle({ fill: '#ff0'});
+}
+
+function actionHoverOut (game, button){
+    console.log("hoverout");
+    this.window[button].setStyle({ fill: '#c51b7d'});
+}
+
+
 
 
 
