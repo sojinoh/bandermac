@@ -24,8 +24,6 @@ var story = [
         [//scene 2b
 
         ]
-    ],
-
-
+    ]
 
 ]
