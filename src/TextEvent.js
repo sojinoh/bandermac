@@ -17,7 +17,7 @@ class TextEvent {
 				appearBy: "character",
 				x: undefined,
 				y: undefined, 
-				partDelay: 10,
+				partDelay: 35,
 				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
 				effects: []
 			}, options);
@@ -28,7 +28,8 @@ class TextEvent {
 		game.textX = this.options.x || game.textX;
 		game.textY = this.options.y || game.textY;
 		let textSprite = game.add.text(game.textX, game.textY, '', this.options.textStyle);
-		game.textY += 20;
+		game.textY += 50;
+		game.scrollContainer.add(textSprite);
 		this.nextPart(game, textSprite, this.text.split(''), 0);
 	}
 
@@ -36,7 +37,6 @@ class TextEvent {
 	    if(parts[partIndex]) {
 	        textSprite.text += parts[partIndex];
 
-console.log(this.options.partDelay)
 	        game.time.addEvent({
 	        	delay: this.options.partDelay,
 	        	callback: () => this.nextPart(game, textSprite, parts, partIndex + 1),
