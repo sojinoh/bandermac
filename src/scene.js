@@ -58,8 +58,8 @@ var currentEventIndex = -1;
 
 function preload() {
     //load the audio asset
-    this.load.audio('theme','assets/creepy.wav');
-    this.load.audio('crash','assets/crash.wav');
+    this.load.audio('theme','../assets/creepy.wav');
+    this.load.audio('crash','../assets/crash.wav');
 }
 
 function create() {
