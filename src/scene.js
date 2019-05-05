@@ -33,6 +33,8 @@ var eventPollingInterval = 100;
 var currentSceneIndex = 0;
 var currentSceneDecisionIndex = 0;
 var currentEventIndex = -1;
+var button1;
+var button2;
 
 
 function preload() {
@@ -46,23 +48,23 @@ function create() {
     theme.play();
 
     this.scrollContainer = this.add.container(this.textX, this.textY);
-    this.textX = 300;
+    this.textX = 250;
     this.textY = 300;
 
-    this.button1 = this.add.text(300, 500, '', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick, this, 2, 1, 0)
+    button1 = this.add.text(300, 500, decisions[currentSceneIndex][0], {font: "16px Courier New", fill: "#c51b7d"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this, 0) )
         .on('pointerover', () => actionOnHover(this, "button1"))
         .on('pointerout', () => actionHoverOut(this, "button1"));
 
-    this.button2 = this.add.text(750, 500, '', {font: "16px Courier New", fill: "#c51b7d"},actionOnClick, this, 2, 1, 0)
+    button2 = this.add.text(750, 500, decisions[currentSceneIndex][0], {font: "16px Courier New", fill: "#c51b7d"})
         .setInteractive()
-        .on('pointerdown', () => actionOnClick(1) )
+        .on('pointerdown', () => actionOnClick(this, 1) )
         .on('pointerover', () => actionOnHover(this, "button2"))
         .on('pointerout', () => actionHoverOut(this, "button2"));
 
-    this.button1.visible = false;
-    this.button2.visible = false;
+    button1.visible = false;
+    button2.visible = false;
 
     checkEvent(this);
 }
@@ -86,10 +88,10 @@ function update (time, delta){
         this.scrollContainer.y -= 0.02 * delta;
     } else{
         //show the decision buttons when the scene is over
-        this.button1.text = decisions[currentSceneIndex][0];
-        this.button2.text = decisions[currentSceneIndex][1];
-        this.button1.visible = true;
-        this.button2.visible = true;
+        button1.text = decisions[currentSceneIndex][0];
+        button2.text = decisions[currentSceneIndex][1];
+        button1.visible = true;
+        button2.visible = true;
     }
 
 }
@@ -99,9 +101,9 @@ function actionOnClick (game, decisionChosen) {
     currentSceneIndex += 1;
     currentSceneDecisionIndex = decisionChosen;
     currentEventIndex = -1;
-    this.scrollContainer.clear();
-    this.button1.visible = false;
-    this.button2.visible = false;
+    game.scrollContainer.removeAll();
+    button1.visible = false;
+    button2.visible = false;
 
     checkEvent(game);
 }
@@ -109,12 +111,12 @@ function actionOnClick (game, decisionChosen) {
 
 function actionOnHover (game, button){
     console.log("hoveron");
-    this.window[button].setStyle({ fill: '#ff0'});
+    window[button].setStyle({ fill: '#ff0'});
 }
 
 function actionHoverOut (game, button){
     console.log("hoverout");
-    this.window[button].setStyle({ fill: '#c51b7d'});
+    window[button].setStyle({ fill: '#c51b7d'});
 }
 
 

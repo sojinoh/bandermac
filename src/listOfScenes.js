@@ -24,10 +24,21 @@ var story = [
 
     [//scene 2 (index:1)
         [//scene 2a (index: 1,0)
-
+            new TextEvent("You stand carefully.", {}),
+            new TextEvent("                     ", {}),
+            new TextEvent("You feel slightly off balance as you walk up the main staircase to the third floor.", {}),
+            new TextEvent("                     ", {}),
+            new TextEvent("Sitting at the one of the circular tables of the top floor is a figure of a man.", {}),
+            new TextEvent("                     ", {}),
+            new TextEvent("From his young features, you guess he must be a student.", {}),
+            new TextEvent("You walk over to him.", {}),
         ],
         [//scene 2b
-
+            new TextEvent("You stand carefully.", {}),
+            new TextEvent("You feel slightly off balance as you walk down the stairs towards the crash.", {}),
+            new TextEvent("                     ", {}),
+            new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
+            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur’s teeth.", {}),
         ]
     ]
 
@@ -40,7 +51,13 @@ var decisions = [
     ],
 
     [//scene 2
+        "Crawl through",
+        "Crawl through"
+    ], 
 
+    [
+        "Crawl through",
+        "Crawl through"
     ]
 
 ]
