@@ -185,9 +185,52 @@ var story = {
         ]
     },
 
+    "devgarden": {
+        events: [
+            //[A: water drip;]
+            new TextEvent("Inside the stone door is a small crawl space.", {}),
+            new TextEvent("After crawling for what feels like hours, you reach a hatch and climb out.", {}),
+            //[A: crawl/dragging, shuffle, hatch/door opens; V: scroll up]
+            new TextEvent("You realize you are in the basement of the library.", {}),
+            new TextEvent("It is eerily quiet, even for a library, and only the backup generator lights are on.", {}),
+            //[A: silence, then whirring; V: slight light]
+            new TextEvent("You walk upstairs and hear a sound coming from the second floor.", {}),
+            //[A: footsteps, typing/clatter; V: scroll up]
+            new TextEvent("As you walk up, the clattering sound gets louder.", {}),
+            //[A: louder clattering]
+            new TextEvent("You notice a figure in the dimly lit idea lab. For some reason, this person seems familiar.", {}),
+            //[V: small zoom in and out]
+            new TextEvent("Somehow, you remember that this person’s name is Paul, but that is all that you remember.", {}),
+            new TextEvent("As you get closer, you realize that Paul is frantically typing on an unconnected keyboard.", {}),
+            //[A: footsteps, clattering/typing; V: bigger text?]
+            new TextEvent("He stands there typing, staring straight into nothingness with bloodshot eyes.", {}),
+            new TextEvent(" He is muttering… “Devvvv Gardennn. Deeeeev Garden.”", {}),
+            //[A: muttering/whispers
+            new TextEvent("He appears to be in a trance.", {}),
+            //[V: Hypnotic movement]
+            new TextEvent("You try to get his attention, but it is no use, he is transfixed.", {}),
+            new TextEvent("You remember that you picked up an item earlier.", {}),
+            new TextEvent("You could take out the item.", {}),
+            new TextEvent("Or Paul might be a lost cause.", {}),
+            new TextEvent("You could move on and hold on to the item.", {}),
+        ],
+        decisions: [
+            {text: "Take out the item", scene: "item"}, //[A: shuffling/grabbing; V: ??]
+            {text: "Move on", scene: "moveon"}, //[A: footsteps; V: scroll horizontal]
+        ]
+    },
 
+    "item": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
 
-    "scene": {
+    "moveon": {
         events: [
             new TextEvent(" ", {}),
         ],
@@ -207,6 +250,7 @@ var story = {
         ]
     },
 
+
     "scene": {
         events: [
             new TextEvent(" ", {}),
@@ -216,5 +260,28 @@ var story = {
             {text: "button", scene: "next"},
         ]
     },
+
+
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
 
 }
