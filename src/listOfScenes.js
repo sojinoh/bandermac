@@ -216,7 +216,7 @@ var story = {
         ],
         decisions: [
             {text: "Take out the item", scene: "item"}, //[A: shuffling/grabbing; V: ??]
-            {text: "Move on", scene: "moveon"}, //[A: footsteps; V: scroll horizontal]
+            {text: "Move on", scene: "squirrels"}, //[A: footsteps; V: scroll horizontal]
         ]
     },
 
@@ -244,9 +244,85 @@ var story = {
         ]
     },
 
-    //stopped at scene 6a (need to do moveon (its options) and (bell/median paths)
+    //stopped at scene 6a (need to do squirrels (its options) and (bell/median paths)
+    //----------------------------------------------------------------------------------- (BELL/MEDIAN)
 
-    "moveon": {
+    "squirrels": {
+        events: [
+            //[A: whirring;]
+            new TextEvent("You decide to leave the orange in your pocket, you might need it later.", {}),
+            new TextEvent("Paul mutters something about needing to check Slack, still staring into the abyss.", {}),
+            //[A: silence; V: pause]
+            new TextEvent("Suddenly you hear a bang, Paul’s eyes fixate on you, and he yells “THEY’RE COMING! RUN!”", {}),
+            //[A: bang, (sudden noise?), yell?; V: one big shake]
+            new TextEvent("Out of nowhere, squirrels climb out from bookcases in every direction and run towards you.", {}),
+            //[A: clatter, squirrel scatter, mini footsteps, heartbeat V: ???]
+            new TextEvent("You grab Paul’s sleeve and try to get him to follow you, but it is no use.", {}),
+            new TextEvent("Squirrels start to pounce on Paul, and he weakly says, “Go on without me… I… still… have to fix… the Bonsai UI… Go to… the LC”", {}),
+            new TextEvent("Do you run away or try to save Paul?", {}),
+            //[A: squirrel noises, thuds, yelp? ]
+        ],
+        decisions: [
+            {text: "Run away", scene: "runaway"}, //[A: running; V: ???]
+            {text: "Save Paul", scene: "savepaul"}, //[A: bang/clash; V: ???]
+        ]
+    },
+
+    "runaway": {
+        events: [ //scene 6.1
+            new TextEvent("You listen to Paul and run away.", {}),
+            //[A: running; V: scroll fast]
+            new TextEvent("You run without looking back, and end up in the Leonard Center.", {}),
+            new TextEvent("The building is empty and dark, but you can still hear the ghostly grunts of past football players coming from the gym.", {}),
+            //[A: grunts, ghost; V: flicker light]
+            new TextEvent("You wonder why Paul would want you to come to the LC.", {}),
+            //[A: background noise; V: pause]
+            new TextEvent("You search for clues.", {}),
+            new TextEvent("As you’re walking, you miss a wet floor sign and you slip and hit your head.", {}),
+            //[A: slip/fall, thud; V: after display → slip, text slides up and shakes]
+            new TextEvent("After a few seconds, you come to and stand back up.", {}),
+            //[A: stand up;]
+            new TextEvent("Somehow, hitting your head helped your memory a bit.", {}),
+            new TextEvent("You remember that you took a software class with Paul.", {}),
+            new TextEvent("Maybe something from his class could help you figure out why he sent you here.", {}),
+            new TextEvent("You ponder for a moment.", {}),
+            //[ V: pause text 3 seconds]
+            new TextEvent("You remember Paul would often talk about the minimum viable product… the MVP.", {}),
+            new TextEvent("You got it!", {}),
+            //[A: lightbulb/ding; V: light flash]
+            new TextEvent("Where are the MVPs displayed at the LC? ", {}),
+            new TextEvent("Do you go to the Hall of Fame room or do you find the banners upstairs?", {}),
+        ],
+        decisions: [
+            {text: "Hall of Fame room", scene: "halloffame"}, //[A: footsteps; V: scroll up/side]
+            {text: "Banner upstairs", scene: "banner"}, //[A: footsteps; V: scroll up]
+        ]
+    },
+
+
+    "savepaul": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+
+    "halloffame": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+
+    "banner": {
         events: [
             new TextEvent(" ", {}),
         ],
@@ -266,6 +342,15 @@ var story = {
         ]
     },
 
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
 
     "scene": {
         events: [
@@ -277,6 +362,15 @@ var story = {
         ]
     },
 
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
 
     "scene": {
         events: [
@@ -288,6 +382,45 @@ var story = {
         ]
     },
 
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+    "scene": {
+        events: [
+            new TextEvent(" ", {}),
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
 
     "scene": {
         events: [
