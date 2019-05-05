@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Updated scene list (got to scene 6a)">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Updated scene list (got to squirrel scene &amp; savepaul is next)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
-              <caret line="305" column="10" lean-forward="true" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
+              <caret line="305" column="10" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -365,6 +364,7 @@
       <workItem from="1557088733688" duration="1784000" />
       <workItem from="1557090553585" duration="721000" />
       <workItem from="1557091626877" duration="1795000" />
+      <workItem from="1557093485536" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -422,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557091260302</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated scene list (got to squirrel scene &amp; savepaul is next)">
+      <created>1557093523403</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557093523403</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15152000" />
+    <option name="totallyTimeSpent" value="15788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -448,8 +455,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5023847" side_tool="true" visible="true" weight="0.120781526" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49761525" visible="true" weight="0.120781526" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50317967" side_tool="true" visible="true" weight="0.120781526" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49682036" visible="true" weight="0.120781526" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -476,7 +483,8 @@
     <MESSAGE value="reverted changes" />
     <MESSAGE value="Updated scene list" />
     <MESSAGE value="Updated scene list (got to scene 6a)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated scene list (got to scene 6a)" />
+    <MESSAGE value="Updated scene list (got to squirrel scene &amp; savepaul is next)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated scene list (got to squirrel scene &amp; savepaul is next)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -524,7 +532,7 @@
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
-          <caret line="305" column="10" lean-forward="true" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
+          <caret line="305" column="10" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
         </state>
       </provider>
     </entry>
