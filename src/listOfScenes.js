@@ -221,14 +221,30 @@ var story = {
     },
 
     "item": {
-        events: [
-            new TextEvent(" ", {}),
+        events: [  //scene 6a
+            new TextEvent("You remember the orange you picked up earlier and take it out.", {}),
+            //[A: shuffling/grabbing;]
+            new TextEvent("You hover it under Paul’s nose and although he is still staring, you notice him wince whenever the orange gets close.", {}),
+            //[A: wind/woosh?; V: slight pulse (twice)]
+            new TextEvent("You begin to peel the orange, and Paul immediately snaps out of it and lets out a disgusted gasp, “agh, get that away from me!”", {}),
+            //[A: groan/gasp; V: pulse/quick shake]
+            //[V: text message]
+            new TextEvent("You ask, “Who am I? What is going on at Macalester? Why is everything so weird?”", {}),
+            new TextEvent("Paul smiles, “Ah, what you want is a clue. Solve this riddle and there might be an answer just for you.”", {}),
+            new TextEvent("You sigh.", {}),
+            //[A: sigh; V: pause]
+            new TextEvent("Paul continues, “A first-year’s true path. Where one winds up at last. To strike or to hit. Only happiness and joy be fit.”", {}),
+            new TextEvent("You think for a moment.", {}),
+            //[A: silence, hmm?; V: game pauses 2.5 seconds]
+            new TextEvent("Is he talking about the bell or the Dupre median?", {}),
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            {text: "The bell", scene: "bell"}, // [A: small ding; V: fade to black]
+            {text: "The Dupre median", scene: "median"}, //[A: footsteps; V: fade to black]
         ]
     },
+
+    //stopped at scene 6a (need to do moveon (its options) and (bell/median paths)
 
     "moveon": {
         events: [
