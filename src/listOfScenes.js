@@ -577,9 +577,145 @@ var story = {
         ]
     },
 
+    "bellone": {
+        events: [
+            new TextEvent("With one ring, the bell echoes throughout campus, and quiet claps and cheers follow.", {}),
+            //[A: bell ring, claps, cheers; V: short pause]
+            new TextEvent("A piece of paper falls from inside the bell and glides into your hands.", {}),
+            //[A: paper flutter; V: zoom/text bigger for note]
+            new TextEvent("You read the clue, “C U @ Kagin bb.”", {}),
+            //[A: kiss sound]
+            new TextEvent("You scratch your head and try to remember where you’ve heard the word Kagin before.", {}),
+            new TextEvent("Your head is still sore.", {}),
+            //[A: scratch; V: pound/pulse]
+            new TextEvent("You walk around campus trying to figure out what the note means.", {}),
+            new TextEvent("Is it some sort of code? Maybe a puzzle?", {}),
+            //[V: pause]
+            new TextEvent("As you continue your search, you walk by some dorm buildings and notice a building labeled, “Kagin.”", {}),
+            new TextEvent("You found it!", {}),
+            new TextEvent("Could this be the answer to your clue, or perhaps to your identity?", {}),
+            //[A: footsteps;]
+            new TextEvent("As you walk closer to Kagin, you see some hooded figures walking towards the Dupre median.", {}),
+            new TextEvent("Do you follow them or continue to Kagin?", {}),
+        ],
+        decisions: [
+            {text: "Follow them", scene: "median"}, //[A: kid chuckles creepy; V: ???]
+            {text: "Continue to Kagin", scene: "kagin"}, //[A: party music; V: light flash]
+        ]
+    },
+
+    "belltwo": {
+        events: [
+            //[A: bell ringing;]
+            new TextEvent("After ringing the bell again, the floor beneath you opens up and you fall in.", {}),
+            //[V: text scrolls up fast like falling]
+            new TextEvent("The bell continues to ring.", {}),
+            //[A: bell ringing transitions to alarm beeping; V: Transitions to white background with black text]
+            new TextEvent("The falling jolts you awake.", {}),
+            //[A: alarm beeps; V: jolt text]
+            new TextEvent("You wake up in your Dupre dorm and realize it was all just a dream.", {}),
+            new TextEvent("You are going to be late for class, so you quickly get ready and rush out of the door.", {}),
+            //[A: wind]
+            new TextEvent("As you leave your room, out of the corner of your eye, you notice an orange sitting on the table…", {}),
+            //[A: door close; V: orange] (End screen)
+        ],
+        decisions: [
+            //END SCREEN
+        ]
+    },
+
+    "kagin": {
+        events: [
+            new TextEvent("You enter the revolving doors of Kagin.", {}),
+            //[A: revolving door sound; V: rotation of text]
+            new TextEvent("Upstairs, you see disco lights and hear music bumping.", {}),
+            //[A: music bumping; V: colorful flash (disco)]
+            new TextEvent("Downstairs, you see a dim light flickering and hear no noise.", {}),
+            //[A: muffled music?; V: light flicker]
+            new TextEvent("Maybe someone upstairs could help your memory.", {}),
+            new TextEvent("But maybe the secrets lie beneath.", {}),
+            new TextEvent("Who knows?", {}),
+            new TextEvent("Do you go upstairs or downstairs?", {}),
+        ],
+        decisions: [
+            {text: "Go upstairs", scene: "upstairs"}, //[A: music; V: disco flash]
+            {text: "Go downstairs", scene: "downstairs"}, //[A: footsteps; V: fade to black or flicker]
+        ]
+    },
+
+
+    "upstairs": {
+        events: [
+            new TextEvent("As you walk up the stairs, the music gets louder and the lights get brighter.", {}),
+            //[A: music loud; V: flash/disco]
+            new TextEvent("You see a sea of people dancing, yelling, and attempting to relate to each other.", {}),
+            //[A: music, voice chatter]
+            new TextEvent("You read a sign that says, “Masquerade Kagin.”", {}),
+            new TextEvent("You walk inside.", {}),
+            //[A: music/footsteps???, V:pause]
+            new TextEvent("Without a mask, you are standing out and you feel like you are getting some looks.", {}),
+            new TextEvent("You could join the crowd on the dance floor, but you also notice that there is no line for the restrooms.", {}),
+            new TextEvent("Do you enter the dance floor or go to the restroom?", {}),
+        ],
+        decisions: [
+            {text: "Enter the dance floor", scene: "dancefloor"}, //[A: music; V: flash]
+            {text: "Go to the restroom", scene: "restroom"}, //[A: music fades; V: ???]
+        ]
+    },
+
+    "downstairs": {
+        events: [
+            new TextEvent("As you go downstairs, you hear muffled voices.", {}),
+            //[A: muffled voices; V: scroll down, ??]
+            new TextEvent("You open a door and walk into the main room.", {}),
+            new TextEvent("Someone hears you and you hear a “shh.”", {}),
+            //[A: footsteps, door open, shh;]
+            new TextEvent("The voices go quiet.", {}),
+            new TextEvent("Somewhat suspicious, you walk forward.", {}),
+            //[A: footsteps; V: pause 3 secs]
+            new TextEvent("Suddenly fifteen people jump out and yell, “Surprise! Happy Birthday!”", {}),
+            //[A: surprise or bday sounds; V: balloon colors/confetti?]
+            new TextEvent("They come out with a birthday cake and start singing.", {}),
+            //[A: bday song]
+            new TextEvent("Sadly, the cake does not have your name on it so you are still clueless as to who you are.", {}),
+            new TextEvent("Anyway, you decide to play along and enjoy yourself.", {}),
+            //[A: bday music, cheers; V: fades to white ending screen with “Happy Birthday!” on it]
+        ],
+        decisions: [
+           //END SCREEN
+        ]
+    },
+
+
+    "dancefloor": {
+        events: [
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+            new TextEvent(" ", {}),
+
+            //You walk into the crowd of people and head towards the center of the dancefloor. [A: kagin music, voice chatter; V: flash/disco] You have to push through people as the crowd thickens. A sweaty first-year taps on you and drunkenly asks to dance, you turn away and head deeper into the center. [A: music; V: slight swaying] Finally you reach the center. The music is loud and there are people all around you. [A: music louder; V: text margins tighter] You are unsure why you wanted to go here, but you felt compelled to. You wait and dance. [V: dance effect??] You feel another tap on your shoulder and are already rolling your eyes. You turn and realize that it is someone new, someone that feels almost familiar.  She says something to you, but you cannot hear it over the music. “WHAT?” She motions for you to follow her. [A: music chattering] You two end up outside of the crowd, where the music is far enough that you can hear. She says, “Hey aren’t you in my software dev class?” You are unsure, but you decide to play along and nod. [V: text nod] She continues, “I think you left your red journal last class. I saw someone drop it off in the Free Swap.” You thank her and try to ask her more about your identity, but her friends pull her away, making confused glances at her and giving you weird looks. Do you go to the Free Swap or follow her?
+        ],
+        decisions: [
+            {text: "button", scene: "next"},
+            {text: "button", scene: "next"},
+        ]
+    },
+
+
     "scene": {
         events: [
             new TextEvent(" ", {}),
+
         ],
         decisions: [
             {text: "button", scene: "next"},
@@ -590,6 +726,7 @@ var story = {
     "scene": {
         events: [
             new TextEvent(" ", {}),
+
         ],
         decisions: [
             {text: "button", scene: "next"},
@@ -600,6 +737,7 @@ var story = {
     "scene": {
         events: [
             new TextEvent(" ", {}),
+
         ],
         decisions: [
             {text: "button", scene: "next"},

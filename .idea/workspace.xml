@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Updated scene list (got to squirrel scene &amp; savepaul is next)">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
     </list>
@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="575" column="27" selection-start-line="575" selection-start-column="27" selection-end-line="575" selection-end-column="27" />
+            <state relative-caret-position="328">
+              <caret line="704" selection-start-line="704" selection-end-line="704" />
             </state>
           </provider>
         </entry>
@@ -92,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,6 +113,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -372,7 +372,8 @@
       <workItem from="1557105183898" duration="1502000" />
       <workItem from="1557108411112" duration="1124000" />
       <workItem from="1557112148360" duration="1111000" />
-      <workItem from="1557166071537" duration="133000" />
+      <workItem from="1557166071537" duration="1774000" />
+      <workItem from="1557175110365" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -444,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557095908659</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;">
+      <created>1557166262653</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557166262653</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22706000" />
+    <option name="totallyTimeSpent" value="25080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -470,8 +478,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50953895" side_tool="true" visible="true" weight="0.120781526" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49046105" visible="true" weight="0.120781526" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50953895" side_tool="true" weight="0.120781526" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49046105" visible="true" weight="0.120781526" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -499,7 +507,8 @@
     <MESSAGE value="Updated scene list" />
     <MESSAGE value="Updated scene list (got to scene 6a)" />
     <MESSAGE value="Updated scene list (got to squirrel scene &amp; savepaul is next)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated scene list (got to squirrel scene &amp; savepaul is next)" />
+    <MESSAGE value="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -546,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="575" column="27" selection-start-line="575" selection-start-column="27" selection-end-line="575" selection-end-column="27" />
+        <state relative-caret-position="328">
+          <caret line="704" selection-start-line="704" selection-end-line="704" />
         </state>
       </provider>
     </entry>
