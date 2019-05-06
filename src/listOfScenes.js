@@ -689,59 +689,226 @@ var story = {
 
     "dancefloor": {
         events: [
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-            new TextEvent(" ", {}),
-
-            //You walk into the crowd of people and head towards the center of the dancefloor. [A: kagin music, voice chatter; V: flash/disco] You have to push through people as the crowd thickens. A sweaty first-year taps on you and drunkenly asks to dance, you turn away and head deeper into the center. [A: music; V: slight swaying] Finally you reach the center. The music is loud and there are people all around you. [A: music louder; V: text margins tighter] You are unsure why you wanted to go here, but you felt compelled to. You wait and dance. [V: dance effect??] You feel another tap on your shoulder and are already rolling your eyes. You turn and realize that it is someone new, someone that feels almost familiar.  She says something to you, but you cannot hear it over the music. “WHAT?” She motions for you to follow her. [A: music chattering] You two end up outside of the crowd, where the music is far enough that you can hear. She says, “Hey aren’t you in my software dev class?” You are unsure, but you decide to play along and nod. [V: text nod] She continues, “I think you left your red journal last class. I saw someone drop it off in the Free Swap.” You thank her and try to ask her more about your identity, but her friends pull her away, making confused glances at her and giving you weird looks. Do you go to the Free Swap or follow her?
+            new TextEvent("You walk into the crowd of people and head towards the center of the dance floor.", {}),
+            //[A: kagin music, voice chatter; V: flash/disco]
+            new TextEvent("You have to push through people as the crowd thickens.", {}),
+            new TextEvent("A sweaty first-year taps on you and drunkenly asks to dance, you turn away and head deeper into the center.", {}),
+            //[A: music; V: slight swaying]
+            new TextEvent("Finally you reach the center.", {}),
+            new TextEvent("The music is loud and there are people all around you.", {}),
+            //[A: music louder; V: text margins tighter]
+            new TextEvent("You are unsure why you wanted to go here, but you felt compelled to.", {}),
+            new TextEvent("You wait and dance.", {}),
+            //[V: dance effect??]
+            new TextEvent("You feel another tap on your shoulder and are already rolling your eyes.", {}),
+            new TextEvent("You turn and realize that it is someone new, someone that feels almost familiar.", {}),
+            new TextEvent("She says something to you, but you cannot hear it over the music.", {}),
+            new TextEvent("“WHAT?”", {}),
+            new TextEvent("She motions for you to follow her.", {}),
+            //[A: music chattering]
+            new TextEvent("You two end up outside of the crowd, where the music is far enough that you can hear.", {}),
+            new TextEvent("She says, “Hey aren’t you in my software dev class?”", {}),
+            new TextEvent("You are unsure, but you decide to play along and nod.", {}),
+            //[V: text nod]
+            new TextEvent("She continues, “I think you left your red journal last class. I saw someone drop it off in the Free Swap.” ", {}),
+            new TextEvent("You thank her and try to ask her more about your identity, but her friends pull her away, making confused glances at her and giving you weird looks.", {}),
+            new TextEvent("Do you go to the Free Swap or follow her?", {}),
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            {text: "Go to the Free Swap", scene: "freeswap"}, //[A: music fades; V: ???]
+            {text: "Follow her", scene: "follow"}, //[A: music; V: disco lights]
         ]
     },
 
 
-    "scene": {
+    "restroom": {
         events: [
-            new TextEvent(" ", {}),
-
+            new TextEvent("You go to the restroom, do your business, and escape the crowd.", {}),
+            //[A: toilet flush; V: text swirl/rotate]
+            new TextEvent("As you are at the sink, and someone approaches you, “Hey, do I know you from somewhere? What’s your name?”", {}),
+            //[A: sink water running]
+            new TextEvent("You reply, “I’m not sure.”", {}),
+            new TextEvent("He laughs, “Nice sticking with the theme, but where is you mask?”", {}),
+            new TextEvent("You say, “I don’t have one.”", {}),
+            new TextEvent("He changes his expression, “Here, take mine. Also have some water too.”", {}),
+            new TextEvent("He tries to hand you his mask and a suspicious-looking water bottle.", {}),
+            new TextEvent("Do you accept his offering or decline it and head back to the dance floor?", {}),
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            {text: "Accept the mask", scene: "mask"}, //[A: flush]
+            {text: "Decline the mask", scene: "dancefloor"}, //[A:music]
         ]
     },
 
-    "scene": {
+    "mask": {
         events: [
-            new TextEvent(" ", {}),
-
+            new TextEvent("You take his mask and water bottle.", {}),
+            new TextEvent("He smirks and quickly runs off.", {}),
+            //[A: running;]
+            new TextEvent("After a few seconds of struggling, you get the mask on and turn towards the door.", {}),
+            new TextEvent("You hear a commotion outside and suddenly two security guards in yellow jackets block the doorway.", {}),
+            //[A: commotion/loud noises/bang; V: flash]
+            new TextEvent("One shouts, “There you are!” and points at you.", {}),
+            new TextEvent("They run up to you and grab you by both arms.", {}),
+            new TextEvent("The other guard says, “We finally got you, and you thought you could get away from us?”", {}),
+            new TextEvent("You try to explain that you are being set up, but it is no use.", {}),
+            new TextEvent("The guards open your water bottle, which after smelling, is definitely not water.", {}),
+            new TextEvent("They write you up, and kick you out of Kagin.", {}),
+            new TextEvent("You are sentenced to one year of academic and residential probation.", {}),
+            //[Screen fades to black] GAME OVER
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+           //GAME OVER SCREEN
         ]
     },
 
-    "scene": {
+    "follow": {
         events: [
-            new TextEvent(" ", {}),
+            new TextEvent("You decide to follow her in the hope of more information.", {}),
+            //[A: music; V: disco]
+            new TextEvent("The room is darker and the crowd is huge.", {}),
+            new TextEvent("You see where she went, but have no way of getting there.", {}),
+            new TextEvent("You walk into the crowd.", {}),
+            new TextEvent("You are being pushed from many directions.", {}),
+            new TextEvent("You feel hot and lightheaded.", {}),
+            new TextEvent("You catch a glimpse of her from across the crowd.", {}),
+            new TextEvent("You push in that direction; you can still see her.", {}),
+            new TextEvent("The more you push and the deeper you get, the hotter you feel.", {}),
+            // [A: music; V: flash/red pulse]
+            new TextEvent("Darkness seems to be creeping up on you.", {}),
+            //[ V: text fades after display]
+            new TextEvent("Do you push your way to her or leave and go to the Free Swap?", {}),
+
+            //
+            // Buttons:
+            // Push your way (11.3)
+            // Free Swap (12)
+        ],
+        decisions: [
+            {text: "Push to her", scene: "push"}, //[A: music, grunts; V: disco]
+            {text: "Go to the Free Swap", scene: "freeswap"}, //[A: music fades; V: flash]
+        ]
+    },
+
+    "push": {
+        events: [
+            new TextEvent("You stubbornly attempt to reach her.", {}),
+            new TextEvent("This girl might have all of the answers.", {}),
+            //[A: music; V: disco]
+            new TextEvent("You ignore the heat and your body and push on.", {}),
+            //[A: music, heartbeat; V: red flash]
+            new TextEvent("You get elbowed in places you wish you hadn’t and dodge drunken students, but you finally make your way across the crowd.", {}),
+            new TextEvent("The girl is right there, within an arm’s reach.", {}),
+            //[A: music; V: pulse/heartbeat]
+            new TextEvent("You feel like you are burning up from the inside.", {}),
+            //[A: faster heartbeats, V: many red pulses]
+            new TextEvent("You reach to tap her shoulder, but you collapse.", {}),
+            new TextEvent("Your body hits the floor and your world fades to black.", {}),
+            //[A: thud; V: fade to black] GAME OVER
+        ],
+        decisions: [
+        //GAME OVER SCREEN
+        ]
+    },
+
+    "freeswap": {
+        events: [
+            new TextEvent("You head downstairs and make your way into Kagin’s Free Swap.", {}),
+            //[A: footsteps; V: downstairs?]
+            new TextEvent("You are looking for the red journal that she mentioned.", {}),
+            new TextEvent("You rummage through some shelves and peer behind some coats.", {}),
+            //[A: shuffling, rummage noises; V: quick pause]
+            new TextEvent("It seems like you have searched everywhere until one cabinet with a golden handle catches your eye.", {}),
+            //[A: sparkle noise; V: flash/twinkle]
+            new TextEvent("You open it up and surely enough, the red journal is inside!", {}),
+            //[A: drawer open;]
+            new TextEvent("You ruffle through the pages until you find one with writing.", {}),
+            //[A: paper flutter; V: page turn effect]
+            new TextEvent("The writing discusses a plot to hack and steal all of the Macalester students’ information.", {}),
+            new TextEvent("At the bottom, the name David Sisk is circled in red sharpie.", {}),
+            //[A: pen/marker scribble; V: circle “David Sisk” in red]
+            new TextEvent("You realize that you must have uncovered Sisk’s plot and he is somehow the reason why you woke up with amnesia.", {}),
+            new TextEvent("You ponder for a few moments about the gravity of the situation.", {}),
+            //[V: pause]
+            new TextEvent("You could save your fellow students’ information and exact revenge on Sisk for your amnesia.", {}),
+            new TextEvent("Or you could just go back to Kagin and ignore this new revelation.", {}),
+        ],
+        decisions: [
+            {text: "REVENGE", scene: "revenge"}, //[A: action music; V: swirl]
+            {text: "Go back to Kagin", scene: "backkagin"}, //[A: kagin music; V: disco lights]
+        ]
+    },
+
+    "revenge": {
+        events: [
+            new TextEvent("You hear footsteps behind you and quickly leave through the back door with your journal in your arms.", {}),
+            //[A: footsteps, door slam;]
+            new TextEvent("You head over to the ITS Help Desk.", {}),
+            new TextEvent("On your way, you hear a “psst” and you see the shadow of a figure sitting on the stairs in front of Old Main.", {}),
+            //[A: psst; V: dark/fade]
+            new TextEvent("You walk closer and realize that it is Paul.", {}),
+            new TextEvent("You fill him in on what you found in your journal.", {}),
+            new TextEvent("He explains that he already knew about the plot and that is why he led you to Kagin.", {}),
+            new TextEvent("He couldn’t tell you in the library because Sisk could have been listening.", {}),
+            new TextEvent("He agrees to go to ITS with you to help prevent this catastrophe.", {}),
+            //[A: action music; V: fade to black]
+            new TextEvent("You end up at the Help Desk and everything is dark except for one bright computer screen.", {}),
+            //[V: bright screen]
+            new TextEvent("You both look closer and realize that it is Sisk’s code and that it has already begun executing.", {}),
+            //[A: retro code music (OR) morse code beeping]
+            new TextEvent("Paul springs into action and tries to terminate the program.", {}),
+            new TextEvent("He is typing faster than you thought possible.", {}),
+            //[A: typing]
+            new TextEvent("Paul says, “I almost got it!”", {}),
+            //[A: typing]
+            new TextEvent("Suddenly, a door swings open and David Sisk comes charging at you.", {}),
+            new TextEvent("He yells, “DO NOT TOUCH THAT COMPUTER!”", {}),
+            //[A: door slam, action, running; V: shake]
+            new TextEvent("Paul gets up from the computer and defends you from Sisk.", {}),
+            new TextEvent("As they are wrestling, you go on the computer and attempt to finish Paul’s hacking.", {}),
+            //[A: typing, fighting, thuds; V: matrix(0/1s)]
+            new TextEvent("You keep trying but it is no use.", {}),
+            new TextEvent("Paul seems to be losing the fight against Sisk as well.", {}),
+            new TextEvent("In a last ditch effort, you press CTRL + ALT + Delete.", {}),
+            new TextEvent("It takes you to a password-locked screen.", {}),
+            new TextEvent("You try the obvious passwords like “Sisk123”, “admin”, and “password”, but none work.", {}),
+            //[A: action music, typing, fighting]
+            new TextEvent("You yell to Paul, asking for help.", {}),
+            new TextEvent("Paul tells you to look in your journal.", {}),
+            //[A: paper, action; V: zoom in]
+            new TextEvent("You open the journal, and inside you see “iLuvPBR” written in big letters below the red circled “David Sisk.”", {}),
+            new TextEvent("You quickly enter in the password.", {}),
+            new TextEvent("All at once everything stops and the lights turn on.", {}),
+            //[A: silence, V:light flash above]
+            new TextEvent("Sisk lets out a loud, “NOOOO…” as you and Paul tie him up.", {}),
+            new TextEvent("You call the police and inform Mac security.", {}),
+            new TextEvent("Sisk gets arrested, you and Paul high-five, and you no longer receive those “ITS will never ask for your password” emails.", {}),
+            new TextEvent(" You saved the day!", {}),
+            //(END SCREEN)
 
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            //END SCREEN
+        ]
+    },
+
+    "backkagin": {
+        events: [
+            new TextEvent("You decide to head back to Kagin.", {}),
+            new TextEvent("You hear footsteps behind you and turn around.", {}),
+            //[A: footsteps]
+            new TextEvent("Behind you, you see David Sisk approaching.", {}),
+            new TextEvent("He growls, “You really should not have meddled. I already knocked you out once.", {}),
+            new TextEvent("I’m surprised you even remembered my plan.”", {}),
+            new TextEvent("You try to back away.", {}),
+            //[V: zoom out/back away]
+            new TextEvent("Sisk follows and knocks you over the head with an Alienware laptop.", {}),
+            new TextEvent("Your world fades to black.", {}),
+            //[A: thud V: fade to black] Game Over
+
+        ],
+        decisions: [
+            //GAME OVER SCREEN
         ]
     },
 

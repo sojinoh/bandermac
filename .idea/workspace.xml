@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="updated scenes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
     </list>
@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="704" selection-start-line="704" selection-end-line="704" />
+            <state relative-caret-position="294">
+              <caret line="910" column="30" selection-start-line="910" selection-start-column="30" selection-end-line="910" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -92,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,7 +114,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -373,7 +373,8 @@
       <workItem from="1557108411112" duration="1124000" />
       <workItem from="1557112148360" duration="1111000" />
       <workItem from="1557166071537" duration="1774000" />
-      <workItem from="1557175110365" duration="733000" />
+      <workItem from="1557175110365" duration="1771000" />
+      <workItem from="1557176928309" duration="1040000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -452,11 +453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557166262653</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updated scenes">
+      <created>1557175870462</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557175870462</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25080000" />
+    <option name="totallyTimeSpent" value="27158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -508,7 +516,8 @@
     <MESSAGE value="Updated scene list (got to scene 6a)" />
     <MESSAGE value="Updated scene list (got to squirrel scene &amp; savepaul is next)" />
     <MESSAGE value="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scenelist up to median scene. Transitions and audio are commented under &quot;A:&quot; and &quot;V:&quot;" />
+    <MESSAGE value="updated scenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated scenes" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -555,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="704" selection-start-line="704" selection-end-line="704" />
+        <state relative-caret-position="294">
+          <caret line="910" column="30" selection-start-line="910" selection-start-column="30" selection-end-line="910" selection-end-column="30" />
         </state>
       </provider>
     </entry>
