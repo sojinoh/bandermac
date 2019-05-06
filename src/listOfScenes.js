@@ -302,33 +302,278 @@ var story = {
 
     "savepaul": {
         events: [
-            new TextEvent(" ", {}),
+            //[A: clash, war, yell; V: flashes]
+            new TextEvent("You run up to Paul and attempt to pull him away from the hounding squirrels.", {}),
+            //[A: snarls; V: shakes]
+            new TextEvent("You fend off the first wave of squirrels by swatting them with Paul’s keyboard.", {}),
+            //[A: sword clang, thuds, smacks; V: ???]
+            new TextEvent("But more squirrels keep coming.", {}),
+            //[A: continue audio V: quick pause]
+            new TextEvent("After five minutes of fighting off the foamy-mouthed, bloodthirsty squirrels, you are covered in fur, sweat, and blood.", {}),
+            //[A: panting, heartbeat]
+            new TextEvent("Paul is sitting on the ground, oblivious to the situation, typing on his imaginary computer.", {}),
+            //[A: finger thumps;]
+            new TextEvent("A quiet minute passes and you think that everything has settled.", {}),
+            //[A: silence; V: pause/slow scroll]
+            new TextEvent("The floor begins to rumble, and squirrels pour from the ceiling and come from every imaginable direction.", {}),
+            //[A: rumble, scurry, crash; V: shake]
+            new TextEvent("You are overwhelmed, and your world fades to black. So much for being the hero.", {}),
+            //[A: groan then silence ; V: fade to black] GAME OVER.
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            //GAME OVER SCREEN
         ]
     },
 
 
     "halloffame": {
         events: [
-            new TextEvent(" ", {}),
+            new TextEvent("You turn on the light in the Hall of Fame room.", {}),
+            //[A: lightswitch; V: light flicker]
+            new TextEvent("You see various plaques, trophies, and team photos, and you begin to look around.", {}),
+            new TextEvent("On the 1998 Cross Country MVP Plaque, you see a yellow note, “You are the real MVP. You are the most viable product. You have been all along.”", {}),
+            //[A: paper flutter; V: zoom in on note text (or diff orientation)]
+            new TextEvent("On the back it reads, “Macalester is in grave danger and needs your help. Mac the Scot, the mascot, is trying to destroy Macalester.", {}),
+            new TextEvent("He has gathered an army of squirrels and plans to brainwash the students and turn the campus into an evil fossil fuel fortress. Only you can stop him!”", {}),
+            //[A:silence; V: zoom out to normal]
+            new TextEvent("Wow.", {}),
+            new TextEvent("That is a lot to take in.", {}),
+            //[ V: quick pause]
+            new TextEvent("You hear a door creak from down the hall and footsteps coming your way.", {}),
+            //[A: door creak, footsteps; V: quick shake]
+            new TextEvent("Do you hide or run?", {}),
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            {text: "Hide", scene: "hidefame"}, //[A: shuffle; V: fade to black]
+            {text: "Run", scene: "runfame"}, //[A: running; V: scroll]
         ]
     },
 
+    "runfame": {
+        events: [
+            new TextEvent("You burst through the doors and send Mac’s squirrels flying into the wall.", {}),
+            //[A: door slam open, thuds; V: thud/shake]
+            new TextEvent("You run out of the Hall of Fame room and see Mac chasing after you.", {}),
+            //[A: running; V: scroll quick]
+            new TextEvent("You run down the hall with Mac and his army of squirrels on your tail.", {}),
+            //[A: running, heartbeat, scurrying; V: scroll]
+            new TextEvent("You finally get some distance between the two of you and make a break for the doors.", {}),
+            new TextEvent("In front of the doorway, you see a skateboard and a scooter propped up against the wall.", {}),
+            new TextEvent("Maybe one of these could help you escape.", {}),
+            //[A: panting; V: short pause]
+            new TextEvent("You must choose quickly as you hear Mac gaining on you.", {}),
+            new TextEvent("You think back to Paul, which would he prefer, the skateboard or the scooter?", {}),
+            //[A: footsteps, suspenseful; V: pause before buttons]
+        ],
+        decisions: [
+            {text: "Skateboard", scene: "skateboard"}, //[A: skateboard noise; V: scroll side quick]
+            {text: "Scooter", scene: "scooter"}, //[A: scooter noise; V: scroll & fade]
+        ]
+    },
+
+    "hidefame": {
+        events: [
+            new TextEvent("You hide in a closet in the back of the room.", {}),
+            //[A: quiet shuffle, fumbling; V: darker?]
+            new TextEvent("You are surrounded by sweaty uniforms and jockstraps.", {}),
+            new TextEvent("You start to retch and want to leave, but you hear someone enter the room.", {}),
+            //[A: retch?, footsteps/door; V: heartbeat pulse 2x]
+            new TextEvent("You peek through the crack between the closet doors and see Mac the Scot standing in the center of the room.", {}),
+            //[ V: peek?]
+            new TextEvent("He makes a screeching noise and suddenly the room fills with squirrels.", {}),
+            //[A: screech; V: text shakes]
+            new TextEvent("Mac shouts, “My minions… my beautiful, scurrying minions.", {}),
+            new TextEvent("Tonight, while the students are preoccupied at Kagin, we shall strike hard and we shall strike fast.", {}),
+            new TextEvent("We must surround the students and force them into our brainwashing facility in 10K, the Dupre basement.”", {}),
+            //[A: drumming/war beats, squirrel squeak/scurry; V: scroll]
+            new TextEvent("As Mac rambles on, you are losing the fight against the smell.", {}),
+            //[A: cough;]
+            new TextEvent("You let out a cough.", {}),
+            //[A: cough; V: shake then pause]
+            new TextEvent("A few squirrels hear you, run over to the closet and scratch on the doors.", {}),
+            //[A: scurry, scratching, heartbeat; V: ???]
+            new TextEvent("Mac stops talking and walks towards your hiding spot.", {}),
+            //[A: heartbeat, footsteps; V: pulse??]
+            new TextEvent("You realize your time is running out.", {}),
+            new TextEvent("You have two options, either run or fight.", {}),
+        ],
+        decisions: [
+            {text: "Run", scene: "runfame"}, //[A: running, heartbeat; V: scroll fast]
+            {text: "Fight", scene: "fightfame"}, //[A: bang; V: quick fade]
+        ]
+    },
 
     "banner": {
         events: [
-            new TextEvent(" ", {}),
+            new TextEvent("You examine the team and MVP banners upstairs.", {}),
+            new TextEvent("You try to look for clues in their names or something off that distinguishes one banner from the others.", {}),
+            //[A: creaks, background clatter; V:??]
+            new TextEvent("After circling the track and looking for clues for what seems like hours, you wonder if you made the wrong decision.", {}),
+            new TextEvent("You could check out the Hall of Fame room or you could stay and search more.", {}),
         ],
         decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
+            {text: "Hall of Fame room", scene: "halloffame"}, //[A: footsteps; V: fade to black]
+            {text: "Stay and search", scene: "staysearch"}, //[A: footsteps; V: ???]
+        ]
+    },
+
+
+    "staysearch": {
+        events: [
+            new TextEvent("You continue to search until you become physically and mentally exhausted.", {}),
+            //[A: deep breath, heartbeat?; V: fade in and out (not completely though), sway]
+            new TextEvent("What a waste.", {}),
+            new TextEvent("You decide to rest for a bit, having been overcome with exhaustion.", {}),
+            //[A: yawn.sleep; V: fade like above]
+            new TextEvent("The lights are flickering.", {}),
+            //[A: light buzz; V: flicker]
+            new TextEvent("Suddenly, you hear a door slam open.", {}),
+            //[A: door slam; V: one shake]
+            new TextEvent("From across the track, you see Mac the Scot marching towards you, holding bagpipes.", {}),
+            //[A: march/stomp, scary music;]
+            new TextEvent("Unsure of what to do and too shocked to move, you stand there like a deer caught in headlights.", {}),
+            new TextEvent("[A: same sounds & bagpipe playing; V: pause]", {}),
+            new TextEvent("As Mac gets closer, you shake with fear.", {}),
+            //[A: bagpipes louder; V: small rapid shakes]
+            new TextEvent("You bargain with yourself, “maybe he is here to help.”", {}),
+            new TextEvent("Suddenly, the bagpipes stop.", {}),
+            //[A: Silence; V: text fades]
+            new TextEvent("Mac lifts up the bagpipes and strikes you over the head with them.", {}),
+            //[A: bang/thud; V:  pulse]
+            new TextEvent("Your world fades to black.", {}),
+            //[A: silence; V: fade to black]GAME OVER
+],
+        decisions: [
+            //GAME OVER SCREEN
+        ]
+    },
+
+    "fightfame": {
+        events: [
+            new TextEvent("You burst through the doors and send Mac’s squirrels flying into the wall.", {}),
+            //[A: door slam open, thuds; V: thud/shake]
+            new TextEvent("You charge towards Mac and he charges towards you.", {}),
+            new TextEvent("You throw kicks and punches and so does he.", {}),
+            //[A: fight sounds; V: shake and sway]
+            new TextEvent("Luckily for him, his fluffy mascot outfit absorbs most of the blows.", {}),
+            new TextEvent("You feel yourself losing the fight as Mac starts to overpower you.", {}),
+            //[A: fighting; V: short pause]
+            new TextEvent("With a final surge of adrenaline, you throw Mac off of you and onto the ground.", {}),
+            //[A: grunt, thud; V:??]
+            new TextEvent("His mascot head falls off and without looking you pull out the orange from earlier and hurl it at him.", {}),
+            //[A: bounce, thud;]
+            new TextEvent("It hits the unmasked person in the face and the orange juice splatters everywhere.", {}),
+            //[A: splatter liquid; V: short pause]
+            new TextEvent("You come up closer to the dazed figure and recognize that it’s Paul.", {}),
+            //[A: footsteps]
+            new TextEvent("He asks you, “Where am I?” and rubs his head.", {}),
+            //[A: window rubbing]
+            new TextEvent("You remember Paul’s hatred for fruit and realize that the orange juice probably snapped him out of his trance.", {}),
+            new TextEvent("You explain everything to Paul and he apologizes and thanks you.", {}),
+            new TextEvent("You saved Macalester!", {}),
+            //[A: victory horn, V: fade to end→](End screen)
+        ],
+        decisions: [
+            //END SCREEN
+        ]
+    },
+
+    "skateboard": {
+        events: [
+            new TextEvent("You skate out of the doors of the LC.", {}),
+            //[A: skateboard, door close?; V: ??]
+            new TextEvent("As you leave, you realize two things: one, you don’t know how to skateboard, and two, Paul would have prefered the scooter.", {}),
+            new TextEvent("Maybe you are not the MVP after all.", {}),
+            //[V: short pause, slow incomplete fade (like blinking)]
+            new TextEvent("With these two realizations, your adrenaline and confidence begin to run out.", {}),
+            new TextEvent("You fall off of the skateboard, scrape your knees, and land on your back.", {}),
+            //[A: fall/thud; V: shake, pause]
+            new TextEvent("The squirrels catch up to you and drag you away as Mac lets out a hearty and maniacal laugh.", {}),
+            //[A: evil laugh, drag; V: text sideways]
+            new TextEvent("That is the last thing you remember as your world fades to black.", {}),
+            // [V: fade to black,pause]
+            new TextEvent("You wake up in the Dupre basement, being dragged into 10K.", {}),
+            new TextEvent("All around you are bright screens and hundreds of other students strapped into chairs being brainwashed.", {}),
+            //[A: whirring, machines, fuzzy noise; V: bright screens, old TV fuzz]
+            new TextEvent("After days and days of this torture, you are now one of Mac’s fossil fuel soldiers, obeying every command.", {}),
+            new TextEvent("You are a slave to the system.", {}),
+            //   [V: fade to black]GAME OVER
+        ],
+        decisions: [
+            //GAME OVER SCREEN
+        ]
+    },
+
+    "scooter": {
+        events: [
+            new TextEvent("You scooter your way out of the doors of the LC.", {}),
+            //[A: scooter, door close; V: scoot?? idk]
+            new TextEvent("You head to Neill Hall to hide, because who would look there, right?", {}),
+            new TextEvent("Once you are inside, you find an old phone in a professor’s office.", {}),
+            new TextEvent("You dial Mac security, but the line is busy.", {}),
+            //[A: phone dial, busy tone;]
+            new TextEvent("After waiting a moment, you decide to call the St. Paul Police Department.", {}),
+            //[A: phone dial;]
+            new TextEvent("You explain the situation to the dispatcher, and they send police to the campus.", {}),
+            new TextEvent("The next two hours on campus are chaos, but finally they capture Mac the Scot and release the squirrels from his command.", {}),
+            new TextEvent("The police inform you that they have unmasked the suspect and that it was Carleton’s president trying to sabotage Macalester.", {}),
+            new TextEvent("As you are filling out witness statements, you see Paul walk past you with your scooter in his hands.", {}),
+            new TextEvent("He gives you an approving nod and walks away.", {}),
+            //[A: footsteps V: fade to black](End screen)
+        ],
+        decisions: [
+            //END SCREEN
+        ]
+    },
+
+    "bell": {
+        events: [
+            new TextEvent("You make your way to Macalester’s (in)famous bell.", {}),
+            new TextEvent("As you approach, some giggling first-years run away.", {}),
+            //[A: giggles, footsteps; V: short pause]
+            new TextEvent("You look around the bell, searching for clues.", {}),
+            new TextEvent("You notice a large “I” engraved into one of the columns and wonder why you haven’t seen that before.", {}),
+            //[V: scroll up]
+            new TextEvent("Under the bench, you notice a note stuck to it with gum.", {}),
+            new TextEvent("You pull the note off and open it.", {}),
+            //[A: paper flutter; V: short pause]
+            new TextEvent("Inside, it reads, “Ringing once is for a dunce. One ring and you will sting. Ringing twice will suffice.”", {}),
+            //[V: zoom on note text]
+            new TextEvent("You notice a bloody fingerprint on the edge of the note.", {}),
+            new TextEvent("Should you trust their advice or are they trying to trick you?", {}),
+            new TextEvent("Do you ring the bell once or twice?", {}),
+        ],
+        decisions: [
+            {text: "Ring once", scene: "bellone"}, //[A: bell ring; V: text sway]
+            {text: "Ring twice", scene: "belltwo"}, //[A: bell ring twice; V: text sway]
+        ]
+    },
+
+    "median": {
+        events: [
+            new TextEvent("You make your way to the Dupre median.", {}),
+            new TextEvent("As you approach, you notice a group of students hooded in cloaks, sitting in a circle.", {}),
+            new TextEvent("A strange smell emanates from them.", {}),
+            //[A: leaves rustling; V: slow scroll]
+            new TextEvent("It sounds like they are chanting something demonic, and you notice little fires appear near there hands.", {}),
+            //[A: chanting, fire burning; V: small fire light in background]
+            new TextEvent("You decide to approach them.", {}),
+            //[A: footsteps]
+            new TextEvent("As you get closer, they stop and stare at you.", {}),
+            new TextEvent("One asks, “Are you an RA?”", {}),
+            new TextEvent("You shake your head no.", {}),
+            new TextEvent("Then they smile and invite you into their circle.", {}),
+            new TextEvent("As you sit there, they pass around a strange looking cigarette.", {}),
+            new TextEvent("When it comes to you, you decide to try your first puff of a cigarette because you are above 18 of course.", {}),
+            //[A: puff, cough, then happy music; V: short pause]
+            new TextEvent("You feel strange, but good.", {}),
+            new TextEvent("You are no longer worried about who you are or what is going on.", {}),
+            new TextEvent("You feel happy and fuzzy.", {}),
+            new TextEvent("Your world fades to black.", {}),
+            //[A: happy; V: fade to black] (Ending screen)
+        ],
+        decisions: [
+            //ENDING SCREEN
         ]
     },
 
@@ -361,76 +606,5 @@ var story = {
             {text: "button", scene: "next"},
         ]
     },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
-    "scene": {
-        events: [
-            new TextEvent(" ", {}),
-        ],
-        decisions: [
-            {text: "button", scene: "next"},
-            {text: "button", scene: "next"},
-        ]
-    },
-
 
 }

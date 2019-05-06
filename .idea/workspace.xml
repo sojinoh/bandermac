@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Updated scene list (got to squirrel scene &amp; savepaul is next)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="305" column="10" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
+            <state relative-caret-position="345">
+              <caret line="575" column="27" selection-start-line="575" selection-start-column="27" selection-end-line="575" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -365,6 +366,13 @@
       <workItem from="1557090553585" duration="721000" />
       <workItem from="1557091626877" duration="1795000" />
       <workItem from="1557093485536" duration="636000" />
+      <workItem from="1557095892071" duration="662000" />
+      <workItem from="1557100243029" duration="609000" />
+      <workItem from="1557103372396" duration="1777000" />
+      <workItem from="1557105183898" duration="1502000" />
+      <workItem from="1557108411112" duration="1124000" />
+      <workItem from="1557112148360" duration="1111000" />
+      <workItem from="1557166071537" duration="133000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -429,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557093523403</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated scene list (got to squirrel scene &amp; savepaul is next)">
+      <created>1557095908659</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557095908659</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15788000" />
+    <option name="totallyTimeSpent" value="22706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -455,8 +470,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50317967" side_tool="true" visible="true" weight="0.120781526" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49682036" visible="true" weight="0.120781526" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50953895" side_tool="true" visible="true" weight="0.120781526" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49046105" visible="true" weight="0.120781526" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -531,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="305" column="10" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
+        <state relative-caret-position="345">
+          <caret line="575" column="27" selection-start-line="575" selection-start-column="27" selection-end-line="575" selection-end-column="27" />
         </state>
       </provider>
     </entry>
