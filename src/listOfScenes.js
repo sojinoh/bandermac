@@ -7,29 +7,29 @@ var story = {
             new TextEvent("Your eyes gradually open", {partDelay: 60}),
             new TextEvent("as you slowly float into consciousness.", {}),
             //A: creepy.wav audio continues
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("With your head pounding", {}),
             new TextEvent("you realize you are lying flat on your back in the middle of Smail gallery. ", {}),
             //A: heartbeat audio
             //V: Effect: sway stops; shake w heartbeat
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("You cannot remember who you are or what happened to you.", {}),
             new TextEvent("You glance to the backdoors only to realize it is pitch black outside.", {}),
             //Effect: fade
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("There is an eerie stillness to the place.", {}),
             //Audio: silence (stop creepy)
             //Effect: pause 2 seconds
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("The building itself is completely dark", {}),
             new TextEvent("except for a light emanating from the top floor.", {}),
             //[A: light buzzing, creepy; V: flash/light top right].
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", {}),
             // [A: crash, glass shatter; V: shake]
         ],
         decisions: [
-            {text: "Go to the top floor", scene: "top-floor"}   //A:footsteps
+            {text: "Go to the top floor", scene: "top-floor"},   //A:footsteps
             {text: "Go to the Geology wing", scene: "geology"}  //A: footsteps
         ]
     },
@@ -38,50 +38,48 @@ var story = {
         events: [    //scene 2a
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You stand carefully.", {}),
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             //[A: footsteps, creepy; V: scroll up and shake]
-            new TextEvent("You feel slightly off balance as you walk up the main staircase to the third floor.", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("Sitting at the one of the circular tables of the top floor is a figure of a man.", {}),
+            new TextEvent("You feel slightly off balance as you walk up the main staircase to the", {}),
+            new TextEvent("third floor.    ", {}),
+            new TextEvent("Sitting at the one of the circular tables of the top floor is a", {}),
             //A: heartbeat, creepy, shriek; V: zoom in (figure?)]
-            new TextEvent("                     ", {}),
+            new TextEvent("figure of a man.    ", {}),
             new TextEvent("From his young features, you guess he must be a student.", {}),
             new TextEvent("You walk over to him.", {}),
             //[A: footsteps; V: pause?]
 
             //[A: silence; V: text message style (pop from side?) (if time?)]
             new TextEvent("Hello.", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("”What do you want?” he grumbles. Not looking up from the molecule he’s drawing.", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("“I’m… I woke up in Smail and…”", {}),
-            new TextEvent("                     ", {}),
+            new TextEvent("\"What do you want?\" he grumbles. Not looking up from the molecule he\'s drawing.", {}),
+            new TextEvent("\"I\'m... I woke up in Smail and...\"", {}),
+            new TextEvent("    ", {}),
             new TextEvent("That gets his attention. He smirks.", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("“Oh it’s you. She told me to me tell you to go as far below as you can. And take this.”", {}),
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),            
+            new TextEvent("\"Oh it\'s you. She told me to me tell you to go as far below as you can. And take this.\"", {}),
+            new TextEvent("    ", {}),
             new TextEvent("He hands you an orange.", {}),
             //  [A: thump/hand noise]
-            new TextEvent("                     ", {}),
-            new TextEvent("“What? What am I supposed to do with this?”", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("He’s no longer paying attention to you.", {}),
+            new TextEvent("    ", {}),
+            new TextEvent("\"What? What am I supposed to do with this?\"", {}),
+            new TextEvent("    ", {}),
+            new TextEvent("He\'s no longer paying attention to you.", {}),
             new TextEvent("Below? You wonder to yourself.", {}),
             new TextEvent("Below what?", {}),
-            new TextEvent("                     ", {}),
             new TextEvent("You start walking downstairs", {}),
             //[A: footsteps; V: scroll]
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("You walk all the way down to the bottom floor.", {}),
             //  [A: creak/crack;]
             new TextEvent("Is that what he meant? You start to wander.", {}),
-            new TextEvent("                     ", {}),
-            new TextEvent("You end up in a old part of the building, down a hallway you didn’t know existed.", {}),
+            new TextEvent("    ", {}),
+            new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {}),
             //[A: creepy, door hinge]
             new TextEvent("A small door is open at the end of it you crawl through.", {}),
         ],
         decisions: [
-            {text: "Crawl through", scene: "tunnels"}   //[A: shuffle; V: enter? (text towards screen (3D?))]
+            {text: "Crawl through", scene: "tunnels"},   //[A: shuffle; V: enter? (text towards screen (3D?))]
+            {text: "", scene: ""}
         ]
     },
 
@@ -95,20 +93,20 @@ var story = {
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You feel slightly off balance as you walk down the stairs towards the crash.", {}),
             // [A: footsteps, creepy; V: scroll down and shake]
-            new TextEvent("                     ", {}),
+            new TextEvent("    ", {}),
             new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
             //[A: glass shuffle, slight growl;]
-            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur’s teeth.", {}),
+            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth.", {}),
             new TextEvent("You pick up the note.", {}),
             //[A: paper flutter; V: quick pause]
-            new TextEvent("The notes reads, “They who hath awoken, hath stumbled upon the broken.", {}),
-            new TextEvent("Here upon these bones shall lead you deep into the unknown. Follow the red or suffer with dread.”", {}),
+            new TextEvent("The notes reads, \"They who hath awoken, hath stumbled upon the broken.", {}),
+            new TextEvent("Here upon these bones shall lead you deep into the unknown. Follow the red or suffer with dread.\"", {}),
             //[A: paper flutter; V: pause]
             new TextEvent("You wonder what William Shakespeare was doing in OLRI.", {}),
             new TextEvent("You also notice a trail of blood leading towards the staircase.", {}),
             //[A: water drip;]
 
-            new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn’t know existed.", {}),
+            new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn\'t know existed.", {}),
             //[A: footsteps;]
             new TextEvent("Along the way, you notice an orange and pick it up.", {}),
             //[A: pick up (hand noise);]
@@ -117,7 +115,8 @@ var story = {
             new TextEvent("A small door opens at the end of the hallway, you crawl through.", {}),
         ],
         decisions: [
-            {text: "Crawl through", scene: "tunnels"}   //[A: shuffle; V: enter? (text towards screen (3D?))]
+            {text: "Crawl through", scene: "tunnels"},  //[A: shuffle; V: enter? (text towards screen (3D?))]
+            {text: "", scene: ""}
         ]
     },
 
@@ -128,10 +127,10 @@ var story = {
             //[A: (same as previous) + groan/noise; V: pause, shake]
             new TextEvent("As you travel further into the tunnel, it begins smelling musty and damp.", {}),
             //[A: footsteps; V: scroll]
-            new TextEvent("It looks like this place hasn’t been touched in years, besides for some recent footprints ahead. ", {}),
+            new TextEvent("It looks like this place hasn\'t been touched in years, besides for some recent footprints ahead. ", {}),
             new TextEvent("Eventually, you notice something on the wall ahead. As you get closer, you become shocked and start shaking with fear. ", {}),
             //[A: footsteps, (sudden noise (dun dun dun); V: shake text after displayed]
-            new TextEvent("You see, “Drink blood” smeared on the wall with seemingly fresh blood.", {}),
+            new TextEvent("You see, \"Drink blood\" smeared on the wall with seemingly fresh blood.", {}),
             //[A: drip]
             new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall.", {}),
             //[A: heartbeat; V: zoom in]
@@ -181,6 +180,8 @@ var story = {
         ],
 
         decisions: [
+            {text: "", scene: ""},
+            {text: "", scene: ""}
            //GAME OVER SCREEN
         ]
     },
@@ -200,11 +201,11 @@ var story = {
             //[A: louder clattering]
             new TextEvent("You notice a figure in the dimly lit idea lab. For some reason, this person seems familiar.", {}),
             //[V: small zoom in and out]
-            new TextEvent("Somehow, you remember that this person’s name is Paul, but that is all that you remember.", {}),
+            new TextEvent("Somehow, you remember that this person\'s name is Paul, but that is all that you remember.", {}),
             new TextEvent("As you get closer, you realize that Paul is frantically typing on an unconnected keyboard.", {}),
             //[A: footsteps, clattering/typing; V: bigger text?]
             new TextEvent("He stands there typing, staring straight into nothingness with bloodshot eyes.", {}),
-            new TextEvent(" He is muttering… “Devvvv Gardennn. Deeeeev Garden.”", {}),
+            new TextEvent("He is muttering... \"Devvvv Gardennn. Deeeeev Garden.\"", {}),
             //[A: muttering/whispers
             new TextEvent("He appears to be in a trance.", {}),
             //[V: Hypnotic movement]
@@ -224,16 +225,16 @@ var story = {
         events: [  //scene 6a
             new TextEvent("You remember the orange you picked up earlier and take it out.", {}),
             //[A: shuffling/grabbing;]
-            new TextEvent("You hover it under Paul’s nose and although he is still staring, you notice him wince whenever the orange gets close.", {}),
+            new TextEvent("You hover it under Paul\'s nose and although he is still staring, you notice him wince whenever the orange gets close.", {}),
             //[A: wind/woosh?; V: slight pulse (twice)]
-            new TextEvent("You begin to peel the orange, and Paul immediately snaps out of it and lets out a disgusted gasp, “agh, get that away from me!”", {}),
+            new TextEvent("You begin to peel the orange, and Paul immediately snaps out of it and lets out a disgusted gasp, \"agh, get that away from me!\"", {}),
             //[A: groan/gasp; V: pulse/quick shake]
             //[V: text message]
-            new TextEvent("You ask, “Who am I? What is going on at Macalester? Why is everything so weird?”", {}),
-            new TextEvent("Paul smiles, “Ah, what you want is a clue. Solve this riddle and there might be an answer just for you.”", {}),
+            new TextEvent("You ask, \"Who am I? What is going on at Macalester? Why is everything so weird?\"", {}),
+            new TextEvent("Paul smiles, \"Ah, what you want is a clue. Solve this riddle and there might be an answer just for you.\"", {}),
             new TextEvent("You sigh.", {}),
             //[A: sigh; V: pause]
-            new TextEvent("Paul continues, “A first-year’s true path. Where one winds up at last. To strike or to hit. Only happiness and joy be fit.”", {}),
+            new TextEvent("Paul continues, \"A first-year\'s true path. Where one winds up at last. To strike or to hit. Only happiness and joy be fit.\"", {}),
             new TextEvent("You think for a moment.", {}),
             //[A: silence, hmm?; V: game pauses 2.5 seconds]
             new TextEvent("Is he talking about the bell or the Dupre median?", {}),
@@ -253,12 +254,12 @@ var story = {
             new TextEvent("You decide to leave the orange in your pocket, you might need it later.", {}),
             new TextEvent("Paul mutters something about needing to check Slack, still staring into the abyss.", {}),
             //[A: silence; V: pause]
-            new TextEvent("Suddenly you hear a bang, Paul’s eyes fixate on you, and he yells “THEY’RE COMING! RUN!”", {}),
+            new TextEvent("Suddenly you hear a bang, Paul\'s eyes fixate on you, and he yells \"THEY\'RE COMING! RUN!\"", {}),
             //[A: bang, (sudden noise?), yell?; V: one big shake]
             new TextEvent("Out of nowhere, squirrels climb out from bookcases in every direction and run towards you.", {}),
             //[A: clatter, squirrel scatter, mini footsteps, heartbeat V: ???]
-            new TextEvent("You grab Paul’s sleeve and try to get him to follow you, but it is no use.", {}),
-            new TextEvent("Squirrels start to pounce on Paul, and he weakly says, “Go on without me… I… still… have to fix… the Bonsai UI… Go to… the LC”", {}),
+            new TextEvent("You grab Paul\'s sleeve and try to get him to follow you, but it is no use.", {}),
+            new TextEvent("Squirrels start to pounce on Paul, and he weakly says, \"Go on without me... I... still... have to fix... the Bonsai UI... Go to... the LC\"", {}),
             new TextEvent("Do you run away or try to save Paul?", {}),
             //[A: squirrel noises, thuds, yelp? ]
         ],
@@ -278,7 +279,7 @@ var story = {
             new TextEvent("You wonder why Paul would want you to come to the LC.", {}),
             //[A: background noise; V: pause]
             new TextEvent("You search for clues.", {}),
-            new TextEvent("As you’re walking, you miss a wet floor sign and you slip and hit your head.", {}),
+            new TextEvent("As you\'re walking, you miss a wet floor sign and you slip and hit your head.", {}),
             //[A: slip/fall, thud; V: after display → slip, text slides up and shakes]
             new TextEvent("After a few seconds, you come to and stand back up.", {}),
             //[A: stand up;]
@@ -287,7 +288,7 @@ var story = {
             new TextEvent("Maybe something from his class could help you figure out why he sent you here.", {}),
             new TextEvent("You ponder for a moment.", {}),
             //[ V: pause text 3 seconds]
-            new TextEvent("You remember Paul would often talk about the minimum viable product… the MVP.", {}),
+            new TextEvent("You remember Paul would often talk about the minimum viable product... the MVP.", {}),
             new TextEvent("You got it!", {}),
             //[A: lightbulb/ding; V: light flash]
             new TextEvent("Where are the MVPs displayed at the LC? ", {}),
@@ -305,7 +306,7 @@ var story = {
             //[A: clash, war, yell; V: flashes]
             new TextEvent("You run up to Paul and attempt to pull him away from the hounding squirrels.", {}),
             //[A: snarls; V: shakes]
-            new TextEvent("You fend off the first wave of squirrels by swatting them with Paul’s keyboard.", {}),
+            new TextEvent("You fend off the first wave of squirrels by swatting them with Paul\'s keyboard.", {}),
             //[A: sword clang, thuds, smacks; V: ???]
             new TextEvent("But more squirrels keep coming.", {}),
             //[A: continue audio V: quick pause]
@@ -322,6 +323,8 @@ var story = {
         ],
         decisions: [
             //GAME OVER SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -331,10 +334,10 @@ var story = {
             new TextEvent("You turn on the light in the Hall of Fame room.", {}),
             //[A: lightswitch; V: light flicker]
             new TextEvent("You see various plaques, trophies, and team photos, and you begin to look around.", {}),
-            new TextEvent("On the 1998 Cross Country MVP Plaque, you see a yellow note, “You are the real MVP. You are the most viable product. You have been all along.”", {}),
+            new TextEvent("On the 1998 Cross Country MVP Plaque, you see a yellow note, \"You are the real MVP. You are the most viable product. You have been all along.\"", {}),
             //[A: paper flutter; V: zoom in on note text (or diff orientation)]
-            new TextEvent("On the back it reads, “Macalester is in grave danger and needs your help. Mac the Scot, the mascot, is trying to destroy Macalester.", {}),
-            new TextEvent("He has gathered an army of squirrels and plans to brainwash the students and turn the campus into an evil fossil fuel fortress. Only you can stop him!”", {}),
+            new TextEvent("On the back it reads, \"Macalester is in grave danger and needs your help. Mac the Scot, the mascot, is trying to destroy Macalester.", {}),
+            new TextEvent("He has gathered an army of squirrels and plans to brainwash the students and turn the campus into an evil fossil fuel fortress. Only you can stop him!\"", {}),
             //[A:silence; V: zoom out to normal]
             new TextEvent("Wow.", {}),
             new TextEvent("That is a lot to take in.", {}),
@@ -351,7 +354,7 @@ var story = {
 
     "runfame": {
         events: [
-            new TextEvent("You burst through the doors and send Mac’s squirrels flying into the wall.", {}),
+            new TextEvent("You burst through the doors and send Mac\'s squirrels flying into the wall.", {}),
             //[A: door slam open, thuds; V: thud/shake]
             new TextEvent("You run out of the Hall of Fame room and see Mac chasing after you.", {}),
             //[A: running; V: scroll quick]
@@ -382,9 +385,9 @@ var story = {
             //[ V: peek?]
             new TextEvent("He makes a screeching noise and suddenly the room fills with squirrels.", {}),
             //[A: screech; V: text shakes]
-            new TextEvent("Mac shouts, “My minions… my beautiful, scurrying minions.", {}),
+            new TextEvent("Mac shouts, \"My minions... my beautiful, scurrying minions.", {}),
             new TextEvent("Tonight, while the students are preoccupied at Kagin, we shall strike hard and we shall strike fast.", {}),
-            new TextEvent("We must surround the students and force them into our brainwashing facility in 10K, the Dupre basement.”", {}),
+            new TextEvent("We must surround the students and force them into our brainwashing facility in 10K, the Dupre basement.\"", {}),
             //[A: drumming/war beats, squirrel squeak/scurry; V: scroll]
             new TextEvent("As Mac rambles on, you are losing the fight against the smell.", {}),
             //[A: cough;]
@@ -435,7 +438,7 @@ var story = {
             new TextEvent("[A: same sounds & bagpipe playing; V: pause]", {}),
             new TextEvent("As Mac gets closer, you shake with fear.", {}),
             //[A: bagpipes louder; V: small rapid shakes]
-            new TextEvent("You bargain with yourself, “maybe he is here to help.”", {}),
+            new TextEvent("You bargain with yourself, \"maybe he is here to help.\"", {}),
             new TextEvent("Suddenly, the bagpipes stop.", {}),
             //[A: Silence; V: text fades]
             new TextEvent("Mac lifts up the bagpipes and strikes you over the head with them.", {}),
@@ -445,12 +448,14 @@ var story = {
 ],
         decisions: [
             //GAME OVER SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
     "fightfame": {
         events: [
-            new TextEvent("You burst through the doors and send Mac’s squirrels flying into the wall.", {}),
+            new TextEvent("You burst through the doors and send Mac\'s squirrels flying into the wall.", {}),
             //[A: door slam open, thuds; V: thud/shake]
             new TextEvent("You charge towards Mac and he charges towards you.", {}),
             new TextEvent("You throw kicks and punches and so does he.", {}),
@@ -464,17 +469,19 @@ var story = {
             //[A: bounce, thud;]
             new TextEvent("It hits the unmasked person in the face and the orange juice splatters everywhere.", {}),
             //[A: splatter liquid; V: short pause]
-            new TextEvent("You come up closer to the dazed figure and recognize that it’s Paul.", {}),
+            new TextEvent("You come up closer to the dazed figure and recognize that it\'s Paul.", {}),
             //[A: footsteps]
-            new TextEvent("He asks you, “Where am I?” and rubs his head.", {}),
+            new TextEvent("He asks you, \"Where am I?\" and rubs his head.", {}),
             //[A: window rubbing]
-            new TextEvent("You remember Paul’s hatred for fruit and realize that the orange juice probably snapped him out of his trance.", {}),
+            new TextEvent("You remember Paul\'s hatred for fruit and realize that the orange juice probably snapped him out of his trance.", {}),
             new TextEvent("You explain everything to Paul and he apologizes and thanks you.", {}),
             new TextEvent("You saved Macalester!", {}),
             //[A: victory horn, V: fade to end→](End screen)
         ],
         decisions: [
             //END SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -482,7 +489,7 @@ var story = {
         events: [
             new TextEvent("You skate out of the doors of the LC.", {}),
             //[A: skateboard, door close?; V: ??]
-            new TextEvent("As you leave, you realize two things: one, you don’t know how to skateboard, and two, Paul would have prefered the scooter.", {}),
+            new TextEvent("As you leave, you realize two things: one, you don\'t know how to skateboard, and two, Paul would have prefered the scooter.", {}),
             new TextEvent("Maybe you are not the MVP after all.", {}),
             //[V: short pause, slow incomplete fade (like blinking)]
             new TextEvent("With these two realizations, your adrenaline and confidence begin to run out.", {}),
@@ -495,12 +502,14 @@ var story = {
             new TextEvent("You wake up in the Dupre basement, being dragged into 10K.", {}),
             new TextEvent("All around you are bright screens and hundreds of other students strapped into chairs being brainwashed.", {}),
             //[A: whirring, machines, fuzzy noise; V: bright screens, old TV fuzz]
-            new TextEvent("After days and days of this torture, you are now one of Mac’s fossil fuel soldiers, obeying every command.", {}),
+            new TextEvent("After days and days of this torture, you are now one of Mac\'s fossil fuel soldiers, obeying every command.", {}),
             new TextEvent("You are a slave to the system.", {}),
             //   [V: fade to black]GAME OVER
         ],
         decisions: [
             //GAME OVER SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -509,35 +518,37 @@ var story = {
             new TextEvent("You scooter your way out of the doors of the LC.", {}),
             //[A: scooter, door close; V: scoot?? idk]
             new TextEvent("You head to Neill Hall to hide, because who would look there, right?", {}),
-            new TextEvent("Once you are inside, you find an old phone in a professor’s office.", {}),
+            new TextEvent("Once you are inside, you find an old phone in a professor\'s office.", {}),
             new TextEvent("You dial Mac security, but the line is busy.", {}),
             //[A: phone dial, busy tone;]
             new TextEvent("After waiting a moment, you decide to call the St. Paul Police Department.", {}),
             //[A: phone dial;]
             new TextEvent("You explain the situation to the dispatcher, and they send police to the campus.", {}),
             new TextEvent("The next two hours on campus are chaos, but finally they capture Mac the Scot and release the squirrels from his command.", {}),
-            new TextEvent("The police inform you that they have unmasked the suspect and that it was Carleton’s president trying to sabotage Macalester.", {}),
+            new TextEvent("The police inform you that they have unmasked the suspect and that it was Carleton\'s president trying to sabotage Macalester.", {}),
             new TextEvent("As you are filling out witness statements, you see Paul walk past you with your scooter in his hands.", {}),
             new TextEvent("He gives you an approving nod and walks away.", {}),
             //[A: footsteps V: fade to black](End screen)
         ],
         decisions: [
             //END SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
     "bell": {
         events: [
-            new TextEvent("You make your way to Macalester’s (in)famous bell.", {}),
+            new TextEvent("You make your way to Macalester\'s (in)famous bell.", {}),
             new TextEvent("As you approach, some giggling first-years run away.", {}),
             //[A: giggles, footsteps; V: short pause]
             new TextEvent("You look around the bell, searching for clues.", {}),
-            new TextEvent("You notice a large “I” engraved into one of the columns and wonder why you haven’t seen that before.", {}),
+            new TextEvent("You notice a large \"I\" engraved into one of the columns and wonder why you haven\'t seen that before.", {}),
             //[V: scroll up]
             new TextEvent("Under the bench, you notice a note stuck to it with gum.", {}),
             new TextEvent("You pull the note off and open it.", {}),
             //[A: paper flutter; V: short pause]
-            new TextEvent("Inside, it reads, “Ringing once is for a dunce. One ring and you will sting. Ringing twice will suffice.”", {}),
+            new TextEvent("Inside, it reads, \"Ringing once is for a dunce. One ring and you will sting. Ringing twice will suffice.\"", {}),
             //[V: zoom on note text]
             new TextEvent("You notice a bloody fingerprint on the edge of the note.", {}),
             new TextEvent("Should you trust their advice or are they trying to trick you?", {}),
@@ -560,7 +571,7 @@ var story = {
             new TextEvent("You decide to approach them.", {}),
             //[A: footsteps]
             new TextEvent("As you get closer, they stop and stare at you.", {}),
-            new TextEvent("One asks, “Are you an RA?”", {}),
+            new TextEvent("One asks, \"Are you an RA?\"", {}),
             new TextEvent("You shake your head no.", {}),
             new TextEvent("Then they smile and invite you into their circle.", {}),
             new TextEvent("As you sit there, they pass around a strange looking cigarette.", {}),
@@ -574,6 +585,8 @@ var story = {
         ],
         decisions: [
             //ENDING SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -583,15 +596,15 @@ var story = {
             //[A: bell ring, claps, cheers; V: short pause]
             new TextEvent("A piece of paper falls from inside the bell and glides into your hands.", {}),
             //[A: paper flutter; V: zoom/text bigger for note]
-            new TextEvent("You read the clue, “C U @ Kagin bb.”", {}),
+            new TextEvent("You read the clue, \"C U @ Kagin bb.\"", {}),
             //[A: kiss sound]
-            new TextEvent("You scratch your head and try to remember where you’ve heard the word Kagin before.", {}),
+            new TextEvent("You scratch your head and try to remember where you\'ve heard the word Kagin before.", {}),
             new TextEvent("Your head is still sore.", {}),
             //[A: scratch; V: pound/pulse]
             new TextEvent("You walk around campus trying to figure out what the note means.", {}),
             new TextEvent("Is it some sort of code? Maybe a puzzle?", {}),
             //[V: pause]
-            new TextEvent("As you continue your search, you walk by some dorm buildings and notice a building labeled, “Kagin.”", {}),
+            new TextEvent("As you continue your search, you walk by some dorm buildings and notice a building labeled, \"Kagin.\"", {}),
             new TextEvent("You found it!", {}),
             new TextEvent("Could this be the answer to your clue, or perhaps to your identity?", {}),
             //[A: footsteps;]
@@ -616,11 +629,13 @@ var story = {
             new TextEvent("You wake up in your Dupre dorm and realize it was all just a dream.", {}),
             new TextEvent("You are going to be late for class, so you quickly get ready and rush out of the door.", {}),
             //[A: wind]
-            new TextEvent("As you leave your room, out of the corner of your eye, you notice an orange sitting on the table…", {}),
+            new TextEvent("As you leave your room, out of the corner of your eye, you notice an orange sitting on the table...", {}),
             //[A: door close; V: orange] (End screen)
         ],
         decisions: [
             //END SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -650,7 +665,7 @@ var story = {
             //[A: music loud; V: flash/disco]
             new TextEvent("You see a sea of people dancing, yelling, and attempting to relate to each other.", {}),
             //[A: music, voice chatter]
-            new TextEvent("You read a sign that says, “Masquerade Kagin.”", {}),
+            new TextEvent("You read a sign that says, \"Masquerade Kagin.\"", {}),
             new TextEvent("You walk inside.", {}),
             //[A: music/footsteps???, V:pause]
             new TextEvent("Without a mask, you are standing out and you feel like you are getting some looks.", {}),
@@ -668,12 +683,12 @@ var story = {
             new TextEvent("As you go downstairs, you hear muffled voices.", {}),
             //[A: muffled voices; V: scroll down, ??]
             new TextEvent("You open a door and walk into the main room.", {}),
-            new TextEvent("Someone hears you and you hear a “shh.”", {}),
+            new TextEvent("Someone hears you and you hear a \"shh.\"", {}),
             //[A: footsteps, door open, shh;]
             new TextEvent("The voices go quiet.", {}),
             new TextEvent("Somewhat suspicious, you walk forward.", {}),
             //[A: footsteps; V: pause 3 secs]
-            new TextEvent("Suddenly fifteen people jump out and yell, “Surprise! Happy Birthday!”", {}),
+            new TextEvent("Suddenly fifteen people jump out and yell, \"Surprise! Happy Birthday!\"", {}),
             //[A: surprise or bday sounds; V: balloon colors/confetti?]
             new TextEvent("They come out with a birthday cake and start singing.", {}),
             //[A: bday song]
@@ -683,6 +698,8 @@ var story = {
         ],
         decisions: [
            //END SCREEN
+           {text: "", scene: ""},
+           {text: "", scene: ""}
         ]
     },
 
@@ -703,14 +720,14 @@ var story = {
             new TextEvent("You feel another tap on your shoulder and are already rolling your eyes.", {}),
             new TextEvent("You turn and realize that it is someone new, someone that feels almost familiar.", {}),
             new TextEvent("She says something to you, but you cannot hear it over the music.", {}),
-            new TextEvent("“WHAT?”", {}),
+            new TextEvent("\"WHAT?\"", {}),
             new TextEvent("She motions for you to follow her.", {}),
             //[A: music chattering]
             new TextEvent("You two end up outside of the crowd, where the music is far enough that you can hear.", {}),
-            new TextEvent("She says, “Hey aren’t you in my software dev class?”", {}),
+            new TextEvent("She says, \"Hey aren\'t you in my software dev class?\"", {}),
             new TextEvent("You are unsure, but you decide to play along and nod.", {}),
             //[V: text nod]
-            new TextEvent("She continues, “I think you left your red journal last class. I saw someone drop it off in the Free Swap.” ", {}),
+            new TextEvent("She continues, \"I think you left your red journal last class. I saw someone drop it off in the Free Swap.\" ", {}),
             new TextEvent("You thank her and try to ask her more about your identity, but her friends pull her away, making confused glances at her and giving you weird looks.", {}),
             new TextEvent("Do you go to the Free Swap or follow her?", {}),
         ],
@@ -725,12 +742,12 @@ var story = {
         events: [
             new TextEvent("You go to the restroom, do your business, and escape the crowd.", {}),
             //[A: toilet flush; V: text swirl/rotate]
-            new TextEvent("As you are at the sink, and someone approaches you, “Hey, do I know you from somewhere? What’s your name?”", {}),
+            new TextEvent("As you are at the sink, and someone approaches you, \"Hey, do I know you from somewhere? What\'s your name?\"", {}),
             //[A: sink water running]
-            new TextEvent("You reply, “I’m not sure.”", {}),
-            new TextEvent("He laughs, “Nice sticking with the theme, but where is you mask?”", {}),
-            new TextEvent("You say, “I don’t have one.”", {}),
-            new TextEvent("He changes his expression, “Here, take mine. Also have some water too.”", {}),
+            new TextEvent("You reply, \"I\'m not sure.\"", {}),
+            new TextEvent("He laughs, \"Nice sticking with the theme, but where is you mask?\"", {}),
+            new TextEvent("You say, \"I don\'t have one.\"", {}),
+            new TextEvent("He changes his expression, \"Here, take mine. Also have some water too.\"", {}),
             new TextEvent("He tries to hand you his mask and a suspicious-looking water bottle.", {}),
             new TextEvent("Do you accept his offering or decline it and head back to the dance floor?", {}),
         ],
@@ -748,9 +765,9 @@ var story = {
             new TextEvent("After a few seconds of struggling, you get the mask on and turn towards the door.", {}),
             new TextEvent("You hear a commotion outside and suddenly two security guards in yellow jackets block the doorway.", {}),
             //[A: commotion/loud noises/bang; V: flash]
-            new TextEvent("One shouts, “There you are!” and points at you.", {}),
+            new TextEvent("One shouts, \"There you are!\" and points at you.", {}),
             new TextEvent("They run up to you and grab you by both arms.", {}),
-            new TextEvent("The other guard says, “We finally got you, and you thought you could get away from us?”", {}),
+            new TextEvent("The other guard says, \"We finally got you, and you thought you could get away from us?\"", {}),
             new TextEvent("You try to explain that you are being set up, but it is no use.", {}),
             new TextEvent("The guards open your water bottle, which after smelling, is definitely not water.", {}),
             new TextEvent("They write you up, and kick you out of Kagin.", {}),
@@ -759,6 +776,8 @@ var story = {
         ],
         decisions: [
            //GAME OVER SCREEN
+           {text: "", scene: ""},
+           {text: "", scene: ""}
         ]
     },
 
@@ -797,8 +816,8 @@ var story = {
             //[A: music; V: disco]
             new TextEvent("You ignore the heat and your body and push on.", {}),
             //[A: music, heartbeat; V: red flash]
-            new TextEvent("You get elbowed in places you wish you hadn’t and dodge drunken students, but you finally make your way across the crowd.", {}),
-            new TextEvent("The girl is right there, within an arm’s reach.", {}),
+            new TextEvent("You get elbowed in places you wish you hadn\'t and dodge drunken students, but you finally make your way across the crowd.", {}),
+            new TextEvent("The girl is right there, within an arm\'s reach.", {}),
             //[A: music; V: pulse/heartbeat]
             new TextEvent("You feel like you are burning up from the inside.", {}),
             //[A: faster heartbeats, V: many red pulses]
@@ -807,13 +826,15 @@ var story = {
             //[A: thud; V: fade to black] GAME OVER
         ],
         decisions: [
-        //GAME OVER SCREEN
+            //GAME OVER SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
     "freeswap": {
         events: [
-            new TextEvent("You head downstairs and make your way into Kagin’s Free Swap.", {}),
+            new TextEvent("You head downstairs and make your way into Kagin\'s Free Swap.", {}),
             //[A: footsteps; V: downstairs?]
             new TextEvent("You are looking for the red journal that she mentioned.", {}),
             new TextEvent("You rummage through some shelves and peer behind some coats.", {}),
@@ -824,13 +845,13 @@ var story = {
             //[A: drawer open;]
             new TextEvent("You ruffle through the pages until you find one with writing.", {}),
             //[A: paper flutter; V: page turn effect]
-            new TextEvent("The writing discusses a plot to hack and steal all of the Macalester students’ information.", {}),
+            new TextEvent("The writing discusses a plot to hack and steal all of the Macalester students\' information.", {}),
             new TextEvent("At the bottom, the name David Sisk is circled in red sharpie.", {}),
             //[A: pen/marker scribble; V: circle “David Sisk” in red]
-            new TextEvent("You realize that you must have uncovered Sisk’s plot and he is somehow the reason why you woke up with amnesia.", {}),
+            new TextEvent("You realize that you must have uncovered Sisk\'s plot and he is somehow the reason why you woke up with amnesia.", {}),
             new TextEvent("You ponder for a few moments about the gravity of the situation.", {}),
             //[V: pause]
-            new TextEvent("You could save your fellow students’ information and exact revenge on Sisk for your amnesia.", {}),
+            new TextEvent("You could save your fellow students\' information and exact revenge on Sisk for your amnesia.", {}),
             new TextEvent("Or you could just go back to Kagin and ignore this new revelation.", {}),
         ],
         decisions: [
@@ -844,51 +865,53 @@ var story = {
             new TextEvent("You hear footsteps behind you and quickly leave through the back door with your journal in your arms.", {}),
             //[A: footsteps, door slam;]
             new TextEvent("You head over to the ITS Help Desk.", {}),
-            new TextEvent("On your way, you hear a “psst” and you see the shadow of a figure sitting on the stairs in front of Old Main.", {}),
+            new TextEvent("On your way, you hear a \"psst\" and you see the shadow of a figure sitting on the stairs in front of Old Main.", {}),
             //[A: psst; V: dark/fade]
             new TextEvent("You walk closer and realize that it is Paul.", {}),
             new TextEvent("You fill him in on what you found in your journal.", {}),
             new TextEvent("He explains that he already knew about the plot and that is why he led you to Kagin.", {}),
-            new TextEvent("He couldn’t tell you in the library because Sisk could have been listening.", {}),
+            new TextEvent("He couldn\'t tell you in the library because Sisk could have been listening.", {}),
             new TextEvent("He agrees to go to ITS with you to help prevent this catastrophe.", {}),
             //[A: action music; V: fade to black]
             new TextEvent("You end up at the Help Desk and everything is dark except for one bright computer screen.", {}),
             //[V: bright screen]
-            new TextEvent("You both look closer and realize that it is Sisk’s code and that it has already begun executing.", {}),
+            new TextEvent("You both look closer and realize that it is Sisk\'s code and that it has already begun executing.", {}),
             //[A: retro code music (OR) morse code beeping]
             new TextEvent("Paul springs into action and tries to terminate the program.", {}),
             new TextEvent("He is typing faster than you thought possible.", {}),
             //[A: typing]
-            new TextEvent("Paul says, “I almost got it!”", {}),
+            new TextEvent("Paul says, \"I almost got it!\"", {}),
             //[A: typing]
             new TextEvent("Suddenly, a door swings open and David Sisk comes charging at you.", {}),
-            new TextEvent("He yells, “DO NOT TOUCH THAT COMPUTER!”", {}),
+            new TextEvent("He yells, \"DO NOT TOUCH THAT COMPUTER!\"", {}),
             //[A: door slam, action, running; V: shake]
             new TextEvent("Paul gets up from the computer and defends you from Sisk.", {}),
-            new TextEvent("As they are wrestling, you go on the computer and attempt to finish Paul’s hacking.", {}),
+            new TextEvent("As they are wrestling, you go on the computer and attempt to finish Paul\'s hacking.", {}),
             //[A: typing, fighting, thuds; V: matrix(0/1s)]
             new TextEvent("You keep trying but it is no use.", {}),
             new TextEvent("Paul seems to be losing the fight against Sisk as well.", {}),
             new TextEvent("In a last ditch effort, you press CTRL + ALT + Delete.", {}),
             new TextEvent("It takes you to a password-locked screen.", {}),
-            new TextEvent("You try the obvious passwords like “Sisk123”, “admin”, and “password”, but none work.", {}),
+            new TextEvent("You try the obvious passwords like \"Sisk123\", \"admin\", and \"password\", but none work.", {}),
             //[A: action music, typing, fighting]
             new TextEvent("You yell to Paul, asking for help.", {}),
             new TextEvent("Paul tells you to look in your journal.", {}),
             //[A: paper, action; V: zoom in]
-            new TextEvent("You open the journal, and inside you see “iLuvPBR” written in big letters below the red circled “David Sisk.”", {}),
+            new TextEvent("You open the journal, and inside you see \"iLuvPBR\" written in big letters below the red circled \"David Sisk.\"", {}),
             new TextEvent("You quickly enter in the password.", {}),
             new TextEvent("All at once everything stops and the lights turn on.", {}),
             //[A: silence, V:light flash above]
-            new TextEvent("Sisk lets out a loud, “NOOOO…” as you and Paul tie him up.", {}),
+            new TextEvent("Sisk lets out a loud, \"NOOOO...\" as you and Paul tie him up.", {}),
             new TextEvent("You call the police and inform Mac security.", {}),
-            new TextEvent("Sisk gets arrested, you and Paul high-five, and you no longer receive those “ITS will never ask for your password” emails.", {}),
+            new TextEvent("Sisk gets arrested, you and Paul high-five, and you no longer receive those \"ITS will never ask for your password\" emails.", {}),
             new TextEvent(" You saved the day!", {}),
             //(END SCREEN)
 
         ],
         decisions: [
             //END SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
@@ -898,8 +921,8 @@ var story = {
             new TextEvent("You hear footsteps behind you and turn around.", {}),
             //[A: footsteps]
             new TextEvent("Behind you, you see David Sisk approaching.", {}),
-            new TextEvent("He growls, “You really should not have meddled. I already knocked you out once.", {}),
-            new TextEvent("I’m surprised you even remembered my plan.”", {}),
+            new TextEvent("He growls, \"You really should not have meddled. I already knocked you out once.", {}),
+            new TextEvent("I\'m surprised you even remembered my plan.\"", {}),
             new TextEvent("You try to back away.", {}),
             //[V: zoom out/back away]
             new TextEvent("Sisk follows and knocks you over the head with an Alienware laptop.", {}),
@@ -909,6 +932,8 @@ var story = {
         ],
         decisions: [
             //GAME OVER SCREEN
+            {text: "", scene: ""},
+            {text: "", scene: ""}
         ]
     },
 
