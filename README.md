@@ -1,5 +1,5 @@
 # BanderMac
 
-## 1. Introduction
+BanderMac is a text-based, Macalester-themed choose your own adventure game.
 
-This is a final project for COMP 225 class. 
+To run you use index.....
