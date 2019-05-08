@@ -24,6 +24,9 @@ class TextEvent {
 		this.finished = false;
 	}
 
+	preload(game) {
+	}
+
 	go(game) {
 		game.textX = this.options.x || game.textX;
 		game.textY = this.options.y || game.textY;

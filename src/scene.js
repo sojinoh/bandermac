@@ -38,15 +38,13 @@ var timer = 300;
 
 
 function preload() {
-    //load the audio asset
-    this.load.audio('theme','../assets/creepy.wav');
-    this.load.audio('crash','../assets/crash.wav');
+    // call preload for all events in this scene
+    for (let event of story[currentScene].events){
+        event.preload(this);
+    }
 }
 
 function create() {
-    var theme = this.sound.add('theme');
-    theme.play();
-
     this.scrollContainer = this.add.container(this.textX, this.textY);
     this.textX = 250;
     this.textY = 100;
@@ -83,10 +81,10 @@ function checkEvent(game){
 }
 
 function update (time, delta){
-    if(!story[currentScene].events[story[currentScene].events.length-1].finished){
+    if (!story[currentScene].events[story[currentScene].events.length-1].finished){
         //when the whole scene is not shown yet
         this.scrollContainer.y -= 0.023 * delta;
-    } else{
+    } else {
         if (timer > 0){
             //scrolling up text for a little bit so it doesn't overlap with the buttons
             this.scrollContainer.y -= 0.023 * delta;
