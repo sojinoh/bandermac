@@ -27,7 +27,7 @@ class TextEvent {
 	}
 
 	preload(game) {
-		
+
 	}
 
 	go(game) {
