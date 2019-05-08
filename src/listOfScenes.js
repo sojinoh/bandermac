@@ -1,4 +1,14 @@
 var story = {
+
+    "startscreen": {
+        events: [
+            new TextEvent("BanderMac", {x: 230, y: 225, }) 
+        ]
+        decisions[
+            {text: "Start", scene: "Start"}
+        ]
+    }
+
     "Start": {
         events: [
             //[//scene 1 (index:0)   [A = audio; V = visual effect]
