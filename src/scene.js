@@ -32,6 +32,7 @@ var currentEventIndex = -1;
 var button1;
 var button2;
 var timer = 300;
+var buttonClicked = false;
 
 
 function preload() {
@@ -41,6 +42,9 @@ function preload() {
             event.preload(this);
         }
     }
+
+    //transition footstep image
+    this.load.image('footprint', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsOc4o0Dd5zR6YxomB3MsecxjmyhJWHzq6q4vAOkYNz1h4laVk');
 }
 
 function create() {
@@ -88,12 +92,14 @@ function update (time, delta){
             //scrolling up text for a little bit so it doesn't overlap with the buttons
             this.scrollContainer.y -= 0.023 * delta;
             timer -= 1;
-        } else {
-            //show the decision buttons when the scene is over
+        } else if(!buttonClicked) {
+            //show the decision buttons when the scene is over, before transition
             button1.text = story[currentScene].decisions[0].text;
             button2.text = story[currentScene].decisions[1].text;
             button1.visible = true;
             button2.visible = true;
+        } else{
+            //transition going on
         }
     }
 
@@ -101,15 +107,33 @@ function update (time, delta){
 
 function actionOnClick (game, decisionChosen) {
     console.log("clicked");
-    currentScene = story[currentScene].decisions[decisionChosen].scene;
-    currentEventIndex = -1;
     game.scrollContainer.removeAll();
+    buttonClicked = true;
     button1.visible = false;
     button2.visible = false;
-    timer = 300;
-    this.scrollContainer.y = this.textY;
 
-    checkEvent(game);
+    //transition
+    var footprintSprite = game.add.sprite(-400, 0, 'footprint');
+    footprintSprite.setScale(.2);
+    var transition = game.tweens.add({
+        targets: footprintSprite,
+        x: 1200,
+        y: 550,
+        duration: 3000,
+        ease: 'Stepped',
+        easeParams: [ 10 ],
+        delay: 10,
+        onComplete: function () {
+            footprintSprite.destroy();
+            
+            currentScene = story[currentScene].decisions[decisionChosen].scene;
+            currentEventIndex = -1;
+            timer = 300;
+            buttonClicked = false;
+        }
+    });
+
+
 }
 
 
@@ -123,7 +147,9 @@ function actionHoverOut (game, button){
     window[button].setStyle({ fill: '#c51b7d'});
 }
 
+function pause(){
 
+}
 
 
 
