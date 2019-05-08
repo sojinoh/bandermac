@@ -19,12 +19,15 @@ class TextEvent {
 				y: undefined, 
 				partDelay: 35,
 				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
-				effects: []
+				sway: false,
+				fade: false,
+				flash: false
 			}, options);
 		this.finished = false;
 	}
 
 	preload(game) {
+		
 	}
 
 	go(game) {
@@ -34,6 +37,9 @@ class TextEvent {
 		game.textY += 50;
 		game.scrollContainer.add(textSprite);
 		this.nextPart(game, textSprite, this.text.split(''), 0);
+		if(this.options.sway){ this.sway(game, textSprite); }
+		if(this.options.fade){ this.fade(game); }
+		if(this.options.flash){ this.flash(game); }
 	}
 
 	nextPart(game, textSprite, parts, partIndex) {
@@ -49,4 +55,31 @@ class TextEvent {
 	    	this.finished = true;
 	    }
 	}
+
+	sway(game, textSprite){
+		var tween = game.tweens.add({
+		    targets: textSprite,
+		    x: 450,
+		    ease: 'Sine.easeInOut',
+		    yoyo: true,
+		    duration: 2000,
+		    onComplete: function () {
+		    	tween.stop();
+		    }
+		});
+		
+	}
+
+	fade(game){
+		game.cameras.main.fadeOut(1800);
+		game.cameras.main.once('camerafadeoutcomplete', function (camera) {
+		    camera.fadeIn(1500);
+		});
+	}
+
+	flash(game){
+		game.cameras.main.flash();
+	}
 }
+
+
