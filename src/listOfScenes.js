@@ -11,6 +11,7 @@ var story = {
             new TextEvent("With your head pounding", {}),
             new TextEvent("you realize you are lying flat on your back in the middle of Smail gallery. ", {}),
             new AudioEvent("heartbeat2"),
+            new AudioEvent("heartbeat2"),
             //V: Effect: sway stops; shake w heartbeat
             new TextEvent("    ", {}),
             new TextEvent("You cannot remember who you are or what happened to you.", {}),
@@ -22,12 +23,12 @@ var story = {
             //Effect: pause 2 seconds
             new TextEvent("    ", {}),
             new TextEvent("The building itself is completely dark", {}),
-            new AudioEvent("lightbuzz"),
+            new AudioEvent("lightbuzz", { volume: 0.5 }),
             new TextEvent("except for a light emanating from the top floor.", {}),
-            //[A: light buzzing, creepy; V: flash/light top right].
+            //[V: flash/light top right].
             new TextEvent("    ", {}),
             new AudioEvent("glass"),
-            new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", {}),
+            new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", { partDelay: 25 }),
             // [A: crash, glass shatter; V: shake]
         ],
         decisions: [
@@ -52,8 +53,8 @@ var story = {
             new TextEvent("figure of a man.    ", {}),
             new TextEvent("From his young features, you guess he must be a student.", {}),
             new TextEvent("You walk over to him.", {}),
-            //[A: footsteps; V: pause?]
-
+            new AudioEvent("footsteps"),
+            //[V: pause?]
             //[A: silence; V: text message style (pop from side?) (if time?)]
             new TextEvent("Hello.", {}),
             new TextEvent("\"What do you want?\" he grumbles. Not looking up from the molecule he\'s drawing.", {}),
@@ -72,10 +73,11 @@ var story = {
             new TextEvent("Below? You wonder to yourself.", {}),
             new TextEvent("Below what?", {}),
             new TextEvent("You start walking downstairs", {}),
-            //[A: footsteps; V: scroll]
+            new AudioEvent("footsteps"),
+            //[V: scroll]
             new TextEvent("    ", {}),
             new TextEvent("You walk all the way down to the bottom floor.", {}),
-            //  [A: creak/crack;]
+            //[A: creak/crack;]
             new TextEvent("Is that what he meant? You start to wander.", {}),
             new TextEvent("    ", {}),
             new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {}),
@@ -88,16 +90,17 @@ var story = {
         ]
     },
 
-
-
-    //********Need to fix way to cause new line other than the "new TextEvent("                     ", {}),"
-
     "geology": {
         events: [//scene 2b
+            new AudioEvent("creepy", { loop: true }),
             new TextEvent("You stand carefully.", {}),
-            //[A: heartbeat; creepy V: slight sway then pause]
-            new TextEvent("You feel slightly off balance as you walk down the stairs towards the crash.", {}),
-            // [A: footsteps, creepy; V: scroll down and shake]
+            //[V: slight sway then pause]
+            new AudioEvent("heartbeat2"),
+            new TextEvent("You feel slightly off balance as you", {}),
+            new TextEvent("walk down the stairs towards the crash.", {}),
+
+            // [V: scroll down and shake]
+            new AudioEvent("footsteps"),
             new TextEvent("    ", {}),
             new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
             //[A: glass shuffle, slight growl;]
@@ -112,7 +115,7 @@ var story = {
             //[A: water drip;]
 
             new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn\'t know existed.", {}),
-            //[A: footsteps;]
+            new AudioEvent("footsteps"),
             new TextEvent("Along the way, you notice an orange and pick it up.", {}),
             //[A: pick up (hand noise);]
             new TextEvent("It might be a clue.", {}),
