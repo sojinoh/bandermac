@@ -2,17 +2,15 @@ var story = {
 
     "Start": {
         events: [
-            //[//scene 1 (index:0)   [A = audio; V = visual effect]
-            //A:creepy.wav audio
+            //[//scene 1  [A = audio; V = visual effect]
             //V: Effect: blink and sway
             new AudioEvent("creepy", { loop: true }),
             new TextEvent("Your eyes gradually open", { partDelay: 60 }),
             new TextEvent("as you slowly float into consciousness.", {}),
-            //A: creepy.wav audio continues
             new TextEvent("    ", {}),
             new TextEvent("With your head pounding", {}),
             new TextEvent("you realize you are lying flat on your back in the middle of Smail gallery. ", {}),
-            //A: heartbeat audio
+            new AudioEvent("heartbeat2"),
             //V: Effect: sway stops; shake w heartbeat
             new TextEvent("    ", {}),
             new TextEvent("You cannot remember who you are or what happened to you.", {}),
@@ -24,10 +22,11 @@ var story = {
             //Effect: pause 2 seconds
             new TextEvent("    ", {}),
             new TextEvent("The building itself is completely dark", {}),
+            new AudioEvent("lightbuzz"),
             new TextEvent("except for a light emanating from the top floor.", {}),
             //[A: light buzzing, creepy; V: flash/light top right].
             new TextEvent("    ", {}),
-            new AudioEvent("crash"),
+            new AudioEvent("glass"),
             new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", {}),
             // [A: crash, glass shatter; V: shake]
         ],
@@ -39,10 +38,13 @@ var story = {
 
     "top-floor": {
         events: [    //scene 2a
+            new AudioEvent("creepy", { loop: true }),
+            new AudioEvent("heartbeat2"),
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You stand carefully.", {}),
             new TextEvent("    ", {}),
-            //[A: footsteps, creepy; V: scroll up and shake]
+            new AudioEvent("footsteps"),
+            //[V: scroll up and shake]
             new TextEvent("You feel slightly off balance as you walk up the main staircase to the", {}),
             new TextEvent("third floor.    ", {}),
             new TextEvent("Sitting at the one of the circular tables of the top floor is a", {}),
