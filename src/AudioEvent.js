@@ -3,8 +3,9 @@ class AudioEvent {
 	Inputs:
 		fileName: name of the audio file to play
 	**/
-	constructor(fileName) {
+	constructor(fileName, options = {}) {
 		this.fileName = fileName;
+		this.options = options;
 	}
 
 	preload(game) {
@@ -12,7 +13,10 @@ class AudioEvent {
 	}
 
 	go(game) {
-		game.sound.add(this.fileName).play();
+		console.log(this.options);
+		game.sound
+			.add(this.fileName)
+			.play(this.options);
 		this.finished = true;
 	}
 }

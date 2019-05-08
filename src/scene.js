@@ -21,9 +21,6 @@ var config = {
         preload: preload,
         create: create,
         update: update
-    },
-    audio: {
-        disableWebAudio: true
     }
 };
 
@@ -38,9 +35,11 @@ var timer = 300;
 
 
 function preload() {
-    // call preload for all events in this scene
-    for (let event of story[currentScene].events){
-        event.preload(this);
+    // call preload for all events in all scenes
+    for (let scene of Object.values(story)) {
+        for (let event of scene.events) {
+            event.preload(this);
+        }
     }
 }
 
