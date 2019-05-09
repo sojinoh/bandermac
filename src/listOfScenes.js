@@ -14,7 +14,7 @@ var story = {
             new AudioEvent("heartbeat2"),
             //V: Effect: sway stops; shake w heartbeat
             new TextEvent("    ", {}),
-            new TextEvent("You cannot remember who you are or what happened to you.", {appearBy: "word"}),
+            new TextEvent("You cannot remember who you are or what happened to you.",),
             new TextEvent("You glance to the backdoors only to realize it is pitch black outside.", {}),
             //Effect: fade
             new TextEvent("    ", {}),
@@ -23,7 +23,7 @@ var story = {
             //Effect: pause 2 seconds
             new TextEvent("    ", {}),
             new TextEvent("The building itself is completely dark", {}),
-            new AudioEvent("lightbuzz", { volume: 0.5 }),
+            new AudioEvent("lightbuzz", { volume: 0.3 }),
             new TextEvent("except for a light emanating from the top floor.", {}),
             //[V: flash/light top right].
             new TextEvent("    ", {}),
