@@ -14,7 +14,7 @@ var story = {
             new AudioEvent("heartbeat2"),
             //V: Effect: sway stops; shake w heartbeat
             new TextEvent("    ", {}),
-            new TextEvent("You cannot remember who you are or what happened to you.", {}),
+            new TextEvent("You cannot remember who you are or what happened to you.", {appearBy: "word"}),
             new TextEvent("You glance to the backdoors only to realize it is pitch black outside.", {}),
             //Effect: fade
             new TextEvent("    ", {}),

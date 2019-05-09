@@ -150,9 +150,6 @@ function actionHoverOut (game, button){
     window[button].setStyle({ fill: '#c51b7d'});
 }
 
-function pause(){
-
-}
 
 
 

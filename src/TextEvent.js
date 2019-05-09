@@ -17,7 +17,7 @@ class TextEvent {
 				appearBy: "character",
 				x: undefined,
 				y: undefined, 
-				partDelay: 35,
+				partDelay: 40,
 				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
 				sway: false,
 				fade: false,
@@ -36,19 +36,27 @@ class TextEvent {
 		let textSprite = game.add.text(game.textX, game.textY, '', this.options.textStyle);
 		game.textY += 50;
 		game.scrollContainer.add(textSprite);
-		this.nextPart(game, textSprite, this.text.split(''), 0);
+		if(this.options.appearBy === "word"){
+			this.options.partDelay += 100;
+			this.nextPart(game, textSprite, this.text.split(' '), 0, this.options.appearBy);
+		} else{
+			this.nextPart(game, textSprite, this.text.split(''), 0, this.options.appearBy);
+		}
+		
 		if(this.options.sway){ this.sway(game, textSprite); }
 		if(this.options.fade){ this.fade(game); }
 		if(this.options.flash){ this.flash(game); }
 	}
 
-	nextPart(game, textSprite, parts, partIndex) {
+	nextPart(game, textSprite, parts, partIndex, appearBy) {
 	    if(parts[partIndex]) {
 	        textSprite.text += parts[partIndex];
-
+	        if(appearBy === "word"){
+	        	textSprite.text += " ";
+	        }
 	        game.time.addEvent({
 	        	delay: this.options.partDelay,
-	        	callback: () => this.nextPart(game, textSprite, parts, partIndex + 1),
+	        	callback: () => this.nextPart(game, textSprite, parts, partIndex + 1, appearBy),
 	        	callbackScope: this
 	        });
 	    } else {
@@ -79,6 +87,14 @@ class TextEvent {
 
 	flash(game){
 		game.cameras.main.flash();
+	}
+
+	pause(game){
+
+	}
+
+	shake(game){
+		
 	}
 }
 
