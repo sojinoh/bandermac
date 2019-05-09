@@ -2,7 +2,6 @@ var config = {
     type: Phaser.WEBGL,
     width: 1250,
     height: 600,
-    parent: 'container',
     plugins: {
       global: [{
         key: 'GameScalePlugin',
@@ -125,7 +124,6 @@ function actionOnClick (game, decisionChosen) {
         delay: 10,
         onComplete: function () {
             footprintSprite.destroy();
-            
             currentScene = story[currentScene].decisions[decisionChosen].scene;
             currentEventIndex = -1;
             timer = 300;
