@@ -1,7 +1,12 @@
 var config = {
     type: Phaser.WEBGL,
-    width: 1250,
-    height: 600,
+    scale: {
+        parent: 'gameWrapper',
+        mode: Phaser.DOM.FIT,
+        autoCenter: Phaser.DOM.CENTER_BOTH,
+        width: 1250,
+        height: 600
+    },
     plugins: {
       global: [{
         key: 'GameScalePlugin',
