@@ -13,10 +13,28 @@ class AudioEvent {
 	}
 
 	go(game) {
-		console.log(this.options);
-		game.sound
-			.add(this.fileName)
-			.play(this.options);
+		var sound = game.sound.add(this.fileName);
+		sound.play(this.options);
 		this.finished = true;
+	}
+
+	stop() {
+		sound.stop();
+	}
+
+	pause() {
+		sound.pause();
+	}
+
+	resume() {
+		sound.resume();
+	}
+
+	isPlaying() {
+		return sound.isPlaying;
+	}
+
+	isPaused() {
+		return sound.isPaused;
 	}
 }
