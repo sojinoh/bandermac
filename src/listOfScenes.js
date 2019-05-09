@@ -5,7 +5,7 @@ var story = {
             //[//scene 1  [A = audio; V = visual effect]
             //V: Effect: blink and sway
             new AudioEvent("creepy", { loop: true }),
-            new TextEvent("Your eyes gradually open", { partDelay: 60 , fade: true, flash: true}),
+            new TextEvent("Your eyes gradually open", { partDelay: 60 , fade: true, sway: true}),
             new TextEvent("as you slowly float into consciousness.", {sway: true}),
             new TextEvent("    ", {}),
             new TextEvent("With your head pounding", {}),
