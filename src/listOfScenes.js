@@ -8,8 +8,8 @@ var story = {
             new TextEvent("Your eyes gradually open", { partDelay: 60 , fade: true, sway: true}),
             new TextEvent("as you slowly float into consciousness.", {sway: true}),
             new TextEvent("    ", {}),
-            new TextEvent("With your head pounding", {}),
-            new TextEvent("you realize you are lying flat on your back in the middle of Smail gallery. ", {}),
+            new TextEvent("With your head pounding", { shake: true}),
+            new TextEvent("you realize you are lying flat on your back in the middle of Smail gallery. ", {shake: true}),
             new AudioEvent("heartbeat2"),
             new AudioEvent("heartbeat2"),
             //V: Effect: sway stops; shake w heartbeat

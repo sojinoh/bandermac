@@ -21,7 +21,8 @@ class TextEvent {
 				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
 				sway: false,
 				fade: false,
-				flash: false
+				flash: false,
+				shake: false,
 			}, options);
 		this.finished = false;
 	}
@@ -89,13 +90,15 @@ class TextEvent {
 		game.cameras.main.flash();
 	}
 
+	shake(game){
+		game.cameras.shake(0.05, 500);
+	}
+
 	pause(game){
 
 	}
 
-	shake(game){
-		
-	}
+
 }
 
 
