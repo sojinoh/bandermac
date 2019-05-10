@@ -12,8 +12,8 @@ var config = {
         parent: 'gameWrapper',
         mode: Phaser.DOM.FIT,
         autoCenter: Phaser.DOM.CENTER_BOTH,
-        width: window.screen.availWidth * window.devicePixelRatio,
-        height: window.screen.availHeight * window.devicePixelRatio
+        width: 1250,
+        height: 600
     },
     plugins: {
       global: [{
@@ -39,8 +39,7 @@ var button;
 
 function create ()
 {
-    var text1 = this.add.text(window.screen.availWidth * window.devicePixelRatio/5*2, window.screen.availHeight * window.devicePixelRatio/3, "GAME OVER", 
-        { font: "100px Courier New", fill: "#ffffff"});
+  var text1 = this.add.text(450, 225, "GAME OVER", { font: "60px Courier New", fill: "#ffffff"})
 
 }
 

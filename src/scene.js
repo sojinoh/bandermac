@@ -4,8 +4,8 @@ var config = {
         parent: 'gameWrapper',
         mode: Phaser.DOM.FIT,
         autoCenter: Phaser.DOM.CENTER_BOTH,
-        width: window.screen.availWidth * window.devicePixelRatio,
-        height: window.screen.availHeight * window.devicePixelRatio
+        width: 1250,
+        height: 600
     },
     plugins: {
       global: [{
@@ -53,17 +53,17 @@ function preload() {
 
 function create() {
     this.scrollContainer = this.add.container(this.textX, this.textY);
-    this.textX = window.screen.availWidth * window.devicePixelRatio/6;
-    this.textY = window.screen.availHeight * window.devicePixelRatio/3;
+    this.textX = 250;
+    this.textY = 100;
     this.scrollSpeed = 0.017;
 
-    button1 = this.add.text(window.screen.availWidth * window.devicePixelRatio/4, window.screen.availHeight * window.devicePixelRatio/4*3, story[currentScene].decisions[0], {font: "30px Courier New", fill: "#c51b7d"})
+    button1 = this.add.text(300, 500, story[currentScene].decisions[0], {font: "16px Courier New", fill: "#c51b7d"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this, 0) )
         .on('pointerover', () => actionOnHover(this, "button1"))
         .on('pointerout', () => actionHoverOut(this, "button1"));
 
-    button2 = this.add.text(window.screen.availWidth * window.devicePixelRatio/5*3, window.screen.availHeight * window.devicePixelRatio/4*3, story[currentScene].decisions[1], {font: "30px Courier New", fill: "#c51b7d"})
+    button2 = this.add.text(750, 500, story[currentScene].decisions[1], {font: "16px Courier New", fill: "#c51b7d"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this, 1) )
         .on('pointerover', () => actionOnHover(this, "button2"))
@@ -150,12 +150,12 @@ function actionOnClick (game, decisionChosen) {
 
 
 function actionOnHover (game, button){
-    window[button].setStyle({ fontSize: 30, fill: '#ff0'});
+    window[button].setStyle({ fontSize: 16, fill: '#ff0'});
 
 }
 
 function actionHoverOut (game, button){
-    window[button].setStyle({ fontSize: 30, fill: '#c51b7d'});
+    window[button].setStyle({ fontSize: 16, fill: '#c51b7d'});
 }
 
 
