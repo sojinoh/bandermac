@@ -18,7 +18,7 @@ class TextEvent {
 				x: undefined,
 				y: undefined, 
 				partDelay: 40,
-				textStyle: { font: "15px Courier New", fill: "#ffffff", lineSpacing: 15 },
+				textStyle: { font: "30px Courier New", fill: "#ffffff", lineSpacing: 15 },
 				sway: false,
 				fade: false,
 				flash: false,
