@@ -1,7 +1,7 @@
 # BanderMac
 
 ## 1. What is BanderMac?
-<img height = "400px" width="400px" src="assets/icon.png">
+<img height = "200px" width="200px" src="assets/icon.png">
 BanderMac is a text-based, Macalester-themed choose your own adventure game. 
 
 ## 2. How to Run
