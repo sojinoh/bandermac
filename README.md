@@ -1,7 +1,7 @@
 # BanderMac
 
 ## 1. What is BanderMac?
-<img height = "200px" width="200px" src="assets/icon.png">
+<img height = "150px" width="200px" src="assets/icon.png">
 BanderMac is a text-based, Macalester-themed choose your own adventure game. 
 
 ## 2. How to Run
@@ -24,9 +24,7 @@ python2.7 -m SimpleHTTPServer
 ```
 Now, open a web browser of your choice (ex. Google Chrome, Safari), and go to [http://localhost:8000/home.html](http://localhost:8000/home.html). You are all set!
 
-## 3. Overall Architecture
-
-## 4. Important Issues & Known Bugs
+## 3. Important Issues & Known Bugs
 
 
 
