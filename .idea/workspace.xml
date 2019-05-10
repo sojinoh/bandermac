@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Devgarden and Orange scenes are done.">
-      <change afterPath="$PROJECT_DIR$/assets/bang.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/grunt.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/squirrel.wav" afterDir="false" />
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Also added squirrel scene. Slight changes to additional scenes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.js" afterDir="false" />
     </list>
     <ignored path="C:\Users\Nkg\WebstormProjects\comp225-bandermac\.idea\shelf/" />
@@ -18,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="236">
@@ -54,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scene.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="49">
@@ -104,8 +100,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/AudioEvent.js" />
         <option value="$PROJECT_DIR$/src/TextEvent.js" />
-        <option value="$PROJECT_DIR$/src/scene.js" />
         <option value="$PROJECT_DIR$/src/listOfScenes.js" />
+        <option value="$PROJECT_DIR$/src/scene.js" />
       </list>
     </option>
   </component>
@@ -461,7 +457,7 @@
       <workItem from="1557444514725" duration="1774000" />
       <workItem from="1557446330234" duration="1779000" />
       <workItem from="1557448140076" duration="1782000" />
-      <workItem from="1557449952643" duration="413000" />
+      <workItem from="1557449952643" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -603,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557449197626</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Also added squirrel scene. Slight changes to additional scenes.">
+      <created>1557450405824</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1557450405824</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47155000" />
+    <option name="totallyTimeSpent" value="47208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -668,7 +671,8 @@
     <MESSAGE value="Fixed shake and edited listofscenes" />
     <MESSAGE value="Dev Garden scene is done and ready for Saturday!!!" />
     <MESSAGE value="Devgarden and Orange scenes are done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Devgarden and Orange scenes are done." />
+    <MESSAGE value="Also added squirrel scene. Slight changes to additional scenes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Also added squirrel scene. Slight changes to additional scenes." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -769,13 +773,6 @@
     <entry file="file://$PROJECT_DIR$/assets/grunt.wav">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/squirrel.wav">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -783,6 +780,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="316" column="63" selection-start-line="316" selection-start-column="63" selection-end-line="316" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
         </state>
       </provider>
     </entry>
