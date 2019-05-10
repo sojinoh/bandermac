@@ -22,7 +22,8 @@ class TextEvent {
 				sway: false,
 				fade: false,
 				flash: false,
-				shake: false
+				shake: false,
+				pause: false
 			}, options);
 		this.finished = false;
 	}
@@ -48,6 +49,7 @@ class TextEvent {
 		if(this.options.fade){ this.fade(game); }
 		if(this.options.flash){ this.flash(game); }
 		if(this.options.shake){ this.shake(game); }
+		if(this.options.pause){ this.pause(game); }
 	}
 
 	nextPart(game, textSprite, parts, partIndex, appearBy) {
@@ -96,7 +98,7 @@ class TextEvent {
 	}
 
 	pause(game){
-
+		
 	}
 
 

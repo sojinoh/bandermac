@@ -256,7 +256,7 @@ var story = {
             new AudioEvent("heartbeat2"),
             new TextEvent("                ", {partDelay: 70}),
             new TextEvent("You hover it under Paul\'s nose.", {partDelay:55}),
-            new TextEvent("Although he is still staring, you notice him wince    ",),
+            new TextEvent("Although he is still staring, you notice him wince    "),
             new AudioEvent("inhale"),
             new TextEvent("whenever the orange gets close.", {shake:true}),
             new TextEvent("                ", {partDelay: 70}),
