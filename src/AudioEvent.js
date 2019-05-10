@@ -6,6 +6,7 @@ class AudioEvent {
 	constructor(fileName, options = {}) {
 		this.fileName = fileName;
 		this.options = options;
+		this.sound;
 	}
 
 	preload(game) {
@@ -14,27 +15,28 @@ class AudioEvent {
 
 	go(game) {
 		var sound = game.sound.add(this.fileName);
-		sound.play(this.options);
+		this.sound = sound;
+		this.sound.play(this.options);
 		this.finished = true;
 	}
 
 	stop() {
-		sound.stop();
+		this.sound.stop();
 	}
 
 	pause() {
-		sound.pause();
+		this.sound.pause();
 	}
 
 	resume() {
-		sound.resume();
+		this.sound.resume();
 	}
 
 	isPlaying() {
-		return sound.isPlaying;
+		return this.sound.isPlaying;
 	}
 
 	isPaused() {
-		return sound.isPaused;
+		return this.sound.isPaused;
 	}
 }

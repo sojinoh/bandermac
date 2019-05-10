@@ -196,13 +196,13 @@ var story = {
 
     "devgarden": {
         events: [
-            new AudioEvent("creepy"),
+            theme = new AudioEvent("creepy"),
             new AudioEvent("water"),
             new TextEvent("    ", {}),
             new TextEvent("    ", {}),
-            new TextEvent("After crawling for what feels like hours, you reach a hatch and climb out.", {}),
-            new AudioEvent("hatch"),
+            new TextEvent("After crawling for what feels like hours, you reach a hatch and climb out.", {}),            new AudioEvent("hatch"),
             new TextEvent("    ", {}),
+            new AudioEventAction(theme,'pause'),
             new AudioEvent("footsteps"),
             new TextEvent("You realize you are in the basement of the library.", {partDelay: 60}),
             new TextEvent("It is eerily quiet, even for a library, and only the backup generator lights are on.", {partDelay: 50}),
