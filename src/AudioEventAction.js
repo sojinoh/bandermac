@@ -20,15 +20,15 @@ class AudioEventAction {
 
 	go(game) {
 
-		if (this.action === pause) {
+		if (this.action === 'pause') {
 			this.audioEvent.pause();
 		}
 
-		if (this.action === stop) {
+		if (this.action === 'stop') {
 			this.audioEvent.stop();
 		}
 
-		if (this.action === resume) {
+		if (this.action === 'resume') {
 			this.audioEvent.resume();
 		}
 
