@@ -378,22 +378,37 @@ var story = {
 
     "savepaul": {
         events: [
+            new AudioEvent("creepy", {loop: true}),
+            new TextEvent("                ", {flash: true, partDelay: 60}),
+            new TextEvent("                ", {flash: true, partDelay: 60}),
+            new AudioEvent("squirrel"),
             //[A: clash, war, yell; V: flashes]
             new TextEvent("You run up to Paul and attempt to pull him away from the hounding squirrels.", {}),
             //[A: snarls; V: shakes]
             new TextEvent("You fend off the first wave of squirrels by swatting them with Paul\'s keyboard.", {}),
             //[A: sword clang, thuds, smacks; V: ???]
+            new TextEvent("                ", {partDelay: 60}),
             new TextEvent("But more squirrels keep coming.", {}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
             //[A: continue audio V: quick pause]
-            new TextEvent("After five minutes of fighting off the foamy-mouthed, bloodthirsty squirrels, you are covered in fur, sweat, and blood.", {}),
+            new TextEvent("After five minutes of fighting off the foamy-mouthed, bloodthirsty squirrels", {}),
+            new TextEvent("you are covered in fur, sweat, and blood.", {}),
+            new TextEvent("                ", {partDelay: 60}),
+            new AudioEvent("heartbeat2"),
+
             //[A: panting, heartbeat]
             new TextEvent("Paul is sitting on the ground, oblivious to the situation, typing on his imaginary computer.", {}),
             //[A: finger thumps;]
             new TextEvent("A quiet minute passes and you think that everything has settled.", {}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
             //[A: silence; V: pause/slow scroll]
+            new AudioEvent("bang"),
             new TextEvent("The floor begins to rumble, and squirrels pour from the ceiling and come from every imaginable direction.", {}),
+            new TextEvent("                ", {partDelay: 60}),
             //[A: rumble, scurry, crash; V: shake]
-            new TextEvent("You are overwhelmed, and your world fades to black. So much for being the hero.", {}),
+            new TextEvent("You are overwhelmed, and your world fades to black. So much for being the hero.", {fade: true}),
             //[A: groan then silence ; V: fade to black] GAME OVER.
         ],
         decisions: [
@@ -652,26 +667,43 @@ var story = {
     "median": {
         events: [
             new AudioEvent("creepy", {loop: true}),
-            new TextEvent("       ",),
-            new TextEvent("You make your way to the Dupre median.", {}),
-            new TextEvent("As you approach, you notice a group of students hooded in cloaks, sitting in a circle.", {}),
-            new TextEvent("A strange smell emanates from them.", {}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.022}),
+            new TextEvent("You make your way to the Dupre median.", {partDelay: 60, scrollSpeed: 0.024}),
+            new TextEvent("       ", {partDelay: 60}),
+            new TextEvent("As you approach, you notice a group of students hooded in cloaks, sitting in a circle.", {partDelay: 58, scrollSpeed: 0.020}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.023}),
+            new TextEvent("A strange smell emanates from them.", {partDelay: 55, scrollSpeed: 0.024}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.023}),
             //[A: leaves rustling; V: slow scroll]
-            new TextEvent("It sounds like they are chanting something demonic, and you notice little fires appear near there hands.", {}),
+            new TextEvent("It sounds like they are chanting something demonic", {partDelay: 50, scrollSpeed: 0.019}),
+            new TextEvent("and you notice little fires appear near their hands.", {partDelay: 50, scrollSpeed: 0.020}),
+            heart = new AudioEvent("heartbeat2", {rate: 1.2}),
+
             //[A: chanting, fire burning; V: small fire light in background]
-            new TextEvent("You decide to approach them.", {}),
-            //[A: footsteps]
-            new TextEvent("As you get closer, they stop and stare at you.", {}),
-            new TextEvent("One asks, \"Are you an RA?\"", {}),
-            new TextEvent("You shake your head no.", {}),
-            new TextEvent("Then they smile and invite you into their circle.", {}),
-            new TextEvent("As you sit there, they pass around a strange looking cigarette.", {}),
-            new TextEvent("When it comes to you, you decide to try your first puff of a cigarette because you are above 18 of course.", {}),
+            new TextEvent("       ", {flash: true, partDelay: 55, scrollSpeed: 0.026}),
+            footmed = new AudioEvent("footsteps", {rate: 0.9, volume: 0.5}),
+            new TextEvent("You decide to approach them.", {partDelay: 55, scrollSpeed: 0.027}),
+            new TextEvent("As you get closer, they stop and stare at you.", {partDelay: 53, scrollSpeed: 0.028}),
+            new TextEvent("       ", {partDelay: 57, scrollSpeed: 0.029}),
+            new AudioEventAction(footmed, 'stop'),
+            new TextEvent("One asks, \"Are you an RA?\"", {partDelay: 63, scrollSpeed: 0.025}),
+            new TextEvent("You shake your head no.", {partDelay: 66, scrollSpeed: 0.026, sway: true}),
+            new TextEvent("       ", {partDelay: 70, scrollSpeed: 0.029}),
+            new TextEvent("Then they smile and invite you into their circle.", {partDelay: 55, scrollSpeed: 0.025}),
+            new TextEvent("As you sit there, they pass around a strange looking cigarette.", {partDelay: 55, scrollSpeed: 0.026}),
+            new TextEvent("       ", {partDelay: 70, scrollSpeed: 0.025}),
+            new TextEvent("When it comes to you, you decide to try your first", {partDelay: 55, scrollSpeed: 0.024}),
+            new AudioEvent("inhale"),
+            new TextEvent("puff because you are above 18 of course.", {partDelay: 55, scrollSpeed: 0.024}),
+            new TextEvent("       ", {partDelay: 70, scrollSpeed: 0.024}),
             //[A: puff, cough, then happy music; V: short pause]
-            new TextEvent("You feel strange, but good.", {}),
-            new TextEvent("You are no longer worried about who you are or what is going on.", {}),
-            new TextEvent("You feel happy and fuzzy.", {}),
-            new TextEvent("Your world fades to black.", {}),
+            new TextEvent("You feel strange but good.", {partDelay: 64, scrollSpeed: 0.024}),
+            new TextEvent("You are no longer worried about who you are or what is going on.", {partDelay: 63, scrollSpeed: 0.025}),
+            new TextEvent("You feel happy and fuzzy.", {partDelay: 65, scrollSpeed: 0.030}),
+            new TextEvent("Your world fades to black.", {partDelay: 55, scrollSpeed: 0.040}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.040}),
+            new TextEvent("       ", {fade: true, partDelay: 70, scrollSpeed: 0.030}),
+
             //[A: happy; V: fade to black] (Ending screen)
         ],
         decisions: [
