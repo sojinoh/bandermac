@@ -198,13 +198,13 @@ var story = {
 
     "devgarden": {
         events: [
-            theme = new AudioEvent("creepy"),
+            new AudioEvent("creepy"),
             new AudioEvent("water"),
             new TextEvent("    ", {}),
             new TextEvent("    ", {}),
-            new TextEvent("After crawling for what feels like hours, you reach a hatch and climb out.", {}),            new AudioEvent("hatch"),
+            new TextEvent("After crawling for what feels like hours, you reach a hatch and climb out.", {}),
+            new AudioEvent("hatch"),
             new TextEvent("    ", {}),
-            new AudioEventAction(theme,'pause'),
             new AudioEvent("footsteps"),
             new TextEvent("You realize you are in the basement of the library.", {partDelay: 60}),
             new TextEvent("It is eerily quiet, even for a library, and only the backup generator lights are on.", {partDelay: 50}),
@@ -328,10 +328,23 @@ var story = {
 
     "runaway": {
         events: [ //scene 6.1
+            new AudioEvent("creepy", {loop: true}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ",),
             new TextEvent("You listen to Paul and run away.", {}),
+            runfoot = new AudioEvent("footsteps", {rate: 1.75}),
             //[A: running; V: scroll fast]
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.05}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.055}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.055}),
+
+            new AudioEventAction(runfoot,'stop'),
             new TextEvent("You run without looking back, and end up in the Leonard Center.", {}),
-            new TextEvent("The building is empty and dark, but you can still hear the ghostly grunts of past football players coming from the gym.", {}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("The building is empty and dark, but you can still hear ", {}),
+            new AudioEvent("moan"),
+            new TextEvent("the ghostly grunts of past football players coming from the gym.", {}),
+
             //[A: grunts, ghost; V: flicker light]
             new TextEvent("You wonder why Paul would want you to come to the LC.", {}),
             //[A: background noise; V: pause]
