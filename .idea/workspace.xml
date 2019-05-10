@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="bell scene and audio issue">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Median scene finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.js" afterDir="false" />
     </list>
     <ignored path="C:\Users\Nkg\WebstormProjects\comp225-bandermac\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
+            <state relative-caret-position="661">
+              <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="153">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -62,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
+            <state relative-caret-position="491">
               <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
             </state>
           </provider>
@@ -75,6 +76,7 @@
       <find>theme</find>
       <find>flash</find>
       <find>scroll</find>
+      <find>savepa</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Nkg\WebstormProjects\comp225-bandermac</dir>
@@ -101,8 +103,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/AudioEvent.js" />
         <option value="$PROJECT_DIR$/src/TextEvent.js" />
-        <option value="$PROJECT_DIR$/src/scene.js" />
         <option value="$PROJECT_DIR$/src/listOfScenes.js" />
+        <option value="$PROJECT_DIR$/src/scene.js" />
       </list>
     </option>
   </component>
@@ -122,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,7 +171,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -462,7 +464,8 @@
       <workItem from="1557519713707" duration="1777000" />
       <workItem from="1557521524134" duration="1780000" />
       <workItem from="1557523335792" duration="1800000" />
-      <workItem from="1557525168469" duration="284000" />
+      <workItem from="1557525168469" duration="1779000" />
+      <workItem from="1557526982153" duration="1790000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -639,17 +642,38 @@
       <option name="project" value="LOCAL" />
       <updated>1557524954171</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="bell scene">
+      <created>1557525522745</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1557525522745</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Bell scene finished">
+      <created>1557526007121</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1557526007121</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Median scene finished">
+      <created>1557528440000</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1557528440000</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52881000" />
+    <option name="totallyTimeSpent" value="56166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13672496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13672496" />
       <window_info id="Structure" order="1" weight="0.24959612" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -665,8 +689,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5238474" side_tool="true" visible="true" weight="0.25399646" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47615263" visible="true" weight="0.25399646" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5246423" side_tool="true" visible="true" weight="0.25399646" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.4753577" visible="true" weight="0.25399646" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -709,7 +733,10 @@
     <MESSAGE value="Working on next scene. Added sound in WAV" />
     <MESSAGE value="runaway scene done." />
     <MESSAGE value="bell scene and audio issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="bell scene and audio issue" />
+    <MESSAGE value="bell scene" />
+    <MESSAGE value="Bell scene finished" />
+    <MESSAGE value="Median scene finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Median scene finished" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -758,16 +785,7 @@
     <entry file="file://$PROJECT_DIR$/assets/grunt.wav" />
     <entry file="file://$PROJECT_DIR$/assets/squirrel.wav" />
     <entry file="file://$PROJECT_DIR$/assets/moan.wav" />
-    <entry file="file://$PROJECT_DIR$/assets/paper.wav">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/paper.wav" />
     <entry file="file://$PROJECT_DIR$/Transitions and Effects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -789,17 +807,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scene.js">
+    <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="491">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
+    <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+        <state relative-caret-position="661">
+          <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -31,7 +31,7 @@ var config = {
 new Phaser.Game(config);
 
 var eventPollingInterval = 60;
-var currentScene = "bell";
+var currentScene = "savepaul";
 var currentEventIndex = -1;
 var button1;
 var button2;
@@ -89,7 +89,9 @@ function checkEvent(game){
 }
 
 function update (time, delta){
-    timerForTextPause = story[currentScene].events[currentEventIndex].options.pause || 0;
+    if(currentEventIndex > -1){
+        timerForTextPause = story[currentScene].events[currentEventIndex].options.pause || 0;
+    }
     if(timerForTextPause > 0){
         timerForTextPause -= 1;
     } else{
@@ -148,13 +150,12 @@ function actionOnClick (game, decisionChosen) {
 
 
 function actionOnHover (game, button){
-    console.log("hoveron");
-    window[button].setStyle({ fill: '#ff0'});
+    window[button].setStyle({ fontSize: 16, fill: '#ff0'});
+
 }
 
 function actionHoverOut (game, button){
-    console.log("hoverout");
-    window[button].setStyle({ fill: '#c51b7d'});
+    window[button].setStyle({ fontSize: 16, fill: '#c51b7d'});
 }
 
 
