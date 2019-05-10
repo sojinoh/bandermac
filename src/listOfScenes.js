@@ -229,7 +229,6 @@ var story = {
             new TextEvent("He is muttering... \"Devvvv Gardennn. Deeeeev Garden.\"", {partDelay: 65}),
             //[A: muttering/whispers
             new TextEvent("He appears to be in a trance.", {partDelay: 65, sway: true}),
-            //[V: Hypnotic movement]
             new TextEvent("                ", {partDelay: 100}),
             new TextEvent("You try to get his attention, but it is no use, he is transfixed.", {}),
             new TextEvent("                ", {partDelay: 120}),
@@ -249,24 +248,41 @@ var story = {
 
     "orange": {
         events: [  //scene 6a
-            new TextEvent("You remember the orange you picked up earlier and take it out.", {}),
+            new AudioEvent("creepy", { volume: 0.4 }),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("You reach into your bag and pull out the orange.", {}),
             //[A: shuffling/grabbing;]
-            new TextEvent("You hover it under Paul\'s nose and although he is still staring, you notice him wince whenever the orange gets close.", {}),
+            new AudioEvent("heartbeat2"),
+            new TextEvent("                ", {partDelay: 70}),
+            new TextEvent("You hover it under Paul\'s nose.", {partDelay:55}),
+            new TextEvent("Although he is still staring, you notice him wince    ",),
+            new TextEvent("whenever the orange gets close.", {shake:true}),
+            new TextEvent("                ", {partDelay: 70}),
             //[A: wind/woosh?; V: slight pulse (twice)]
-            new TextEvent("You begin to peel the orange, and Paul immediately snaps out of it and lets out a disgusted gasp, \"agh, get that away from me!\"", {}),
+            new TextEvent("You begin to peel the orange...", {partDelay: 55}),
+            new AudioEvent("inhale"),
+            new TextEvent("Paul immediately snaps out of it and lets out a disgusted gasp, \"agh, get that away from me!\"", {partDelay: 45}),
+            new TextEvent("                ", {partDelay: 110}),
             //[A: groan/gasp; V: pulse/quick shake]
-            //[V: text message]
-            new TextEvent("You ask, \"Who am I? What is going on at Macalester? Why is everything so weird?\"", {}),
-            new TextEvent("Paul smiles, \"Ah, what you want is a clue. Solve this riddle and there might be an answer just for you.\"", {}),
-            new TextEvent("You sigh.", {}),
+            new TextEvent("You ask, \"Who am I? What is going on at Macalester? Why is everything so weird?\"", {partDelay: 45}),
+            new TextEvent("Paul smiles, \"Ah, what you want is a clue. Solve this riddle and there might be an answer just for you.\"", {partDelay: 45}),
+            new TextEvent("You sigh.", {partDelay: 70}),
+            new AudioEvent("sigh"),
+
+            new TextEvent("                ", {partDelay: 110}),
             //[A: sigh; V: pause]
-            new TextEvent("Paul continues, \"A first-year\'s true path. Where one winds up at last. To strike or to hit. Only happiness and joy be fit.\"", {}),
+            new TextEvent("Paul continues,", {}),
+            new TextEvent("\"A first-year\'s true path. Where one winds up at last. To strike or to hit. Only happiness and joy be fit.\"", {partDelay: 65}),
+            new TextEvent("                ", {partDelay: 90}),
             new TextEvent("You think for a moment.", {}),
+            new TextEvent("                ", {partDelay: 110}),
+            new TextEvent("                ", {partDelay: 110}),
             //[A: silence, hmm?; V: game pauses 2.5 seconds]
-            new TextEvent("Is he talking about the bell or the Dupre median?", {}),
+            new TextEvent("Is he talking about the Bell or the Dupre median?", {}),
         ],
         decisions: [
-            {text: "The bell", scene: "bell"}, // [A: small ding; V: fade to black]
+            {text: "The Bell", scene: "bell"}, // [A: small ding; V: fade to black]
             {text: "The Dupre median", scene: "median"}, //[A: footsteps; V: fade to black]
         ]
     },

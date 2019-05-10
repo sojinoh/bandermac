@@ -92,7 +92,7 @@ class TextEvent {
 	}
 
 	shake(game){
-		game.cameras.main.shake();
+		game.cameras.main.shake(50, 0.05);
 	}
 
 	pause(game){
