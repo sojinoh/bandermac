@@ -2,6 +2,7 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
 </head>
 <body>
     <script type="text/javascript">
@@ -38,7 +39,8 @@ var button;
 
 function create ()
 {
-    var text1 = this.add.text(225, 265, "GAME OVER", { font: "60px Courier New", fill: "#ffffff"})
+    var text1 = this.add.text(window.screen.availWidth * window.devicePixelRatio/5*2, window.screen.availHeight * window.devicePixelRatio/3, "GAME OVER", 
+        { font: "100px Courier New", fill: "#ffffff"});
 
 }
 
