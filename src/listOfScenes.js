@@ -335,30 +335,39 @@ var story = {
             new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.055}),
 
             new AudioEventAction(runfoot,'stop'),
-            new TextEvent("You run without looking back, and end up in the Leonard Center.", {}),
-            new TextEvent("                ", {partDelay: 60}),
-            new TextEvent("The building is empty and dark, but you can still hear ", {}),
+            new TextEvent("You run without looking back, and end up in the Leonard Center.", {scrollSpeed: 0.027}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.03}),
+            new TextEvent("The building is empty and dark, but you can still hear ", {scrollSpeed: 0.023}),
             new AudioEvent("moan"),
-            new TextEvent("the ghostly grunts of past football players coming from the gym.", {}),
-
-            //[A: grunts, ghost; V: flicker light]
-            new TextEvent("You wonder why Paul would want you to come to the LC.", {}),
+            new TextEvent("the ghostly grunts of past football players coming from the gym.", {flash: true, scrollSpeed: 0.022}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.027}),
+            new TextEvent("You wonder why Paul would want you to come to the LC.", {scrollSpeed: 0.023}),
+            new TextEvent("                ", {partDelay: 65, scrollSpeed: 0.025}),
             //[A: background noise; V: pause]
-            new TextEvent("You search for clues.", {}),
-            new TextEvent("As you\'re walking, you miss a wet floor sign and you slip and hit your head.", {}),
-            //[A: slip/fall, thud; V: after display → slip, text slides up and shakes]
-            new TextEvent("After a few seconds, you come to and stand back up.", {}),
+            new TextEvent("You search for clues.", {partDelay: 70}),
+            new TextEvent("As you\'re walking, you miss a wet floor sign and you slip and hit your head.     ", {partDelay: 65, scrollSpeed: 0.020}),
+            new AudioEvent("thud"),
+            new TextEvent("                ", {shake: true, scrollSpeed: 0.020}),
+            new TextEvent("After a few seconds, you come to and stand back up.", {scrollSpeed: 0.020}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.020}),
             //[A: stand up;]
-            new TextEvent("Somehow, hitting your head helped your memory a bit.", {}),
-            new TextEvent("You remember that you took a software class with Paul.", {}),
-            new TextEvent("Maybe something from his class could help you figure out why he sent you here.", {}),
-            new TextEvent("You ponder for a moment.", {}),
+            new TextEvent("Somehow, hitting your head helped your memory a bit.", {scrollSpeed:0.022, partDelay: 60}),
+            new TextEvent("You remember that you took a software class with Paul.", {scrollSpeed: 0.020, partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("Maybe something from his class could help you figure out why he sent you here.", {partDelay: 60, scrollSpeed: 0.018}),
+            new TextEvent("You ponder for a moment.", {partDelay: 70, scrollSpeed: 0.019}),
+            new AudioEvent("hmm"),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.019}),
+            new TextEvent("                ", {partDelay: 60, scrollSpeed: 0.018}),
             //[ V: pause text 3 seconds]
-            new TextEvent("You remember Paul would often talk about the minimum viable product... the MVP.", {}),
-            new TextEvent("You got it!", {}),
+            new TextEvent("You remember Paul would often talk about the minimum viable product... the MVP.              ", {partDelay: 67}),
+            new TextEvent("You got it!", {partDelay: 70}),
+            new TextEvent("                ", {partDelay: 60}),
             //[A: lightbulb/ding; V: light flash]
-            new TextEvent("Where are the MVPs displayed at the LC? ", {}),
-            new TextEvent("Do you go to the Hall of Fame room or do you find the banners upstairs?", {}),
+            new TextEvent("Where are the MVPs displayed at the LC? ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("Do you go to the Hall of Fame room or do you find the banners upstairs?", {partDelay: 50, scrollSpeed: 0.019}),
         ],
         decisions: [
             {text: "Hall of Fame room", scene: "halloffame"}, //[A: footsteps; V: scroll up/side]

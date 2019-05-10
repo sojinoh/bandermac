@@ -23,7 +23,7 @@ class TextEvent {
 				fade: false,
 				flash: false,
 				shake: false,
-				pause: false,
+				pause: undefined,
 				scrollSpeed: undefined
 			}, options);
 		this.finished = false;
@@ -50,7 +50,6 @@ class TextEvent {
 		if(this.options.fade){ this.fade(game); }
 		if(this.options.flash){ this.flash(game); }
 		if(this.options.shake){ this.shake(game); }
-		if(this.options.pause){ this.pause(game); }
 	}
 
 	nextPart(game, textSprite, parts, partIndex, appearBy) {
@@ -97,11 +96,6 @@ class TextEvent {
 	shake(game){
 		game.cameras.main.shake(50, 0.05);
 	}
-
-	pause(game){
-		
-	}
-
 
 }
 
