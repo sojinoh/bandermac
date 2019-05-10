@@ -9,7 +9,7 @@ Requirement: Either Python (above Python 2.7) installed or other IDEs (ex. WebSt
 First, clone this repository on the device you are using. Open your terminal and navigate to the directory you want to clone this repository to. 
 ```
 cd Desktop
-git clone 
+git clone https://github.com/sojinoh/comp225-bandermac.git
 ```
 
 ### Using IDE
