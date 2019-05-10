@@ -10,7 +10,7 @@ class AudioEvent {
 	}
 
 	preload(game) {
-	    game.load.audio(this.fileName, './assets/' + this.fileName + '.wav');  // TODO: Convert all audio to AAC and change to .m4a
+	    game.load.audio(this.fileName, './assets/' + this.fileName + '.m4a');  // TODO: Convert all audio to AAC and change to .m4a
 	}
 
 	go(game) {
