@@ -614,19 +614,32 @@ var story = {
 
     "bell": {
         events: [
-            new TextEvent("You make your way to Macalester\'s (in)famous bell.", {}),
-            new TextEvent("As you approach, some giggling first-years run away.", {}),
+            new AudioEvent("creepy", {loop: true}),
+            new TextEvent("       ", {partDelay: 60}),
+            new TextEvent("You make your way to Macalester\'s (in)famous bell.", {partDelay: 60}),
+            runbell = new AudioEvent("footsteps", {rate: 1.95}),
+            new TextEvent("As you approach, some giggling first-years run away.", {partDelay: 60}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.024}),
+            new AudioEventAction(runbell, 'stop'),
             //[A: giggles, footsteps; V: short pause]
-            new TextEvent("You look around the bell, searching for clues.", {}),
-            new TextEvent("You notice a large \"I\" engraved into one of the columns and wonder why you haven\'t seen that before.", {}),
-            //[V: scroll up]
-            new TextEvent("Under the bench, you notice a note stuck to it with gum.", {}),
-            new TextEvent("You pull the note off and open it.", {}),
+            new TextEvent("You look around the bell, searching for clues.", {scrollSpeed: 0.020}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.026}),
+            new TextEvent("You notice a large \"I\" engraved into one of the ", {scrollSpeed: 0.020}),
+            new TextEvent("columns and wonder why you haven\'t seen that before.", {scrollSpeed: 0.022}),
+            new TextEvent("       ", {partDelay: 60}),
+            new TextEvent("Under the bench, you notice a note stuck to it with gum.", {scrollSpeed: 0.020}),
+            new TextEvent("You pull the note off and open it.", {scrollSpeed: 0.020}),
+            //new AudioEvent("paper"),
+            new TextEvent("       ", {partDelay: 90}),
             //[A: paper flutter; V: short pause]
-            new TextEvent("Inside, it reads, \"Ringing once is for a dunce. One ring and you will sting. Ringing twice will suffice.\"", {}),
+            new TextEvent("Inside, it reads,", {}),
+            new TextEvent("\"Ringing once is for a dunce. One ring and you will sting. Ringing twice will suffice.\"", {partDelay: 60}),
             //[V: zoom on note text]
+            new TextEvent("       ", {partDelay: 60}),
             new TextEvent("You notice a bloody fingerprint on the edge of the note.", {}),
+            new TextEvent("       ", {partDelay: 60}),
             new TextEvent("Should you trust their advice or are they trying to trick you?", {}),
+            new TextEvent("       ", {partDelay: 60}),
             new TextEvent("Do you ring the bell once or twice?", {}),
         ],
         decisions: [
@@ -637,6 +650,8 @@ var story = {
 
     "median": {
         events: [
+            new AudioEvent("creepy", {loop: true}),
+            new TextEvent("       ",),
             new TextEvent("You make your way to the Dupre median.", {}),
             new TextEvent("As you approach, you notice a group of students hooded in cloaks, sitting in a circle.", {}),
             new TextEvent("A strange smell emanates from them.", {}),
