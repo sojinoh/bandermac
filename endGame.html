@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+var config = {
+    type: Phaser.WEBGL,
+    width: 800,
+    height: 600,
+    backgroundColor: '#000000',
+    parent: 'phaser-example',
+    scene: {
+        create: create
+    }
+};
+
+var game = new Phaser.Game(config);
+var button; 
+
+function create ()
+{
+    var text1 = this.add.text(225, 265, "GAME OVER", { font: "60px Courier New", fill: "#ffffff"})
+
+}
+
+
+
+    </script>
+</body>
+</html>
