@@ -39,52 +39,48 @@ var story = {
             new AudioEvent("creepy", { loop: true }),
             new AudioEvent("heartbeat2"),
             //[A: heartbeat; creepy V: slight sway then pause]
-            new TextEvent("You stand carefully.", {}),
+            new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
             //[V: scroll up and shake]
             footstepsTopFloor = new AudioEvent("footsteps"),
-            new TextEvent("You feel slightly off balance as you walk up the main staircase to the", { shake: true }),
-            new TextEvent("third floor.    ", {}),
-            new TextEvent("                ", {partDelay: 50}),
-            new TextEvent("Sitting at one of the circular tables of the top floor is a figure of a man.", {}),
+            new TextEvent("You feel slightly off balance as you walk up the main staircase to the", { shake: true, scrollSpeed: 0.025 }),
+            new TextEvent("third floor.    ", {scrollSpeed: 0.025}),
+            new TextEvent("                ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("Sitting at one of the circular tables of the top floor is a figure of a man.", {scrollSpeed: 0.025}),
             //A: heartbeat, creepy, shriek; V: zoom in (figure?)]
             new AudioEvent('heartbeat'),
             new AudioEventAction(footstepsTopFloor,'pause'),
-            new TextEvent("From his young features, you guess he must be a student.", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("You walk over to him.", {}),
+            new TextEvent("From his young features, you guess he must be a student.", {scrollSpeed: 0.025}),
+            new TextEvent("                ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("You walk over to him.", {scrollSpeed: 0.025}),
 
             //[V: pause?]
             //[A: silence; V: text message style (pop from side?) (if time?)]
-            new TextEvent("'Hello.'", {}),
+            new TextEvent("'Hello...'", { partDelay: 60, scrollSpeed: 0.025 }),
             new AudioEvent('grumble'),
-            new TextEvent("\"What do you want?\" he grumbles, not looking up from the molecule he\'s drawing.", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("'I... I woke up in Smail and...\"'", {}),
-            new TextEvent("                ", {partDelay: 10}),
-            new TextEvent("That gets his attention. He smirks.", {}),
+            new TextEvent("\"What do you want?\" he grumbles, not looking up from the molecule he\'s drawing.", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("'I... I woke up in Smail and...\"'", {partDelay: 55, scrollSpeed: 0.025}),
+            new TextEvent("                ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("That gets his attention. He smirks.", {scrollSpeed: 0.025}),
             new AudioEvent("hmm"),
-            new TextEvent("\"Oh it\'s you. She told me to me tell you to go as far below as you can. And take this.\"", {}),
-            new TextEvent("He hands you an orange.", {}),
+            new TextEvent("\"Oh it\'s you. She told me to me tell you to go as far below as you can. And take this.\"", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("He hands you an orange.", {scrollSpeed: 0.025}),
             //  [A: thump/hand noise]
-            new TextEvent("                ", {partDelay: 30}),
-            new TextEvent("\"What? What am I supposed to do with this?\"", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("He\'s no longer paying attention to you.", {}),
-            new TextEvent("                ", {partDelay: 50}),
-            new TextEvent("Below? You wonder to yourself.", {}),
-            new TextEvent("Below what?", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("You start walking downstairs", {}),
+            new TextEvent("\"What? What am I supposed to do with this?\"", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("                ", {scrollSpeed: 0.025}),
+            new TextEvent("He\'s no longer paying attention to you.", {scrollSpeed: 0.025}),
+            new TextEvent("                               ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("\"Below?\" You wonder to yourself.", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("Below what?", { scrollSpeed: 0.025}),
+            new TextEvent("You start walking downstairs", {partDelay: 50, scrollSpeed: 0.017}),
             new AudioEventAction(footstepsTopFloor, 'resume'),    //[V: scroll]
-            new TextEvent("    ", {}),
-            new TextEvent("You walk all the way down to the bottom floor.", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("Is that what he meant? You start to wander.", {}),
-            new TextEvent("                ", {partDelay: 20}),
-            new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {}),
+            new TextEvent("                       ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("You walk all the way down to the bottom floor.", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("\"Is that what he meant?\" You start to wander.", {scrollSpeed: 0.025}),
+            new TextEvent("                            ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {partDelay: 50, scrollSpeed: 0.025}),
             new AudioEventAction(footstepsTopFloor, 'pause'),   
             //[A: creepy, door hinge]
-            new TextEvent("A small door is open at the end of it you crawl through.", {})
+            new TextEvent("A small door is open at the end of it you crawl through.", {scrollSpeed: 0.025})
         ],
         decisions: [
             {text: "Crawl through", scene: "tunnels"},   //[A: shuffle; V: enter? (text towards screen (3D?))]
@@ -96,7 +92,7 @@ var story = {
         events: [//scene 2b
             new AudioEvent("creepy", { loop: true }),
             new TextEvent("You stand carefully.", {}),
-            //[V: slight sway then pause]
+            new TextEvent("                          ", {partDelay : 50}),
             new AudioEvent("heartbeat2"),
             new TextEvent("You feel slightly off balance as you", { shake: true }),
             new TextEvent("walk down the stairs towards the crash.", {}),
@@ -108,11 +104,11 @@ var story = {
             new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
             new AudioEventAction(glassshards,'stop'), //[A: glass shuffle, slight growl;]
             new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth.", {}),
-            new TextEvent("You pick up the note.", {}),
+            new TextEvent("You pick up the note.", { partDelay: 55 }),
             //[A: paper flutter; V: quick pause]
-            new TextEvent("The notes reads, \"They who hath awoken, hath stumbled upon the broken.", {}),
-            new TextEvent("Here upon these bones shall lead you deep into the unknown. Follow the red or suffer with dread.\"", {}),
-            //[A: paper flutter; V: pause]
+            new TextEvent("The notes reads, \"They who hath awoken, hath stumbled upon the broken.", {partDelay: 55}),
+            new TextEvent("Here upon these bones shall lead you deep into the unknown. Follow the red or suffer with dread.\"", {partDelay: 50}),
+            new TextEvent("                    ", {partDelay: 50}),
             new TextEvent("You wonder what William Shakespeare was doing in OLRI.", {}),
             new TextEvent("You also notice a trail of blood leading towards the staircase.", {}),
             new AudioEvent('blooddrip'), //[A: water drip;]
