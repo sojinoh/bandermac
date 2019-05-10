@@ -21,7 +21,7 @@ If you do not have any IDEs installed but have Python installed, open your termi
 cd comp225-bandermac
 python2.7 -m SimpleHTTPServer
 ```
-Now, open a web browser of your choice (ex. Google Chrome, Safari), and go to [http://localhost:8000/index.html](http://localhost:8000/index.html). You are all set!
+Now, open a web browser of your choice (ex. Google Chrome, Safari), and go to [http://localhost:8000/home.html](http://localhost:8000/home.html). You are all set!
 
 ## 3. Overall Architecture
 
