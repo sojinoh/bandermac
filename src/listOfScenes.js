@@ -257,11 +257,12 @@ var story = {
             new TextEvent("                ", {partDelay: 70}),
             new TextEvent("You hover it under Paul\'s nose.", {partDelay:55}),
             new TextEvent("Although he is still staring, you notice him wince    ",),
+            new AudioEvent("inhale"),
             new TextEvent("whenever the orange gets close.", {shake:true}),
             new TextEvent("                ", {partDelay: 70}),
             //[A: wind/woosh?; V: slight pulse (twice)]
             new TextEvent("You begin to peel the orange...", {partDelay: 55}),
-            new AudioEvent("inhale"),
+            new AudioEvent("grunt"),
             new TextEvent("Paul immediately snaps out of it and lets out a disgusted gasp, \"agh, get that away from me!\"", {partDelay: 45}),
             new TextEvent("                ", {partDelay: 110}),
             //[A: groan/gasp; V: pulse/quick shake]
@@ -287,21 +288,33 @@ var story = {
         ]
     },
 
-    //stopped at scene 6a (need to do squirrels (its options) and (bell/median paths)
-    //----------------------------------------------------------------------------------- (BELL/MEDIAN)
-
     "squirrels": {
         events: [
-            //[A: whirring;]
-            new TextEvent("You decide to leave the orange in your pocket, you might need it later.", {}),
+            new AudioEvent("creepy", {volume: 0.4}),
+            new AudioEvent("lightbuzz", {volume: 0.1}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 70}),
+            new TextEvent("You decide to leave the orange in your pocket, you might need it later.", {partDelay: 45}),
+            new TextEvent("                ", {partDelay: 75}),
             new TextEvent("Paul mutters something about needing to check Slack, still staring into the abyss.", {}),
-            //[A: silence; V: pause]
-            new TextEvent("Suddenly you hear a bang, Paul\'s eyes fixate on you, and he yells \"THEY\'RE COMING! RUN!\"", {}),
+            new TextEvent("                ", {partDelay: 75}),
+            new TextEvent("The lights flicker and go out for a second.", {fade: true, flash: true}),
+            new TextEvent("                ", {flash: true, partDelay: 100}),
+            new AudioEvent("bang", {volume: 0.4}),
+            new TextEvent("Suddenly you hear a bang, Paul\'s eyes fixate on you, and he yells \"THEY\'RE COMING! RUN!\"", {partDelay: 45, shake: true}),
+            new TextEvent("                ", {partDelay: 75}),
             //[A: bang, (sudden noise?), yell?; V: one big shake]
+            new AudioEvent("squirrel"),
+            new AudioEvent("squirrel"),
             new TextEvent("Out of nowhere, squirrels climb out from bookcases in every direction and run towards you.", {}),
+            new AudioEvent("squirrel"),
             //[A: clatter, squirrel scatter, mini footsteps, heartbeat V: ???]
             new TextEvent("You grab Paul\'s sleeve and try to get him to follow you, but it is no use.", {}),
-            new TextEvent("Squirrels start to pounce on Paul, and he weakly says, \"Go on without me... I... still... have to fix... the Bonsai UI... Go to... the LC\"", {}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("Squirrels start to pounce on Paul, and he weakly says,", {}),
+            new TextEvent("\"Go on without me... I... still... have to fix... the Bonsai UI... Go to... the LC\"", {partDelay: 50}),
+            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {partDelay: 60}),
             new TextEvent("Do you run away or try to save Paul?", {}),
             //[A: squirrel noises, thuds, yelp? ]
         ],

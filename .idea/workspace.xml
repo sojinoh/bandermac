@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Dev Garden scene is done and ready for Saturday!!!">
-      <change afterPath="$PROJECT_DIR$/assets/inhale.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/sigh.wav" afterDir="false" />
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Devgarden and Orange scenes are done.">
+      <change afterPath="$PROJECT_DIR$/assets/bang.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/grunt.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/squirrel.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextEvent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.js" afterDir="false" />
     </list>
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="281" column="52" selection-start-line="281" selection-start-column="52" selection-end-line="281" selection-end-column="52" />
+            <state relative-caret-position="236">
+              <caret line="316" column="63" selection-start-line="316" selection-start-column="63" selection-end-line="316" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="49">
               <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
             </state>
           </provider>
@@ -66,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1443">
+            <state relative-caret-position="1598">
               <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
             </state>
           </provider>
@@ -104,8 +104,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/AudioEvent.js" />
         <option value="$PROJECT_DIR$/src/TextEvent.js" />
-        <option value="$PROJECT_DIR$/src/listOfScenes.js" />
         <option value="$PROJECT_DIR$/src/scene.js" />
+        <option value="$PROJECT_DIR$/src/listOfScenes.js" />
       </list>
     </option>
   </component>
@@ -125,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -183,12 +183,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Nkg\WebstormProjects\comp225-bandermac\" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nkg\WebstormProjects\comp225-bandermac\assets" />
       <recent name="$PROJECT_DIR$/dist" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nkg\WebstormProjects\comp225-bandermac\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -460,7 +460,8 @@
       <workItem from="1557442610615" duration="1832000" />
       <workItem from="1557444514725" duration="1774000" />
       <workItem from="1557446330234" duration="1779000" />
-      <workItem from="1557448140076" duration="1027000" />
+      <workItem from="1557448140076" duration="1782000" />
+      <workItem from="1557449952643" duration="413000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -595,11 +596,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557446956240</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Devgarden and Orange scenes are done.">
+      <created>1557449197626</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557449197626</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45987000" />
+    <option name="totallyTimeSpent" value="47155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -621,8 +629,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5198728" side_tool="true" visible="true" weight="0.25399646" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4801272" visible="true" weight="0.25399646" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.52066773" side_tool="true" visible="true" weight="0.25399646" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47933227" visible="true" weight="0.25399646" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -659,7 +667,8 @@
     <MESSAGE value="Added shake effect" />
     <MESSAGE value="Fixed shake and edited listofscenes" />
     <MESSAGE value="Dev Garden scene is done and ready for Saturday!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dev Garden scene is done and ready for Saturday!!!" />
+    <MESSAGE value="Devgarden and Orange scenes are done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Devgarden and Orange scenes are done." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -720,6 +729,15 @@
     <entry file="file://$PROJECT_DIR$/assets/typing.wav">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/inhale.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sigh.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/bang.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Transitions and Effects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -741,30 +759,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/inhale.wav">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
+        <state relative-caret-position="1598">
           <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sigh.wav">
+    <entry file="file://$PROJECT_DIR$/assets/grunt.wav">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/squirrel.wav">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="281" column="52" selection-start-line="281" selection-start-column="52" selection-end-line="281" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="236">
+          <caret line="316" column="63" selection-start-line="316" selection-start-column="63" selection-end-line="316" selection-end-column="63" />
         </state>
       </provider>
     </entry>
