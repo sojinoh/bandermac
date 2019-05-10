@@ -31,7 +31,7 @@ var config = {
 new Phaser.Game(config);
 
 var eventPollingInterval = 60;
-var currentScene = "Start";
+var currentScene = "devgarden";
 var currentEventIndex = -1;
 var button1;
 var button2;
@@ -90,11 +90,11 @@ function checkEvent(game){
 function update (time, delta){
     if (!story[currentScene].events[story[currentScene].events.length-1].finished){
         //when the whole scene is not shown yet
-        this.scrollContainer.y -= 0.023 * delta;
+        this.scrollContainer.y -= 0.017 * delta;
     } else {
         if (timer > 0){
             //scrolling up text for a little bit so it doesn't overlap with the buttons
-            this.scrollContainer.y -= 0.023 * delta;
+            this.scrollContainer.y -= 0.017 * delta;
             timer -= 1;
         } else if(!buttonClicked) {
             //show the decision buttons when the scene is over, before transition
