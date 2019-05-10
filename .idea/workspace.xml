@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="bell scene and audio issue">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="bell scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
     </list>
@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
+            <state relative-caret-position="204">
+              <caret line="642" column="74" selection-start-line="642" selection-start-column="74" selection-end-line="642" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -462,7 +462,7 @@
       <workItem from="1557519713707" duration="1777000" />
       <workItem from="1557521524134" duration="1780000" />
       <workItem from="1557523335792" duration="1800000" />
-      <workItem from="1557525168469" duration="284000" />
+      <workItem from="1557525168469" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -639,17 +639,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557524954171</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="bell scene">
+      <created>1557525522745</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1557525522745</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52881000" />
+    <option name="totallyTimeSpent" value="53357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13672496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13672496" />
       <window_info id="Structure" order="1" weight="0.24959612" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -666,7 +673,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5238474" side_tool="true" visible="true" weight="0.25399646" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47615263" visible="true" weight="0.25399646" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.47615263" visible="true" weight="0.25399646" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -709,7 +716,8 @@
     <MESSAGE value="Working on next scene. Added sound in WAV" />
     <MESSAGE value="runaway scene done." />
     <MESSAGE value="bell scene and audio issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="bell scene and audio issue" />
+    <MESSAGE value="bell scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="bell scene" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -763,8 +771,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
+        <state relative-caret-position="204">
+          <caret line="642" column="74" selection-start-line="642" selection-start-column="74" selection-end-line="642" selection-end-column="74" />
         </state>
       </provider>
     </entry>
