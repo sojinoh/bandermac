@@ -215,14 +215,14 @@ var story = {
             //[A: louder clattering]
             new AudioEvent("typing", { volume: 0.5 }),
             new TextEvent("                   ", {partDelay:80}),
-            new TextEvent("You notice a figure in the dimly lit idea lab.", {partDelay: 50}),
-            new TextEvent("For some reason, this person seems familiar.", {partDelay: 50}),
-            new TextEvent("                ", {partDelay: 100}),
+            new TextEvent("You notice a figure in the dimly lit idea lab.", {partDelay: 50, scrollSpeed: 0.02}),
+            new TextEvent("For some reason, this person seems familiar.", {partDelay: 50, scrollSpeed: 0.021}),
+            new TextEvent("                ", {partDelay: 100, scrollSpeed: 0.023}),
             //[V: small zoom in and out]
-            new TextEvent("Somehow, you remember that this person\'s name is Paul, but that is all that you remember.", {}),
-            new TextEvent("                ", {partDelay: 100}),
+            new TextEvent("Somehow, you remember that this person\'s name is Paul, but that is all that you remember.", {scrollSpeed: 0.025}),
+            new TextEvent("                ", {partDelay: 100, scrollSpeed: 0.027}),
             new AudioEvent("typing", { volume: 0.7 }),
-            new TextEvent("As you get closer, you realize that Paul is frantically typing on an unconnected keyboard.", {}),
+            new TextEvent("As you get closer, you realize that Paul is frantically typing on an unconnected keyboard.", {scrollSpeed: 0.03}),
             //[A: footsteps, clattering/typing; V: bigger text?]
             new TextEvent("                ", {partDelay: 100}),
             new TextEvent("He stands there typing, staring straight into nothingness with bloodshot eyes.", {}),

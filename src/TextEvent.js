@@ -23,7 +23,8 @@ class TextEvent {
 				fade: false,
 				flash: false,
 				shake: false,
-				pause: false
+				pause: false,
+				scrollSpeed: undefined
 			}, options);
 		this.finished = false;
 	}
@@ -33,10 +34,10 @@ class TextEvent {
 	}
 
 	go(game) {
-		game.textX = this.options.x || game.textX;
+		game.scrollSpeed = this.options.scrollSpeed || 0.017;
 		game.textY = this.options.y || game.textY;
-		let textSprite = game.add.text(game.textX, game.textY, '', this.options.textStyle);
-		game.textY += 50;
+		let textSprite = game.add.text(this.options.x || game.textX, game.textY, '', this.options.textStyle);
+		game.textY += 50; //space between different lines
 		game.scrollContainer.add(textSprite);
 		if(this.options.appearBy === "word"){
 			this.options.partDelay += 100;
