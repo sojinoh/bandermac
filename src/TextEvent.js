@@ -71,7 +71,7 @@ class TextEvent {
 	sway(game, textSprite){
 		var tween = game.tweens.add({
 		    targets: textSprite,
-		    x: 400,
+		    x: 350,
 		    ease: 'Sine.easeInOut',
 		    yoyo: true,
 		    duration: 2000,

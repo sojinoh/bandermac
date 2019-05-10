@@ -324,7 +324,7 @@ var story = {
 
     "runaway": {
         events: [ //scene 6.1
-            new AudioEvent("creepy", {loop: true}),
+            new AudioEvent("creepy", {loop: true, volume: 0.4}),
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("                ",),
             new TextEvent("You listen to Paul and run away.", {}),
@@ -378,7 +378,7 @@ var story = {
 
     "savepaul": {
         events: [
-            new AudioEvent("creepy", {loop: true}),
+            new AudioEvent("creepy", {loop: true, volume: 0.5}),
             new TextEvent("                ", {flash: true, partDelay: 60}),
             new TextEvent("                ", {flash: true, partDelay: 60}),
             new AudioEvent("squirrel"),
@@ -386,6 +386,7 @@ var story = {
             new TextEvent("You run up to Paul and attempt to pull him away from the hounding squirrels.", {}),
             //[A: snarls; V: shakes]
             new TextEvent("You fend off the first wave of squirrels by swatting them with Paul\'s keyboard.", {}),
+            new AudioEvent("thud"),
             //[A: sword clang, thuds, smacks; V: ???]
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("But more squirrels keep coming.", {}),
@@ -396,7 +397,7 @@ var story = {
             new TextEvent("you are covered in fur, sweat, and blood.", {}),
             new TextEvent("                ", {partDelay: 60}),
             new AudioEvent("heartbeat2"),
-
+            new AudioEvent("typing"),
             //[A: panting, heartbeat]
             new TextEvent("Paul is sitting on the ground, oblivious to the situation, typing on his imaginary computer.", {}),
             //[A: finger thumps;]
@@ -404,11 +405,14 @@ var story = {
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("                ", {partDelay: 60}),
             //[A: silence; V: pause/slow scroll]
-            new AudioEvent("bang"),
-            new TextEvent("The floor begins to rumble, and squirrels pour from the ceiling and come from every imaginable direction.", {}),
+            new TextEvent("The floor begins to rumble", {}),
+            new AudioEvent("crash"),
+            new TextEvent("squirrels pour from the ceiling and come from every imaginable direction.", {shake: true}),
             new TextEvent("                ", {partDelay: 60}),
             //[A: rumble, scurry, crash; V: shake]
-            new TextEvent("You are overwhelmed, and your world fades to black. So much for being the hero.", {fade: true}),
+            new TextEvent("You are overwhelmed and your world fades to black.", {}),
+            new TextEvent("So much for being the hero.", {fade: true}),
+
             //[A: groan then silence ; V: fade to black] GAME OVER.
         ],
         decisions: [

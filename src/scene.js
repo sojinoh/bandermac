@@ -31,7 +31,7 @@ var config = {
 new Phaser.Game(config);
 
 var eventPollingInterval = 60;
-var currentScene = "savepaul";
+var currentScene = "devgarden";
 var currentEventIndex = -1;
 var button1;
 var button2;
@@ -53,7 +53,7 @@ function preload() {
 
 function create() {
     this.scrollContainer = this.add.container(this.textX, this.textY);
-    this.textX = 250;
+    this.textX = 200;
     this.textY = 100;
     this.scrollSpeed = 0.017;
 
