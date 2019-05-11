@@ -2,7 +2,8 @@
 
 ## 1. What is BanderMac?
 <img height = "150px" width="200px" src="assets/icon.png">
-BanderMac is a text-based, Macalester-themed choose your own adventure game. 
+BanderMac is a text-based, Macalester-themed choose your own adventure horror game. We want to evoke suspense, fear, and interest in our audience through the use of compelling story, graphical effects, creepy sounds, and Macalester inside jokes. 
+
 
 ## 2. How to Run
 Requirement: Either Python (above Python 2.7) installed or other IDEs (ex. WebStorm, IntelliJ) that can run html using a local host. 
@@ -12,6 +13,9 @@ First, clone this repository on the device you are using. Open your terminal and
 cd Desktop
 git clone https://github.com/sojinoh/comp225-bandermac.git
 ```
+
+### Accessing through url [https://sojinoh.github.io/bandermac](https://sojinoh.github.io/bandermac)
+Sound works on Google Chrome and Microsoft Edge but not Safari.
 
 ### Using IDE
 If you have any IDEs, open this project and run the *home.html* file. You are all set!
