@@ -31,7 +31,7 @@ var config = {
 new Phaser.Game(config);
 
 var eventPollingInterval = 60;
-var currentScene = "devgarden";
+var currentScene = "savepaul";
 var currentEventIndex = -1;
 var button1;
 var button2;

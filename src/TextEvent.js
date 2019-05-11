@@ -24,7 +24,8 @@ class TextEvent {
 				flash: false,
 				shake: false,
 				pause: undefined,
-				scrollSpeed: undefined
+				scrollSpeed: undefined,
+				gameOver: false
 			}, options);
 		this.finished = false;
 	}
@@ -50,6 +51,7 @@ class TextEvent {
 		if(this.options.fade){ this.fade(game); }
 		if(this.options.flash){ this.flash(game); }
 		if(this.options.shake){ this.shake(game); }
+		if(this.options.gameOver){ this.gameOver();}
 	}
 
 	nextPart(game, textSprite, parts, partIndex, appearBy) {
@@ -97,6 +99,9 @@ class TextEvent {
 		game.cameras.main.shake(50, 0.05);
 	}
 
+	gameOver(){
+		window.location.href = "gameover.html"
+	}
 }
 
 

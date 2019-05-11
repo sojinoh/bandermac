@@ -436,6 +436,7 @@ var story = {
             //[A: rumble, scurry, crash; V: shake]
             new TextEvent("You are overwhelmed and your world fades to black.", {}),
             new TextEvent("So much for being the hero.", {fade: true}),
+            new TextEvent("                ", {gameOver: true}),
 
             //[A: groan then silence ; V: fade to black] GAME OVER.
         ],
