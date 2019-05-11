@@ -40,7 +40,7 @@ var button;
 function create ()
 {
     var text1 = this.add.text(450, 225, "BanderMac", { font: "60px Courier New", fill: "#ffffff"})
-    button = this.add.text(580, 320, "Start", {font: "20px Courier New", fill: "#c51b7d"})
+    button = this.add.text(580, 320, "Start", {font: "20px Courier New", fill: "#ffffff"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this) )
         .on('pointerover', () => actionOnHover(this))
@@ -57,7 +57,7 @@ function actionOnHover (game){
 }
 
 function actionHoverOut (game){
-    button.setStyle({ fontSize: 20, fill: '#c51b7d'});
+    button.setStyle({ fontSize: 20, fill: '#ffffff'});
 }
 
 
