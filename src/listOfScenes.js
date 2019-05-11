@@ -782,16 +782,32 @@ var story = {
     "belltwo": {
         events: [
             //[A: bell ringing;]
-            new TextEvent("After ringing the bell again, the floor beneath you opens up and you fall in."),
+            bellTwo = new AudioEvent('bell', {loop: true}),
+            new AudioEvent('earthquake'),
+            new TextEvent("After ringing the bell again, the floor beneath you opens up and you fall in.         ", {partDelay: 45}),
+            new TextEvent("                            ", {scrollSpeed: 0.1}),
+            new TextEvent("                            ", {scrollSpeed: 0.05}),
+            new TextEvent("                            "),
+            new TextEvent("                            "),
+
             //[V: text scrolls up fast like falling]
-            new TextEvent("The bell continues to ring."),
+            new TextEvent("The bell continues to ring.", {partDelay: 50, fade: true, sway: true}),
+            new TextEvent("                ", {partDelay: 50}),
+            new TextEvent("                ", {partDelay: 50}),
             //[A: bell ringing transitions to alarm beeping; V: Transitions to white background with black text]
-            new TextEvent("The falling jolts you awake."),
+            new AudioEventAction(bellTwo, 'stop'),
+            alarmBellTwo = new AudioEvent('alarm'),
+            new TextEvent("The falling jolts you awake.", {pause: 10000}),
+            new AudioEvent('whine'),
             //[A: alarm beeps; V: jolt text]
             new TextEvent("You wake up in your Dupre dorm and realize it was all just a dream."),
+            new AudioEventAction(alarmBellTwo,'stop'),
+            new TextEvent("                            "),
             new TextEvent("You are going to be late for class, so you quickly get ready and rush out of the door."),
-            //[A: wind]
+            new TextEvent("                            "),
             new TextEvent("As you leave your room, out of the corner of your eye, you notice an orange sitting on the table..."),
+            new TextEvent("                              ", {partDelay: 80}),        
+            new TextEvent("                ", {gameOver: true})
             //[A: door close; V: orange] (End screen)
         ],
         decisions: [
