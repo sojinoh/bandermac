@@ -4,7 +4,7 @@ var story = {
         events: [
             //[//scene 1  [A = audio; V = visual effect]
             //V: Effect: blink and sway
-            themeStart = new AudioEvent("creepy", { loop: true }),
+            themeStart = new AudioEvent("creepy"),
             new AudioEvent("heartbeat2"),
             new TextEvent("Your eyes gradually open", { partDelay: 60 , fade: true, sway: true}),
             new TextEvent("as you slowly float into consciousness.", {sway: true}),
@@ -37,7 +37,7 @@ var story = {
     "top-floor": {
         events: [    //scene 2a
                 //scene 2a
-            new AudioEvent("creepy", { loop: true }),
+            new AudioEvent('creepy'),
             new AudioEvent("heartbeat2"),
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
@@ -82,7 +82,8 @@ var story = {
             new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {partDelay: 50, scrollSpeed: 0.025}),
             new AudioEventAction(footstepsTopFloor, 'pause'),   
             //[A: creepy, door hinge]
-            new TextEvent("A small door is open at the end of it you crawl through.", {scrollSpeed: 0.025})
+            new TextEvent("A small door is open at the end of it. You crawl through.", {scrollSpeed: 0.025}),
+            new AudioEvent('door')
         ],
         decisions: [
             {text: "Crawl through", scene: "tunnels"},   //[A: shuffle; V: enter? (text towards screen (3D?))]
@@ -92,44 +93,45 @@ var story = {
     
     "geology": {
         events: [//scene 2b
-            new AudioEvent("creepy", { loop: true }),
-            new TextEvent("You stand carefully.", {}),
+            new AudioEvent('creepy'),
+            new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
             new TextEvent("                          ",),
             new AudioEvent("heartbeat2"),
             footstepsGeology = new AudioEvent("footsteps"),
             new TextEvent("You feel slightly off balance as you", {scrollSpeed: 0.025, shake: true }),
-            new TextEvent("walk down the stairs towards the crash.", {}),
+            new TextEvent("walk down the stairs towards the crash.", {scrollSpeed: 0.025}),
     
             // [V: scroll down and shake]
-            new TextEvent("      ", {}),
+            new TextEvent("      ", {scrollSpeed: 0.025}),
             new AudioEventAction(footstepsGeology,'pause'),
             new AudioEvent('shardsofglass'),
             new AudioEvent('shardsofglass'),
-            new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
-            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth.", {}),
-            new TextEvent("You pick up the note.", {partDelay: 50 }),
+            new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {scrollSpeed: 0.025}),
+            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth.", {scrollSpeed: 0.025}),
+            new TextEvent("You pick up the note.", {scrollSpeed: 0.025, partDelay : 55}),
             new AudioEvent('paper'),
-            new TextEvent("                   ", {partDelay: 50}),
+            new TextEvent("                   ", {scrollSpeed: 0.025}),
             //[A: paper flutter; V: quick pause]
-            new TextEvent("The note reads,", {}),
+            new TextEvent("The note reads,", {scrollSpeed: 0.025}),
             new TextEvent("\"They who hath awoken, hath stumbled upon the broken.", {partDelay: 60}),
             new TextEvent("Here upon these bones shall lead you deep into the unknown. ", {partDelay: 60}),
             new TextEvent("Follow the red or suffer with dread.\"", {partDelay: 60}),
-            new TextEvent("                    ", {partDelay: 50}),
-            new TextEvent("You wonder what William Shakespeare was doing in OLRI.", {}),
-            new TextEvent("                    "),
-            new TextEvent("You also notice a trail of blood leading towards the staircase.", {partDelay: 50}),
+            new TextEvent("                    ", {scrollSpeed: 0.025, partDelay: 60}),
+            new TextEvent("You wonder what William Shakespeare was doing in OLRI.", {scrollSpeed: 0.025}),
+            new TextEvent("                    ", {scrollSpeed: 0.025}),
+            new TextEvent("You also notice a trail of blood leading towards the staircase.", {scrollSpeed: 0.025, partDelay: 50}),
             new AudioEvent('blooddrip', {loop: true}), //[A: water drip;]
             new AudioEventAction(footstepsGeology,'resume'),
-            new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn\'t know existed."),
-            new TextEvent("                    "),
-            new TextEvent("Along the way, you notice an orange and pick it up.", {partDelay: 50}),
-            //[A: pick up (hand noise);]
-            new TextEvent("It might be a clue.", {partDelay: 50}),
+            new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn\'t know existed.", {scrollSpeed: 0.025}),
+            new TextEvent("                    ", {scrollSpeed: 0.025}),
+            new TextEvent("Along the way, you notice an orange and pick it up.", {scrollSpeed: 0.025, partDelay: 50}),
+            new TextEvent("It might be a clue.", {scrollSpeed: 0.025, partDelay: 50}),
             //[A: door hinge creak; V: scroll]
-            new TextEvent("                ", {partDelay: 60}),
+            new TextEvent("                ", {scrollSpeed: 0.025, partDelay: 60}),
             new AudioEventAction(footstepsGeology, 'stop'),
-            new TextEvent("A small door opens at the end of the hallway, you crawl through.", {}),
+            new TextEvent("A small door opens at the end of the hallway, you crawl through.", {scrollSpeed: 0.025, partDelay: 50}),
+            new AudioEvent('door')
+
         ],
 
         decisions: [
@@ -141,7 +143,7 @@ var story = {
     "tunnels": {
         events: [ //scene 3
             //[A: water drip, creepy, creaks; V: darkness/nothing]
-            new AudioEvent('creepy',{loop:true}),
+            new AudioEvent('creepy'),
             new AudioEvent('haunt'),
             new TextEvent("Inside the door, you see a vast, cobwebbed tunnel.", {}),
             new AudioEvent('water', {loop:true}),    
@@ -153,18 +155,19 @@ var story = {
             new TextEvent("It looks like this place hasn\'t been touched in years, besides for some recent footprints ahead. ", {partDelay: 35}),
             new AudioEventAction(footstepsTunnel,'pause'),
             new TextEvent("                ", {partDelay: 50}),        
-            new TextEvent("Eventually, you notice something on the wall ahead.", {pause: 3500}),
+            new TextEvent("Eventually, you notice something on the wall ahead.", {pause: 15000}),
             new TextEvent("                ", {partDelay: 50}),        
-            new AudioEvent('heartbeat'),
+            heartbeatTunnels = new AudioEvent('heartbeat', {loop:true}),
             new TextEvent("As you get closer, you become shocked and start shaking with fear. ", {}),
             //[A: footsteps, (sudden noise (dun dun dun); V: shake text after displayed]
             new TextEvent("                ", {partDelay: 50}),       
             new TextEvent("You see \"Drink blood\" smeared on the wall with seemingly fresh blood.", {shake: true}),
             new TextEvent("                ", {partDelay: 50}),        
-            new AudioEvent('heartbeat'),
             new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall.", {}),
             //[A: heartbeat; V: zoom in]
+            new TextEvent("                ", {partDelay: 50}),        
             new TextEvent("Do you touch it or leave it alone?"),
+            new AudioEventAction(heartbeatTunnels, 'stop')
         ],
         decisions: [
             {text: "Touch it", scene: "stonedoor"}, //[A: heartbeat then rumble; V: fade to black, slight shake]
@@ -175,12 +178,20 @@ var story = {
     
     "stonedoor": {
         events: [
-            new TextEvent("After touching the door, the tunnel starts to rumble."),
+            new AudioEvent('creepy'),
+            new AudioEvent('stonedoor', {volume: 0.8}),
+            new AudioEvent('stonedoor2', {volume: 0.8}),
+            new TextEvent("After touching the door, the tunnel suddenly starts to rumble.", {partDelay: 50, shake: true}),
+            new TextEvent("                ", {partDelay: 50}),        
             //[A: rumbling; V: shake]
-            new TextEvent("Suddenly, a hidden stone door opens from where you touched it."),
+            new TextEvent("A hidden stone door opens from where you touched it.", {partDelay: 50}),
             //[A: stone sliding, rumbling;, V:slight shake after displayed]
-            new TextEvent("You fear you are done for if you stay."),
-            new TextEvent("You want to go inside, but you are afraid and might want to stay outside."),
+            heartbeatStoneDoor = new AudioEvent('heartbeat', {loop:true}),
+            new TextEvent("                ", {partDelay: 50}),        
+            new TextEvent("You fear you are done for if you stay.", {partDelay: 50}),
+            new TextEvent("                ", {partDelay: 50}),        
+            new TextEvent("You want to go inside, but you are afraid and might want to stay outside.", {partDelay: 50}),
+
     
             //
         ],
