@@ -4,7 +4,7 @@ var story = {
         events: [
             //[//scene 1  [A = audio; V = visual effect]
             //V: Effect: blink and sway
-            themeStart = new AudioEvent("creepy"),
+            themeStart = new AudioEvent("creepy", {loop: true}),
             new AudioEvent("heartbeat2"),
             new TextEvent("Your eyes gradually open", { partDelay: 60 , fade: true, sway: true}),
             new TextEvent("as you slowly float into consciousness.", {sway: true}),
@@ -37,7 +37,7 @@ var story = {
     "top-floor": {
         events: [    //scene 2a
                 //scene 2a
-            new AudioEvent('creepy'),
+            // new AudioEvent('creepy'),
             new AudioEvent("heartbeat2"),
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
@@ -93,7 +93,7 @@ var story = {
     
     "geology": {
         events: [//scene 2b
-            new AudioEvent('creepy'),
+            // new AudioEvent('creepy'),
             new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
             new TextEvent("                          ",),
             new AudioEvent("heartbeat2"),
@@ -142,15 +142,13 @@ var story = {
     "tunnels": {
         events: [ //scene 3
             //[A: water drip, creepy, creaks; V: darkness/nothing]
-            new AudioEvent('creepy'),
+            // new AudioEvent('creepy'),
             new AudioEvent('haunt'),
             new TextEvent("Inside the door, you see a vast, cobwebbed tunnel."),
-            new AudioEvent('water', {loop:true}),    
+            waterTunnels = new AudioEvent('water', {loop:true}),    
             new TextEvent("                ", {partDelay: 50}),        
-            //[A: (same as previous) + groan/noise; V: pause, shake]
             new TextEvent("As you travel further into the tunnel, it begins smelling musty and damp.", {partDelay: 35}),
             footstepsTunnel = new AudioEvent('footsteps'),
-            //[A: footsteps; V: scroll]
             new TextEvent("It looks like this place hasn\'t been touched in years, besides for some recent footprints ahead. ", {partDelay: 35}),
             new AudioEventAction(footstepsTunnel,'pause'),
             new TextEvent("                ", {partDelay: 50}),        
@@ -158,15 +156,14 @@ var story = {
             new TextEvent("                ", {partDelay: 50}),        
             heartbeatTunnels = new AudioEvent('heartbeat', {loop:true}),
             new TextEvent("As you get closer, you become shocked and start shaking with fear. ", {}),
-            //[A: footsteps, (sudden noise (dun dun dun); V: shake text after displayed]
             new TextEvent("                ", {partDelay: 50}),       
             new TextEvent("You see \"Drink blood\" smeared on the wall with seemingly fresh blood.", {shake: true}),
             new TextEvent("                ", {partDelay: 50}),        
             new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall.", {}),
-            //[A: heartbeat; V: zoom in]
             new TextEvent("                ", {partDelay: 50}),        
             new TextEvent("Do you touch it or leave it alone?"),
-            new AudioEventAction(heartbeatTunnels, 'stop')
+            new AudioEventAction(heartbeatTunnels, 'stop'),
+            new AudioEventAction(waterTunnels,'stop')
         ],
         decisions: [
             {text: "Touch it", scene: "stonedoor"}, //[A: heartbeat then rumble; V: fade to black, slight shake]
@@ -177,7 +174,7 @@ var story = {
     
     "stonedoor": {
         events: [
-            new AudioEvent('creepy'),
+            // new AudioEvent('creepy'),
             new AudioEvent('stonedoor', {volume: 0.8}),
             new AudioEvent('stonedoor2', {volume: 0.8}),
             new TextEvent("After touching the door, the tunnel suddenly starts to rumble.", {partDelay: 50, shake: true}),
@@ -202,20 +199,22 @@ var story = {
     
     "aloneKO": {
         events: [
-            //[A: rumbing, creepy]
-            new TextEvent("You start to feel afraid and confused."),
-            new TextEvent("Your head is pounding."),
-            //[A: pounding sound; V: text pounds (heartbeat-like)]
-            new TextEvent("You walk past the bloody wall."),
-            //[A: footsteps; V: scroll]
-            new TextEvent("A few more steps and you foot presses down on a slightly discolored tile."),
-            //[A: footsteps, diff stone sliding/lever/platepress,; V: scroll]
-            new TextEvent("The tile lowers and the tunnel begins to shake."),
-            //[A: shaking; V: shake]
+            // new AudioEvent('creepy'),
+            footstepsAloneKO = new AudioEvent('footsteps'),
+            new TextEvent("You start to feel afraid and confused.", {partDelay: 50}),
+            new TextEvent("Your head is pounding.",  {partDelay: 50}),
+            new TextEvent("You walk past the bloody wall.", { scrollSpeed: 0.007, partDelay: 50}),
+            new TextEvent("                ", {partDelay: 50}),        
+            new TextEvent("A few more steps and you foot presses down on a slightly discolored tile.", {partDelay: 50}),
+            new AudioEventAction(footstepsAloneKO,'stop'),
+            new AudioEvent('earthquake'),
+            new TextEvent("The tile lowers and the tunnel begins to shake.",),
             new TextEvent("Rocks and rubble fall from the dark ceiling."),
             //[A: rocks falling, crashes; V: scroll]
             new TextEvent("You try to run, but you are too late."),
+            new TextEvent("                "),        
             new TextEvent("You are crushed in the rubble."),
+            new TextEvent("                ", {gameOver: true}),
             //[A: crash, sound muffled to silence; V: fades to black then shows -->] GAME OVER
         ],
     
@@ -228,7 +227,7 @@ var story = {
 
     "devgarden": {
         events: [
-            new AudioEvent("creepy"),
+            // new AudioEvent("creepy"),
             new AudioEvent("water"),
             new TextEvent("    "),
             new TextEvent("    "),
@@ -280,7 +279,7 @@ var story = {
 
     "orange": {
         events: [  //scene 6a
-            new AudioEvent("creepy", { volume: 0.4 }),
+            // new AudioEvent("creepy", { volume: 0.4 }),
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("You reach into your bag and pull out the orange."),
@@ -322,7 +321,7 @@ var story = {
 
     "squirrels": {
         events: [
-            new AudioEvent("creepy", {volume: 0.4}),
+            // new AudioEvent("creepy", {volume: 0.4}),
             new AudioEvent("lightbuzz", {volume: 0.1}),
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("                ", {partDelay: 70}),
@@ -358,7 +357,7 @@ var story = {
 
     "runaway": {
         events: [ //scene 6.1
-            new AudioEvent("creepy", {loop: true, volume: 0.4}),
+            // new AudioEvent("creepy", {loop: true, volume: 0.4}),
             new TextEvent("                ", {partDelay: 60}),
             new TextEvent("                ",),
             new TextEvent("You listen to Paul and run away."),
@@ -412,7 +411,7 @@ var story = {
 
     "savepaul": {
         events: [
-            new AudioEvent("creepy", {loop: true, volume: 0.5}),
+            // new AudioEvent("creepy", {loop: true, volume: 0.5}),
             new TextEvent("                ", {flash: true, partDelay: 60}),
             new TextEvent("                ", {flash: true, partDelay: 60}),
             new AudioEvent("squirrel"),

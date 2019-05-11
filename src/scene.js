@@ -89,7 +89,7 @@ function checkEvent(game){
 }
 
 function update (time, delta){
-    if(currentEventIndex > -1){
+    if(currentEventIndex > -1 && !(story[currentScene].events[currentEventIndex] instanceof AudioEventAction)){
         timerForTextPause = story[currentScene].events[currentEventIndex].options.pause || 0;
     }
     if(timerForTextPause > 0){
