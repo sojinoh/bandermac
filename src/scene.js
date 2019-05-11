@@ -57,13 +57,13 @@ function create() {
     this.textY = 100;
     this.scrollSpeed = 0.017;
 
-    button1 = this.add.text(300, 500, story[currentScene].decisions[0], {font: "16px Courier New", fill: "#c51b7d"})
+    button1 = this.add.text(300, 500, story[currentScene].decisions[0], {font: "16px Courier New", fill: "#ffffff"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this, 0) )
         .on('pointerover', () => actionOnHover(this, "button1"))
         .on('pointerout', () => actionHoverOut(this, "button1"));
 
-    button2 = this.add.text(750, 500, story[currentScene].decisions[1], {font: "16px Courier New", fill: "#c51b7d"})
+    button2 = this.add.text(750, 500, story[currentScene].decisions[1], {font: "16px Courier New", fill: "#ffffff"})
         .setInteractive()
         .on('pointerdown', () => actionOnClick(this, 1) )
         .on('pointerover', () => actionOnHover(this, "button2"))
@@ -155,7 +155,7 @@ function actionOnHover (game, button){
 }
 
 function actionHoverOut (game, button){
-    window[button].setStyle({ fontSize: 16, fill: '#c51b7d'});
+    window[button].setStyle({ fontSize: 16, fill: '#ffffff'});
 }
 
 
