@@ -25,7 +25,6 @@ var story = {
             new AudioEvent("glass"),
             new TextEvent("             ", {partDelay: 30}),
             new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", { partDelay: 25 }),
-
             // [A: crash, glass shatter; V: shake]
         ],
         decisions: [
@@ -37,7 +36,7 @@ var story = {
     "top-floor": {
         events: [    //scene 2a
                 //scene 2a
-            // new AudioEvent('creepy'),
+            // new AudioEvent('creepy', {loop: true}),
             new AudioEvent("heartbeat2"),
             //[A: heartbeat; creepy V: slight sway then pause]
             new TextEvent("You stand carefully.", {scrollSpeed: 0.025}),
@@ -79,7 +78,7 @@ var story = {
             new TextEvent("You walk all the way down to the bottom floor.", {partDelay: 50, scrollSpeed: 0.025}),
             new TextEvent("\"Is that what he meant?\" You start to wander.", {scrollSpeed: 0.025}),
             new TextEvent("                            ", {partDelay: 50, scrollSpeed: 0.025}),
-            new TextEvent("You end up in a old part of the building, down a hallway you didn\'t know existed.", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("You end up in an old part of the building, down a hallway you didn\'t know existed.", {partDelay: 50, scrollSpeed: 0.025}),
             new AudioEventAction(footstepsTopFloor, 'pause'),   
             //[A: creepy, door hinge]
             new TextEvent("A small door is open at the end of it. You crawl through.", {scrollSpeed: 0.025}),
@@ -155,9 +154,9 @@ var story = {
             new TextEvent("Eventually, you notice something on the wall ahead.", {pause: 15000}),
             new TextEvent("                ", {partDelay: 50}),        
             heartbeatTunnels = new AudioEvent('heartbeat', {loop:true}),
-            new TextEvent("As you get closer, you become shocked and start shaking with fear. ", {}),
+            new TextEvent("You come closer, then freeze on your track.", {}),
             new TextEvent("                ", {partDelay: 50}),       
-            new TextEvent("You see \"Drink blood\" smeared on the wall with seemingly fresh blood.", {shake: true}),
+            new TextEvent("The letters \"Drink blood\" are smeared on the wall with seemingly fresh blood.", {shake: true}),
             new TextEvent("                ", {partDelay: 50}),        
             new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall.", {}),
             new TextEvent("                ", {partDelay: 50}),        
@@ -203,17 +202,19 @@ var story = {
             footstepsAloneKO = new AudioEvent('footsteps'),
             new TextEvent("You start to feel afraid and confused.", {partDelay: 50}),
             new TextEvent("Your head is pounding.",  {partDelay: 50}),
-            new TextEvent("You walk past the bloody wall.", { scrollSpeed: 0.007, partDelay: 50}),
+            new TextEvent("You walk past the bloody wall.", { scrollSpeed: 0.035, partDelay: 50}),
             new TextEvent("                ", {partDelay: 50}),        
             new TextEvent("A few more steps and you foot presses down on a slightly discolored tile.", {partDelay: 50}),
             new AudioEventAction(footstepsAloneKO,'stop'),
             new AudioEvent('earthquake'),
-            new TextEvent("The tile lowers and the tunnel begins to shake.",),
             new TextEvent("Rocks and rubble fall from the dark ceiling."),
+            new TextEvent("The tile lowers and the tunnel begins to shake.",),
             //[A: rocks falling, crashes; V: scroll]
             new TextEvent("You try to run, but you are too late."),
             new TextEvent("                "),        
             new TextEvent("You are crushed in the rubble."),
+            new TextEvent("                              ", {partDelay: 80}),        
+            new TextEvent("                              ", {partDelay: 80}),        
             new TextEvent("                ", {gameOver: true}),
             //[A: crash, sound muffled to silence; V: fades to black then shows -->] GAME OVER
         ],
