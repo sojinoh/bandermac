@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="Median scene finished">
+    <list default="true" id="382d1835-a852-4e29-83ac-8d39071a12db" name="Default" comment="savepaul scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextEvent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/listOfScenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/listOfScenes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene.js" afterDir="false" />
     </list>
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
+            <state relative-caret-position="289">
+              <caret line="391" column="65" lean-forward="true" selection-start-line="391" selection-start-column="65" selection-end-line="391" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -54,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -63,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            <state relative-caret-position="1241">
+              <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -124,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -466,6 +467,8 @@
       <workItem from="1557523335792" duration="1800000" />
       <workItem from="1557525168469" duration="1779000" />
       <workItem from="1557526982153" duration="1790000" />
+      <workItem from="1557528805039" duration="1857000" />
+      <workItem from="1557530702471" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic initial &quot;loading&quot; state">
       <created>1554831588094</created>
@@ -663,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557528440000</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="savepaul scene">
+      <created>1557529027855</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1557529027855</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56166000" />
+    <option name="totallyTimeSpent" value="58580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -689,8 +699,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32956383" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5246423" side_tool="true" visible="true" weight="0.25399646" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.4753577" visible="true" weight="0.25399646" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5262321" side_tool="true" visible="true" weight="0.25399646" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.47376788" visible="true" weight="0.25399646" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -711,7 +721,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created basic initial &quot;loading&quot; state" />
     <MESSAGE value="cleaned up directories" />
     <MESSAGE value="cleaned up comments, added module for intellij" />
     <MESSAGE value="reverted changes" />
@@ -736,7 +745,8 @@
     <MESSAGE value="bell scene" />
     <MESSAGE value="Bell scene finished" />
     <MESSAGE value="Median scene finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Median scene finished" />
+    <MESSAGE value="savepaul scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="savepaul scene" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -809,22 +819,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TextEvent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+        <state relative-caret-position="1241">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listOfScenes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="410" column="120" selection-start-line="410" selection-start-column="120" selection-end-line="410" selection-end-column="120" />
+        <state relative-caret-position="289">
+          <caret line="391" column="65" lean-forward="true" selection-start-line="391" selection-start-column="65" selection-end-line="391" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
         </state>
       </provider>
     </entry>
