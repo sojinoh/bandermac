@@ -14,13 +14,13 @@ cd Desktop
 git clone https://github.com/sojinoh/comp225-bandermac.git
 ```
 
-### Accessing through url [https://sojinoh.github.io/bandermac](https://sojinoh.github.io/bandermac)
-Sound works on Google Chrome and Microsoft Edge but not Safari.
+### (1) Accessing through url 
+Open [https://sojinoh.github.io/bandermac](https://sojinoh.github.io/bandermac) on your favorite browser. But keep in mind that sound works only on Google Chrome and Microsoft Edge but not Safari.
 
-### Using IDE
+### (2) Using IDE
 If you have any IDEs, open this project and run the *home.html* file. You are all set!
 
-### Using Python and Web Browser of Your Choice
+### (3) Using Python and Web Browser of Your Choice
 If you do not have any IDEs installed but have Python installed, open your terminal and navigate so that the current working directory is *comp225-bandermac*, and then create web server using a Python module SimpleHTTPServer.
 ```
 cd comp225-bandermac
@@ -28,7 +28,12 @@ python2.7 -m SimpleHTTPServer
 ```
 Now, open a web browser of your choice (ex. Google Chrome, Safari), and go to [http://localhost:8000/home.html](http://localhost:8000/home.html). You are all set!
 
-## 3. Important Issues & Known Bugs
+## 3. Known Bugs & Future Steps
+
+Currently, the known bugs are that 1) sound does not work in safari and 2) button shortening issue. Sometimes the buttons do not register clicks if the text in the button is long.
+
+We have many features that we would improve or implement in the future. Adding a scrollbar would be useful so that users could reread text that they miss. We also need to finish adding graphics and audio to some scenes. We would like to add new graphics and effects to help give the game more variety. If we had more time, we would have added a settings page that allows users to customize the speed that the text is displayed. We would also add an “Ending History” page that tracks how which and how many Winning endings and Game Over endings the use has reached. Another future direction could be turning this game into a phone app.
+
 
 
 
