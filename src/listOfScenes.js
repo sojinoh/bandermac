@@ -25,6 +25,7 @@ var story = {
             new AudioEvent("glass"),
             new TextEvent("             ", {partDelay: 30}),
             new TextEvent("Suddenly you hear a crash coming downstairs from the geology wing.", { partDelay: 25 }),
+
             // [A: crash, glass shatter; V: shake]
         ],
         decisions: [
@@ -58,19 +59,20 @@ var story = {
             new TextEvent("'Hello...'", { partDelay: 60, scrollSpeed: 0.025 }),
             new AudioEvent('grumble'),
             new TextEvent("\"What do you want?\" he grumbles, not looking up from the molecule he\'s drawing.", {partDelay: 50, scrollSpeed: 0.025}),
-            new TextEvent("'I... I woke up in Smail and...\"'", {partDelay: 55, scrollSpeed: 0.025}),
+            new TextEvent("'I... I woke up in Smail and...\"'", {partDelay: 60, scrollSpeed: 0.025}),
             new TextEvent("                ", {partDelay: 50, scrollSpeed: 0.025}),
-            new TextEvent("That gets his attention. He smirks.", {scrollSpeed: 0.025}),
+            new TextEvent("That gets his attention. He smirks.", { partDelay: 50, scrollSpeed: 0.025}),
             new AudioEvent("hmm"),
             new TextEvent("\"Oh it\'s you. She told me to me tell you to go as far below as you can. And take this.\"", {partDelay: 50, scrollSpeed: 0.025}),
-            new TextEvent("He hands you an orange.", {scrollSpeed: 0.025}),
+            new TextEvent("                ", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("He hands you an orange.", {partDelay: 55, scrollSpeed: 0.025}),
             //  [A: thump/hand noise]
-            new TextEvent("\"What? What am I supposed to do with this?\"", {partDelay: 50, scrollSpeed: 0.025}),
+            new TextEvent("\"What? What am I supposed to do with this?\"", {partDelay: 60, scrollSpeed: 0.025}),
             new TextEvent("                ", {scrollSpeed: 0.025}),
             new TextEvent("He\'s no longer paying attention to you.", {scrollSpeed: 0.025}),
             new TextEvent("                               ", {partDelay: 50, scrollSpeed: 0.025}),
             new TextEvent("\"Below?\" You wonder to yourself.", {partDelay: 50, scrollSpeed: 0.025}),
-            new TextEvent("Below what?", { scrollSpeed: 0.025}),
+            new TextEvent("Below what?", {partDelay: 50, scrollSpeed: 0.025}),
             new TextEvent("You start walking downstairs", {partDelay: 50, scrollSpeed: 0.017}),
             new AudioEventAction(footstepsTopFloor, 'resume'),    //[V: scroll]
             new TextEvent("                       ", {partDelay: 50, scrollSpeed: 0.025}),
@@ -91,6 +93,7 @@ var story = {
     "geology": {
         events: [//scene 2b
             new AudioEvent("creepy", { loop: true }),
+<<<<<<< HEAD
             new TextEvent("You stand carefully."),
             new TextEvent("                          ", {partDelay : 50}),
             new AudioEvent("heartbeat2"),
@@ -105,10 +108,32 @@ var story = {
             new AudioEventAction(glassshards,'stop'), //[A: glass shuffle, slight growl;]
             new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth."),
             new TextEvent("You pick up the note.", { partDelay: 55 }),
+=======
+            new TextEvent("You stand carefully.", {}),
+            new TextEvent("                          ",),
+            new AudioEvent("heartbeat2"),
+            footstepsGeology = new AudioEvent("footsteps"),
+            new TextEvent("You feel slightly off balance as you", {scrollSpeed: 0.025, shake: true }),
+            new TextEvent("walk down the stairs towards the crash.", {}),
+    
+            // [V: scroll down and shake]
+            new TextEvent("      ", {}),
+            new AudioEventAction(footstepsGeology,'pause'),
+            new AudioEvent('shardsofglass'),
+            new AudioEvent('shardsofglass'),
+            new TextEvent("As you come closer, you notice shards of glass scattered around a case containing a dinosaur skull.", {}),
+            new TextEvent("The case is broken, and you notice a note pinned between the dinosaur\'s teeth.", {}),
+            new TextEvent("You pick up the note.", {partDelay: 50 }),
+            new AudioEvent('paper'),
+            new TextEvent("                   ", {partDelay: 50}),
+>>>>>>> b36410b4566df319e608887393b74182ea7d3e45
             //[A: paper flutter; V: quick pause]
-            new TextEvent("The notes reads, \"They who hath awoken, hath stumbled upon the broken.", {partDelay: 55}),
-            new TextEvent("Here upon these bones shall lead you deep into the unknown. Follow the red or suffer with dread.\"", {partDelay: 50}),
+            new TextEvent("The note reads,", {}),
+            new TextEvent("\"They who hath awoken, hath stumbled upon the broken.", {partDelay: 60}),
+            new TextEvent("Here upon these bones shall lead you deep into the unknown. ", {partDelay: 60}),
+            new TextEvent("Follow the red or suffer with dread.\"", {partDelay: 60}),
             new TextEvent("                    ", {partDelay: 50}),
+<<<<<<< HEAD
             new TextEvent("You wonder what William Shakespeare was doing in OLRI."),
             new TextEvent("You also notice a trail of blood leading towards the staircase."),
             new AudioEvent('blooddrip'), //[A: water drip;]
@@ -119,7 +144,24 @@ var story = {
             new TextEvent("It might be a clue."),
             //[A: door hinge creak; V: scroll]
             new TextEvent("A small door opens at the end of the hallway, you crawl through.")
+=======
+            new TextEvent("You wonder what William Shakespeare was doing in OLRI.", {}),
+            new TextEvent("                    "),
+            new TextEvent("You also notice a trail of blood leading towards the staircase.", {partDelay: 50}),
+            new AudioEvent('blooddrip', {loop: true}), //[A: water drip;]
+            new AudioEventAction(footstepsGeology,'resume'),
+            new TextEvent("You follow it and end up in a old part of the building, down a hallway you didn\'t know existed."),
+            new TextEvent("                    "),
+            new TextEvent("Along the way, you notice an orange and pick it up.", {partDelay: 50}),
+            //[A: pick up (hand noise);]
+            new TextEvent("It might be a clue.", {partDelay: 50}),
+            //[A: door hinge creak; V: scroll]
+            new TextEvent("                ", {partDelay: 60}),
+            new AudioEventAction(footstepsGeology, 'stop'),
+            new TextEvent("A small door opens at the end of the hallway, you crawl through.", {}),
+>>>>>>> b36410b4566df319e608887393b74182ea7d3e45
         ],
+
         decisions: [
             {text: "Crawl through", scene: "tunnels"},  //[A: shuffle; V: enter? (text towards screen (3D?))]
             {text: "", scene: ""}
@@ -129,6 +171,7 @@ var story = {
     "tunnels": {
         events: [ //scene 3
             //[A: water drip, creepy, creaks; V: darkness/nothing]
+<<<<<<< HEAD
             new TextEvent("Inside the door, you see a vast, cobwebbed tunnel."),
             //[A: (same as previous) + groan/noise; V: pause, shake]
             new TextEvent("As you travel further into the tunnel, it begins smelling musty and damp."),
@@ -139,6 +182,30 @@ var story = {
             new TextEvent("You see, \"Drink blood\" smeared on the wall with seemingly fresh blood."),
             //[A: drip]
             new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall."),
+=======
+            new AudioEvent('creepy',{loop:true}),
+            new AudioEvent('haunt'),
+            new TextEvent("Inside the door, you see a vast, cobwebbed tunnel.", {}),
+            new AudioEvent('water', {loop:true}),    
+            new TextEvent("                ", {partDelay: 50}),        
+            //[A: (same as previous) + groan/noise; V: pause, shake]
+            new TextEvent("As you travel further into the tunnel, it begins smelling musty and damp.", {partDelay: 35}),
+            footstepsTunnel = new AudioEvent('footsteps'),
+            //[A: footsteps; V: scroll]
+            new TextEvent("It looks like this place hasn\'t been touched in years, besides for some recent footprints ahead. ", {partDelay: 35}),
+            new AudioEventAction(footstepsTunnel,'pause'),
+            new TextEvent("                ", {partDelay: 50}),        
+            new TextEvent("Eventually, you notice something on the wall ahead.", {pause: 3500}),
+            new TextEvent("                ", {partDelay: 50}),        
+            new AudioEvent('heartbeat'),
+            new TextEvent("As you get closer, you become shocked and start shaking with fear. ", {}),
+            //[A: footsteps, (sudden noise (dun dun dun); V: shake text after displayed]
+            new TextEvent("                ", {partDelay: 50}),       
+            new TextEvent("You see \"Drink blood\" smeared on the wall with seemingly fresh blood.", {shake: true}),
+            new TextEvent("                ", {partDelay: 50}),        
+            new AudioEvent('heartbeat'),
+            new TextEvent("Your world seems to be closing in and you feel compelled to touch the bloody wall.", {}),
+>>>>>>> b36410b4566df319e608887393b74182ea7d3e45
             //[A: heartbeat; V: zoom in]
             new TextEvent("Do you touch it or leave it alone?"),
         ],
@@ -638,8 +705,8 @@ var story = {
             new TextEvent("You make your way to Macalester\'s (in)famous bell.", {partDelay: 60, scrollSpeed: 0.020}),
             new AudioEvent("bell"),
             runbell = new AudioEvent("footsteps", {rate: 1.95}),
-            new TextEvent("As you approach, some giggling first-years run away.", {partDelay: 60, scrollSpeed: 0.022}),
-            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.027}),
+            new TextEvent("As you approach, some giggling first-years run away.", {partDelay: 60}),
+            new TextEvent("       ", {partDelay: 60, scrollSpeed: 0.024}),
             new AudioEventAction(runbell, 'stop'),
             //[A: giggles, footsteps; V: short pause]
             new TextEvent("You look around the bell, searching for clues.", {scrollSpeed: 0.023}),
