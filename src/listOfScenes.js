@@ -131,7 +131,6 @@ var story = {
             new AudioEventAction(footstepsGeology, 'stop'),
             new TextEvent("A small door opens at the end of the hallway, you crawl through.", {scrollSpeed: 0.025, partDelay: 50}),
             new AudioEvent('door')
-
         ],
 
         decisions: [
@@ -145,7 +144,7 @@ var story = {
             //[A: water drip, creepy, creaks; V: darkness/nothing]
             new AudioEvent('creepy'),
             new AudioEvent('haunt'),
-            new TextEvent("Inside the door, you see a vast, cobwebbed tunnel.", {}),
+            new TextEvent("Inside the door, you see a vast, cobwebbed tunnel."),
             new AudioEvent('water', {loop:true}),    
             new TextEvent("                ", {partDelay: 50}),        
             //[A: (same as previous) + groan/noise; V: pause, shake]
